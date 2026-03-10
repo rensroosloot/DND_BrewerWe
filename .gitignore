@@ -1,0 +1,8 @@
+.obsidian/
+**/.obsidian/workspace.json
+site/
+dist/
+build/
+.DS_Store
+Thumbs.db
+
