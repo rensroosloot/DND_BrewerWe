@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-03-10T19:38:11.335Z",
+  "locations": [
+    {
+      "id": 885305,
+      "entityId": 3784705,
+      "module": "locations",
+      "name": "Ebrius",
+      "type": null,
+      "title": null,
+      "image": "",
+      "summary": null,
+      "locationId": null,
+      "url": null,
+      "updatedAt": "2023-11-03T15:41:49.000000Z"
+    },
+    {
+      "id": 885310,
+      "entityId": 3784723,
+      "module": "locations",
+      "name": "Macallan, Under Ebrius",
+      "type": "City",
+      "title": null,
+      "image": "",
+      "summary": null,
+      "locationId": null,
+      "url": null,
+      "updatedAt": "2023-11-03T15:42:57.000000Z"
+    }
+  ],
+  "maps": []
+}

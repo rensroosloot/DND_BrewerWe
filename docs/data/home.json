@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-10T19:38:11.335Z",
+  "title": "BrewerWe",
+  "intro": "A player-facing campaign hub shaped around a tiny brewery, its bar, and the places and people tied to it.",
+  "stats": {
+    "totalEntries": 3,
+    "locations": 2,
+    "organisations": 1,
+    "characters": 0,
+    "quests": 0,
+    "journals": 0,
+    "events": 0
+  },
+  "featured": {
+    "brewery": {
+      "id": 189284,
+      "entityId": 3784730,
+      "module": "organisations",
+      "name": "the Bearded Barrel Brewery",
+      "type": "Brewery",
+      "title": null,
+      "image": "",
+      "summary": null,
+      "locationId": null,
+      "url": null,
+      "updatedAt": "2023-11-03T13:09:15.000000Z"
+    },
+    "location": {
+      "id": 885305,
+      "entityId": 3784705,
+      "module": "locations",
+      "name": "Ebrius",
+      "type": null,
+      "title": null,
+      "image": "",
+      "summary": null,
+      "locationId": null,
+      "url": null,
+      "updatedAt": "2023-11-03T15:41:49.000000Z"
+    },
+    "latestChronicle": null
+  }
+}

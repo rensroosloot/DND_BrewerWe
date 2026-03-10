@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrewerWe | Brewery</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="brewery.js"></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="topnav">
+      <a class="brand" href="./index.html">BrewerWe</a>
+      <div class="navlinks">
+        <a class="is-active" href="./brewery.html">Brewery</a>
+        <a href="./atlas.html">Atlas</a>
+        <a href="./chronicle.html">Chronicle</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <p class="eyebrow">The Hub</p>
+      <h1>Brewery</h1>
+      <p class="lead">The home base, current public business, and the people and hooks tied to it.</p>
+      <p class="status" data-generated-at>Waiting for generated data.</p>
+    </section>
+
+    <section class="feature-card" data-brewery-main></section>
+
+    <section class="module">
+      <div class="section-head">
+        <p class="eyebrow">Known Organisations</p>
+        <h2>Who’s in Orbit</h2>
+      </div>
+      <div class="grid" data-list="organisations"></div>
+    </section>
+
+    <section class="module">
+      <div class="section-head">
+        <p class="eyebrow">Public Stock</p>
+        <h2>Items and Ingredients</h2>
+      </div>
+      <div class="grid" data-list="items"></div>
+    </section>
+
+    <section class="module">
+      <div class="section-head">
+        <p class="eyebrow">Active Leads</p>
+        <h2>Quest Hooks</h2>
+      </div>
+      <div class="grid" data-list="quests"></div>
+    </section>
+
+    <section class="alert" data-error hidden></section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrewerWe | Atlas</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="atlas.js"></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="topnav">
+      <a class="brand" href="./index.html">BrewerWe</a>
+      <div class="navlinks">
+        <a href="./brewery.html">Brewery</a>
+        <a class="is-active" href="./atlas.html">Atlas</a>
+        <a href="./chronicle.html">Chronicle</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <p class="eyebrow">Travel Guide</p>
+      <h1>Atlas</h1>
+      <p class="lead">Known places, regions, and maps connected to the campaign.</p>
+      <p class="status" data-generated-at>Waiting for generated data.</p>
+    </section>
+
+    <section class="module">
+      <div class="section-head">
+        <p class="eyebrow">Known Places</p>
+        <h2>Locations</h2>
+      </div>
+      <div class="grid" data-list="locations"></div>
+    </section>
+
+    <section class="module">
+      <div class="section-head">
+        <p class="eyebrow">Reference</p>
+        <h2>Maps</h2>
+      </div>
+      <div class="grid" data-list="maps"></div>
+    </section>
+
+    <section class="alert" data-error hidden></section>
+  </main>
+</body>
+</html>

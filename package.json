@@ -1,0 +1,10 @@
+{
+  "name": "dnd_brewerwe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "kanka:fetch": "node Tech/fetch-kanka.mjs",
+    "site:build": "node Tech/build-site-data.mjs",
+    "kanka:sync": "node Tech/fetch-kanka.mjs && node Tech/build-site-data.mjs"
+  }
+}

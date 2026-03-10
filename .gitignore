@@ -14,3 +14,9 @@ DND/*
 # Never publish or sync local assets unless explicitly re-added.
 Images/
 Players/
+
+# Local automation data and secrets.
+Tech/data/raw/
+Tech/.env
+Tech/.env.*
+!Tech/.env.example

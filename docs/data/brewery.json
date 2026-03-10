@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-03-10T19:38:11.335Z",
+  "brewery": {
+    "id": 189284,
+    "entityId": 3784730,
+    "module": "organisations",
+    "name": "the Bearded Barrel Brewery",
+    "type": "Brewery",
+    "title": null,
+    "image": "",
+    "summary": null,
+    "locationId": null,
+    "url": null,
+    "updatedAt": "2023-11-03T13:09:15.000000Z"
+  },
+  "organisations": [
+    {
+      "id": 189284,
+      "entityId": 3784730,
+      "module": "organisations",
+      "name": "the Bearded Barrel Brewery",
+      "type": "Brewery",
+      "title": null,
+      "image": "",
+      "summary": null,
+      "locationId": null,
+      "url": null,
+      "updatedAt": "2023-11-03T13:09:15.000000Z"
+    }
+  ],
+  "items": [],
+  "quests": []
+}

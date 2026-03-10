@@ -3,39 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DND_BrewerWe</title>
-  <meta name="description" content="Player-safe campaign hub for the BrewerWe D&D game.">
+  <title>BrewerWe</title>
+  <meta name="description" content="Player-facing campaign hub for BrewerWe.">
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="home.js"></script>
 </head>
 <body>
   <main class="page">
+    <nav class="topnav">
+      <a class="brand" href="./index.html">BrewerWe</a>
+      <div class="navlinks">
+        <a href="./brewery.html">Brewery</a>
+        <a href="./atlas.html">Atlas</a>
+        <a href="./chronicle.html">Chronicle</a>
+      </div>
+    </nav>
+
     <section class="hero">
-      <p class="eyebrow">GitHub Pages Test</p>
+      <p class="eyebrow">Campaign Hub</p>
       <h1>BrewerWe</h1>
-      <p class="lead">
-        This is the player-facing test site for the campaign. It is intentionally small and only meant to expose public notes.
+      <p class="lead" data-home-intro>
+        A player-facing campaign hub for the brewery campaign.
       </p>
+      <p class="status" data-generated-at>Waiting for generated data.</p>
+    </section>
+
+    <section class="stats" data-home-stats></section>
+
+    <section class="grid grid-featured">
+      <article class="feature-card" data-feature="brewery"></article>
+      <article class="feature-card" data-feature="location"></article>
+      <article class="feature-card" data-feature="chronicle"></article>
     </section>
 
     <section class="panel">
-      <h2>What this site is for</h2>
+      <h2>Public-only workflow</h2>
       <p>
-        This site will eventually publish content from the Obsidian vault's public area only.
-        DM-only notes stay out of the website.
+        Kanka holds the campaign structure. This site reshapes that data into a story-first view that is easier to browse than a raw campaign database.
       </p>
     </section>
 
-    <section class="grid">
-      <article class="card">
-        <h2>Current status</h2>
-        <p>Static test page deployed from the repository.</p>
-      </article>
-      <article class="card">
-        <h2>Next step</h2>
-        <p>Connect a custom subdomain and replace this page with generated public notes.</p>
-      </article>
-    </section>
+    <section class="alert" data-error hidden></section>
   </main>
 </body>
 </html>
-
