@@ -6,3 +6,11 @@ build/
 .DS_Store
 Thumbs.db
 
+# Keep the Obsidian vault local by default.
+DND/*
+!DND/09_Public/
+!DND/09_Public/**
+
+# Never publish or sync local assets unless explicitly re-added.
+Images/
+Players/
