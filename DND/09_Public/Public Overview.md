@@ -1,24 +1,23 @@
-# Public Overview
+# Publiek overzicht
 
-This folder is safe to share with players or publish to a simple site.
+Deze map is veilig om met spelers te delen of naar een eenvoudige site te publiceren.
 
-## Include here
-- Confirmed setting facts
-- Session summaries
-- Known NPCs
-- Known locations
-- Brewery status that players should see
-- Current quest board, if public
+## Hier opnemen
+- Bevestigde settingfeiten
+- Sessiesamenvattingen
+- Bekende NPC's
+- Bekende locaties
+- Brouwerijstatus die spelers mogen zien
+- Huidig quest board, als het publiek mag zijn
 
-## Do not include here
-- Future twists
-- Hidden faction motives
-- Secret maps
-- Encounter plans
-- Unrevealed consequences
+## Hier niet opnemen
+- Toekomstige twists
+- Verborgen factiemotieven
+- Geheime kaarten
+- Encounter-plannen
+- Nog niet onthulde gevolgen
 
-## Recommended publish flow
-1. Write notes in the main vault.
-2. Copy or summarize player-safe material into `09_Public`.
-3. Publish only this folder to your domain.
-
+## Aanbevolen publicatieflow
+1. Schrijf notities in de hoofdvault.
+2. Kopieer of vat speler-veilige inhoud samen in `09_Public`.
+3. Publiceer alleen deze map naar je domein.

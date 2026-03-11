@@ -1,6 +1,29 @@
 {
-  "generatedAt": "2026-03-10T19:38:11.335Z",
+  "generatedAt": "2026-03-10T22:15:16.877Z",
   "locations": [
+    {
+      "id": 2021733,
+      "entityId": 8992267,
+      "module": "locations",
+      "name": "Boareskyr Bridge",
+      "type": "City",
+      "title": null,
+      "image": "",
+      "summary": null,
+      "fullText": null,
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/8992267",
+      "updatedAt": "2026-03-10T20:53:56.000000Z",
+      "mapPin": {
+        "id": "boareskyr-bridge",
+        "label": "Boareskyr Bridge",
+        "locationName": "Boareskyr Bridge",
+        "x": 57.94,
+        "y": 54.37
+      },
+      "mapLink": "./map.html?pin=boareskyr-bridge",
+      "previewImage": "./assets/maps/previews/boareskyr-bridge.jpg"
+    },
     {
       "id": 885305,
       "entityId": 3784705,
@@ -10,9 +33,19 @@
       "title": null,
       "image": "",
       "summary": null,
+      "fullText": null,
       "locationId": null,
-      "url": null,
-      "updatedAt": "2023-11-03T15:41:49.000000Z"
+      "url": "https://app.kanka.io/w/167950/entities/3784705",
+      "updatedAt": "2023-11-03T15:41:49.000000Z",
+      "mapPin": {
+        "id": "ebrius",
+        "label": "Ebrius",
+        "locationName": "Ebrius",
+        "x": 41.8,
+        "y": 63.2
+      },
+      "mapLink": "./map.html?pin=ebrius",
+      "previewImage": "./assets/maps/previews/ebrius.jpg"
     },
     {
       "id": 885310,
@@ -23,9 +56,19 @@
       "title": null,
       "image": "",
       "summary": null,
+      "fullText": null,
       "locationId": null,
-      "url": null,
-      "updatedAt": "2023-11-03T15:42:57.000000Z"
+      "url": "https://app.kanka.io/w/167950/entities/3784723",
+      "updatedAt": "2023-11-03T15:42:57.000000Z",
+      "mapPin": {
+        "id": "macallan",
+        "label": "Macallan, Under Ebrius",
+        "locationName": "Macallan, Under Ebrius",
+        "x": 43.4,
+        "y": 65.4
+      },
+      "mapLink": "./map.html?pin=macallan",
+      "previewImage": "./assets/maps/previews/macallan.jpg"
     }
   ],
   "maps": []

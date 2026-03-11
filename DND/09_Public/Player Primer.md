@@ -1,18 +1,17 @@
-# Player Primer
+# Spelersintro
 
-## Campaign premise
-The party is starting a very small brewery with a bar attached. The brewery is the home base and main source of long-term progression.
+## Campagnepremisse
+De groep begint met een piepkleine brouwerij met een bar eraan vast. De brouwerij is de thuisbasis en de belangrijkste bron van langetermijnprogressie.
 
-## What players should expect
-- A home base that grows over time
-- Adventures tied back to the business
-- Downtime decisions that matter
-- Shared ownership of the group's place in the region
+## Wat spelers kunnen verwachten
+- Een thuisbasis die in de loop van de tijd groeit
+- Avonturen die teruggrijpen op het bedrijf
+- Downtime-beslissingen die ertoe doen
+- Gedeeld eigenaarschap over de plek van de groep in de regio
 
-## To be defined in Session 0
-- World details
-- Region facts
-- Factions
-- Starting allies and rivals
-- Name and identity of the brewery
-
+## Wordt bepaald in Session 0
+- Wereld-details
+- Feiten over de regio
+- Facties
+- Eerste bondgenoten en rivalen
+- Naam en identiteit van de brouwerij

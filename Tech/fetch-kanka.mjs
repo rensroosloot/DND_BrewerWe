@@ -71,7 +71,21 @@ function stripHtml(value) {
     .trim();
 }
 
+function createSummary(fullText) {
+  if (!fullText) {
+    return null;
+  }
+
+  const firstSentence = fullText.match(/^(.+?[.!?])(?:\s|$)/);
+  if (firstSentence?.[1]) {
+    return firstSentence[1].trim();
+  }
+
+  return fullText.slice(0, 180).trim() || null;
+}
+
 function toPublicSummary(record, moduleName) {
+  const fullText = stripHtml(record.entry) || null;
   return {
     id: record.id,
     entityId: record.entity_id ?? null,
@@ -80,9 +94,10 @@ function toPublicSummary(record, moduleName) {
     type: record.type ?? null,
     title: record.title ?? null,
     image: record.image_full ?? record.image_thumb ?? record.image ?? null,
-    summary: stripHtml(record.entry).slice(0, 280) || null,
+    summary: createSummary(fullText),
+    fullText,
     locationId: record.location_id ?? null,
-    url: record.url ?? record.entity?.url ?? null,
+    url: record.urls?.view ?? record.url ?? record.entity?.url ?? null,
     updatedAt: record.updated_at ?? null
   };
 }

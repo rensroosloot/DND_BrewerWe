@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-03-10T22:15:16.877Z",
+  "characters": [
+    {
+      "id": 981048,
+      "entityId": 3770862,
+      "module": "characters",
+      "name": "RED the Robot Parrot",
+      "type": "NPC",
+      "title": null,
+      "image": "https://cdn-ugc.kanka.io/characters/z9MZBTznhgaEAcEw8dm3cL4aX0hGm7cudT7vOUgV.png",
+      "summary": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep.",
+      "fullText": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep. RED used to have a name, however it was ehr.. redacted. The parrot is quite vulgar but luckily doesn't know the proper curse words. Her former owner programmed RED to provide any takers with more or less usefull information regarding the bar and brewery. RED is capable of understanding common language but might not always provide the answers some might hope for. Once everywhile RED will receive scheduled upgrades which will unlock additional information.",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/3770862",
+      "updatedAt": "2026-03-10T19:55:08.000000Z"
+    }
+  ]
+}

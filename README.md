@@ -1,32 +1,32 @@
 # DND_BrewerWe
 
-Campaign workspace for a rotating-DM D&D game centered on a very small brewery and bar that grows over time.
+Campagneworkspace voor een roulerende DM D&D-campagne rond een kleine brouwerij met bar die langzaam kan uitgroeien.
 
-## Structure
-- `DND/` Obsidian vault
-- `DND/09_Public/` player-safe notes intended for sharing or publishing
-- `DND/90_DM Only/` private prep and unrevealed material
-- `Tech/` automation, import scripts, and build helpers
-- `docs/` GitHub Pages site output
+## Structuur
+- `DND/` Obsidian-vault
+- `DND/09_Public/` speler-veilige notities voor delen of publiceren
+- `DND/90_DM Only/` privé voorbereiding en nog niet onthulde informatie
+- `Tech/` automatisering, importscripts en build-hulpmiddelen
+- `docs/` output van de GitHub Pages-site
 
-## Publishing direction
-The long-term plan is to publish only `DND/09_Public/` to a website, keeping DM-only content out of the build.
+## Publicatierichting
+Het plan is om alleen `DND/09_Public/` naar de website te publiceren en DM-only inhoud buiten de build te houden.
 
-## Kanka integration
-Kanka can be used as a structured source for public campaign data.
+## Kanka-integratie
+Kanka wordt gebruikt als gestructureerde bron voor publieke campagnegegevens.
 
-Run the fetcher with:
+Voer de fetcher uit met:
 
 ```bash
 npm run kanka:fetch
 ```
 
-Required environment variables:
+Verplichte environment variables:
 - `KANKA_TOKEN`
 - `KANKA_CAMPAIGN_ID`
 - `KANKA_MODULES` (optional)
 
-Default fetched modules:
+Standaard opgehaalde modules:
 - `characters`
 - `locations`
 - `organisations`

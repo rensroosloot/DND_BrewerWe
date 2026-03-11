@@ -1,32 +1,31 @@
-# GitHub Pages Setup
+# GitHub Pages-instelling
 
-This repo is prepared to publish a static site from the `docs/` folder on the `main` branch.
+Deze repo is voorbereid om een statische site te publiceren vanuit de map `docs/` op de `main`-branch.
 
-## GitHub setup
-1. Create the GitHub repository.
-2. Push this repo to GitHub.
-3. In GitHub, open `Settings -> Pages`.
-4. Set:
+## GitHub-instelling
+1. Maak de GitHub-repository aan.
+2. Push deze repo naar GitHub.
+3. Open in GitHub `Settings -> Pages`.
+4. Stel in:
    - Source: `Deploy from a branch`
    - Branch: `main`
    - Folder: `/docs`
 
-## Custom domain
-Recommended: use a subdomain such as `dnd.yourdomain.com`.
+## Eigen domein
+Aanbevolen: gebruik een subdomein zoals `dnd.jouwdomein.com`.
 
-1. In GitHub Pages settings, enter your custom domain.
-2. GitHub will create or expect a `CNAME` file in `docs/`.
-3. Replace `docs/CNAME.example` with `docs/CNAME` containing only your real domain.
+1. Vul in GitHub Pages-instellingen je eigen domein in.
+2. GitHub maakt of verwacht een `CNAME`-bestand in `docs/`.
+3. Vervang `docs/CNAME.example` door `docs/CNAME` met alleen je echte domein.
 
 ## DNS
-For a subdomain:
-- Create a `CNAME` record from `dnd` to `<your-github-username>.github.io`
+Voor een subdomein:
+- Maak een `CNAME`-record aan van `dnd` naar `<jouw-github-gebruikersnaam>.github.io`
 
-For a root domain:
-- Use GitHub Pages apex `A` records from the current GitHub docs instead of a CNAME
-- Root domains are more fragile than a subdomain, so a subdomain is preferred
+Voor een hoofddomein:
+- Gebruik de GitHub Pages apex `A`-records uit de actuele GitHub-documentatie in plaats van een CNAME
+- Een hoofddomein is kwetsbaarder dan een subdomein, dus een subdomein heeft de voorkeur
 
-## Important
-- Publish only player-safe content
-- Do not expose `DND/90_DM Only`
-
+## Belangrijk
+- Publiceer alleen speler-veilige inhoud
+- Stel `DND/90_DM Only` niet bloot

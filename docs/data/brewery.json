@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T19:38:11.335Z",
+  "generatedAt": "2026-03-10T22:15:16.877Z",
   "brewery": {
     "id": 189284,
     "entityId": 3784730,
@@ -9,8 +9,9 @@
     "title": null,
     "image": "",
     "summary": null,
+    "fullText": null,
     "locationId": null,
-    "url": null,
+    "url": "https://app.kanka.io/w/167950/entities/3784730",
     "updatedAt": "2023-11-03T13:09:15.000000Z"
   },
   "organisations": [
@@ -23,8 +24,9 @@
       "title": null,
       "image": "",
       "summary": null,
+      "fullText": null,
       "locationId": null,
-      "url": null,
+      "url": "https://app.kanka.io/w/167950/entities/3784730",
       "updatedAt": "2023-11-03T13:09:15.000000Z"
     }
   ],

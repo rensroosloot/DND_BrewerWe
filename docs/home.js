@@ -7,10 +7,10 @@ function renderStats(stats) {
   }
 
   const entries = [
-    ["Entries", stats.totalEntries],
-    ["Locations", stats.locations],
-    ["Organisations", stats.organisations],
-    ["Characters", stats.characters]
+    ["Items", stats.totalEntries],
+    ["Locaties", stats.locations],
+    ["Organisaties", stats.organisations],
+    ["Personages", stats.characters]
   ];
 
   root.innerHTML = entries
@@ -36,9 +36,9 @@ async function main() {
     setGeneratedAt(data.generatedAt);
     document.querySelector("[data-home-intro]").textContent = data.intro;
     renderStats(data.stats);
-    renderFeature("brewery", "Featured Brewery", data.featured.brewery, "No brewery record yet.");
-    renderFeature("location", "Featured Place", data.featured.location, "No location record yet.");
-    renderFeature("chronicle", "Latest Chronicle", data.featured.latestChronicle, "No public chronicle entry yet.");
+    renderFeature("brewery", "Uitgelichte brouwerij", data.featured.brewery, "Nog geen brouwerijrecord.");
+    renderFeature("location", "Uitgelichte plek", data.featured.location, "Nog geen locatierecord.");
+    renderFeature("chronicle", "Laatste kroniek", data.featured.latestChronicle, "Nog geen publiek kroniek-item.");
   } catch (error) {
     setError(error);
   }

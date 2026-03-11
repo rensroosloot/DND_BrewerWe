@@ -11,7 +11,7 @@ async function main() {
     }
 
     if (!data.entries.length) {
-      root.innerHTML = '<p class="empty">No public chronicle entries yet.</p>';
+      root.innerHTML = '<p class="empty">Nog geen publieke kroniek-items.</p>';
       return;
     }
 

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-10T19:38:11.335Z",
+  "generatedAt": "2026-03-10T22:15:16.877Z",
   "title": "BrewerWe",
-  "intro": "A player-facing campaign hub shaped around a tiny brewery, its bar, and the places and people tied to it.",
+  "intro": "Een spelergerichte campagnehub rond een kleine brouwerij, de bijbehorende bar en de plaatsen en personen die ermee verbonden zijn.",
   "stats": {
-    "totalEntries": 3,
-    "locations": 2,
+    "totalEntries": 5,
+    "locations": 3,
     "organisations": 1,
-    "characters": 0,
+    "characters": 1,
     "quests": 0,
     "journals": 0,
     "events": 0
@@ -21,22 +21,33 @@
       "title": null,
       "image": "",
       "summary": null,
+      "fullText": null,
       "locationId": null,
-      "url": null,
+      "url": "https://app.kanka.io/w/167950/entities/3784730",
       "updatedAt": "2023-11-03T13:09:15.000000Z"
     },
     "location": {
-      "id": 885305,
-      "entityId": 3784705,
+      "id": 2021733,
+      "entityId": 8992267,
       "module": "locations",
-      "name": "Ebrius",
-      "type": null,
+      "name": "Boareskyr Bridge",
+      "type": "City",
       "title": null,
       "image": "",
       "summary": null,
+      "fullText": null,
       "locationId": null,
-      "url": null,
-      "updatedAt": "2023-11-03T15:41:49.000000Z"
+      "url": "https://app.kanka.io/w/167950/entities/8992267",
+      "updatedAt": "2026-03-10T20:53:56.000000Z",
+      "mapPin": {
+        "id": "boareskyr-bridge",
+        "label": "Boareskyr Bridge",
+        "locationName": "Boareskyr Bridge",
+        "x": 57.94,
+        "y": 54.37
+      },
+      "mapLink": "./map.html?pin=boareskyr-bridge",
+      "previewImage": "./assets/maps/previews/boareskyr-bridge.jpg"
     },
     "latestChronicle": null
   }

@@ -8,7 +8,7 @@ async function main() {
     const hero = document.querySelector("[data-brewery-main]");
     if (hero) {
       hero.innerHTML = `
-        <p class="eyebrow">Featured Organisation</p>
+        <p class="eyebrow">Uitgelichte organisatie</p>
         ${renderCard(data.brewery)}
       `;
     }
