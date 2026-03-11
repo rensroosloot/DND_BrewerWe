@@ -1,22 +1,23 @@
-# BrewerWe Site Architecture
+# BrewerWe Site-architectuur
 
-## Goal
-Build a player-facing campaign site that uses Kanka as structured source data, but presents the world as a story hub rather than an admin database.
+## Doel
+Bouw een spelergerichte campagnesite die Kanka gebruikt als gestructureerde databron, maar de wereld presenteert als verhaalhub in plaats van als beheerinterface.
 
-## Product direction
-Kanka is the canonical store for public campaign entities.
+## Productrichting
+Kanka is de canonieke opslagplaats voor publieke campagne-entiteiten.
 
-The website is the presentation layer:
-- more visual
-- more atmospheric
-- easier to browse
-- focused on story and play
+De website is de presentatielaag:
+- visueler
+- sfeervoller
+- makkelijker om doorheen te bladeren
+- gericht op verhaal en spel
 
-Obsidian remains the private DM workspace.
+Obsidian wordt ook gebruikt als gegenereerde spiegel van dezelfde publieke dataset.
+Later kan speler-veilige informatie uit die vault opnieuw worden gebruikt voor de website, maar Kanka blijft de primaire gestructureerde bron.
 
-## Content model
+## Contentmodel
 
-### Kanka is best for
+### Kanka is het best voor
 - characters
 - locations
 - organisations
@@ -25,218 +26,227 @@ Obsidian remains the private DM workspace.
 - journals
 - items
 - events
-- tags and relationships later
+- extra gestructureerde helperdata voor sitefeatures, zoals kaartcoordinaten
+- later ook tags en relaties
 
-### Manual notes are best for
-- home page copy
-- curated story summaries
-- session recaps with tone
-- brewery announcements
-- tavern rumors
-- player onboarding text
+### Handmatige notities zijn het best voor
+- tekst op de homepage
+- gecureerde verhaalfragmenten
+- sfeervolle sessiesamenvattingen
+- brouwerij-aankondigingen
+- kroeggeruchten
+- onboardingtekst voor spelers
 
-## Source-of-truth split
+## Source-of-truth verdeling
 
-### Private
+### Privé
 - `DND/` except `DND/09_Public/`
 - DM prep
 - secrets
 - draft lore
 
-### Public structured
+### Publiek gestructureerd
 - Kanka API
 - only non-private entities
+- inclusief helpermetadata voor rendering, zoals kaartmarkers
 
-### Public editorial
+### Publiek redactioneel
 - `DND/09_Public/`
 - hand-written player-safe notes
 
-### Technical
+### Gespiegelde werkruimte
+- Obsidian vault output
+- afgeleid van publieke Kanka-data
+- mogelijk later extra bron voor player-safe websitetekst
+
+### Technisch
 - `Tech/`
 - fetch scripts
 - transforms
 - templates
 - frontend logic
 
-### Published output
+### Gepubliceerde output
 - `docs/`
 
-## Site map
+## Sitestructuur
 
 ### 1. Home
-Purpose:
-- set tone
-- explain the campaign premise
-- show the current state of the brewery campaign
+Doel:
+- de toon zetten
+- de campagnepremisse uitleggen
+- de huidige staat van de brouwerijcampagne tonen
 
-Content:
-- campaign intro
-- latest session or latest chronicle entry
-- featured location
-- featured faction or NPC
-- quick links into the atlas, brewery, and chronicle
+Inhoud:
+- campagneintro
+- laatste sessie of laatste kroniek-item
+- uitgelichte locatie
+- uitgelichte factie of NPC
+- snelle links naar atlas, brouwerij en kroniek
 
-Sources:
-- manual copy from `DND/09_Public`
-- latest generated Kanka highlights
+Bronnen:
+- handmatige tekst uit `DND/09_Public`
+- laatst gegenereerde Kanka-highlights
 
 ### 2. Brewery
-Purpose:
-- make the brewery feel like the heart of the campaign
+Doel:
+- de brouwerij laten voelen als het hart van de campagne
 
-Content:
-- brewery identity
-- current public status
-- upgrades discovered
-- staff and known allies
-- current public hooks
-- signature brews or ingredients
+Inhoud:
+- identiteit van de brouwerij
+- huidige publieke status
+- ontdekte upgrades
+- personeel en bekende bondgenoten
+- huidige publieke hooks
+- kenmerkende bieren of ingrediënten
 
-Sources:
-- organisation data from Kanka for the brewery itself
-- items for ingredients, recipes, stock
-- manual note for custom brewery summary
+Bronnen:
+- organisatiedata uit Kanka voor de brouwerij zelf
+- items voor ingrediënten, recepten en voorraad
+- handmatige notitie voor een eigen samenvatting
 
 ### 3. Atlas
-Purpose:
-- browse the world by place, not by database table
+Doel:
+- door de wereld bladeren op plek in plaats van op databasecategorie
 
-Content:
-- location cards
-- region groupings
-- map image or map links
-- travel-style summaries
+Inhoud:
+- locatiekaarten
+- regio-indeling
+- kaartafbeeldingen of kaartlinks
+- reisachtige samenvattingen
 
-Sources:
+Bronnen:
 - locations
 - maps
-- later: parent-child location relationships
+- later: parent-child locatie-relaties
 
 ### 4. People
-Purpose:
-- show known NPCs as story actors
+Doel:
+- bekende NPC's tonen als spelers in het verhaal
 
-Content:
-- portraits
-- short known summary
-- affiliations
-- where they are connected
+Inhoud:
+- portretten
+- korte bekende samenvatting
+- affiliaties
+- waar ze mee verbonden zijn
 
-Sources:
+Bronnen:
 - characters
 - organisations
-- tags/relationships later
+- later tags/relaties
 
 ### 5. Factions
-Purpose:
-- show power blocks and allies/rivals clearly
+Doel:
+- machtsblokken en bondgenoten/rivalen helder tonen
 
-Content:
-- faction cards
-- public goals
-- known territory
-- known links to the brewery
+Inhoud:
+- factiekaarten
+- publieke doelen
+- bekend gebied
+- bekende links met de brouwerij
 
-Sources:
+Bronnen:
 - organisations
 - locations
-- tags/relationships later
+- later tags/relaties
 
 ### 6. Quest Board
-Purpose:
-- show live hooks and expedition opportunities
+Doel:
+- actieve hooks en expeditiekansen tonen
 
-Content:
+Inhoud:
 - open quests
-- rumors
-- leads by type
-- rewards or motives
+- geruchten
+- leads per type
+- beloningen of motieven
 
-Sources:
+Bronnen:
 - quests
-- manual public hooks if needed
+- handmatige publieke hooks indien nodig
 
 ### 7. Chronicle
-Purpose:
-- tell the story of the campaign over time
+Doel:
+- het verhaal van de campagne door de tijd heen vertellen
 
-Content:
-- session summaries
-- public journals
-- major public events
+Inhoud:
+- sessiesamenvattingen
+- publieke journaals
+- grote publieke gebeurtenissen
 
-Sources:
+Bronnen:
 - journals
 - events
-- manual session recaps in `DND/09_Public`
+- handmatige sessiesamenvattingen in `DND/09_Public`
 
 ### 8. Brews and Ingredients
-Purpose:
-- give the campaign a distinct brewery identity
+Doel:
+- de campagne een duidelijke brouwerij-identiteit geven
 
-Content:
-- discovered brews
-- ingredients
-- special stock
-- rare finds from adventures
+Inhoud:
+- ontdekte bieren
+- ingrediënten
+- bijzondere voorraad
+- zeldzame vondsten uit avonturen
 
-Sources:
+Bronnen:
 - items
-- manual notes for style and flavor text
+- handmatige notities voor stijl en sfeer
 
-## Design principles
+## Ontwerpprincipes
 
-### Do not mirror Kanka directly
-Avoid pages that feel like raw entity dumps.
+### Spiegel Kanka niet direct
+Vermijd pagina's die voelen als ruwe entity-dumps.
 
-Instead:
-- group entries by purpose
-- feature only useful fields
-- surface atmosphere and story first
-- show structure second
+In plaats daarvan:
+- groepeer items op doel
+- toon alleen bruikbare velden
+- zet sfeer en verhaal voorop
+- toon structuur pas daarna
 
-### Story first, data second
-Every page should answer:
-- why this matters
-- what players know
-- how it connects to the brewery or campaign
+### Eerst verhaal, daarna data
+Elke pagina moet antwoord geven op:
+- waarom dit ertoe doet
+- wat spelers weten
+- hoe dit verbonden is met de brouwerij of campagne
 
-### Curate
-Not every Kanka field belongs on the public site.
-Transform records into a simpler front-end model.
+### Cureer
+Niet elk Kanka-veld hoort op de publieke site.
+Zet records om naar een eenvoudiger front-end model.
 
-## Transformation layer
+## Transformatielaag
 
-## Phase 1
-Current state:
-- fetch public Kanka modules
-- write sanitized JSON into `docs/data/kanka-public.json`
+## Fase 1
+Huidige staat:
+- haal publieke Kanka-modules op
+- schrijf geschoonde JSON naar `docs/data/kanka-public.json`
 
-## Phase 2
-Add a build step that produces view models such as:
+## Fase 2
+Voeg een build-stap toe die view-modellen maakt zoals:
 - `home.json`
 - `atlas.json`
 - `people.json`
 - `factions.json`
 - `chronicle.json`
 
-These files should be shaped for page needs, not Kanka schema.
+Deze bestanden moeten zijn gevormd naar de behoefte van de pagina, niet naar het Kanka-schema.
 
-Example:
-- `locations` become grouped atlas sections
-- `organisations` become factions and brewery records
-- `events` and `journals` become chronicle entries
+Voorbeeld:
+- `locations` worden gegroepeerde atlassecties
+- `organisations` worden facties en brouwerijrecords
+- `events` en `journals` worden kroniek-items
 
-## Recommended build pipeline
+## Aanbevolen build-pipeline
 1. Fetch Kanka raw data
-2. Filter to public records
-3. Transform into page-oriented JSON
-4. Render frontend components from those page models
+2. Extract structured helpermetadata where nodig
+3. Filter to public records
+4. Transform into page-oriented JSON
+5. Sync relevante output naar Obsidian
+6. Render frontend components from those page models
 
-## Next implementation steps
+## Volgende implementatiestappen
 
-### Step 1
-Replace the current single long page with a small routed site:
+### Stap 1
+Vervang de huidige lange pagina door een kleine site met aparte pagina's:
 - `index.html`
 - `atlas.html`
 - `people.html`
@@ -244,30 +254,29 @@ Replace the current single long page with a small routed site:
 - `chronicle.html`
 - `brewery.html`
 
-### Step 2
-Create generated page-model JSON files in `docs/data/`
+### Stap 2
+Maak gegenereerde page-model JSON-bestanden in `docs/data/`
 
-### Step 3
-Add image rendering for entities that have public images
+### Stap 3
+Voeg afbeeldingsweergave toe voor entiteiten met publieke afbeeldingen
 
-### Step 4
-Add featured content rules:
-- featured brewery
-- featured location
-- latest chronicle entry
+### Stap 4
+Voeg regels voor uitgelichte content toe:
+- uitgelichte brouwerij
+- uitgelichte locatie
+- nieuwste kroniek-item
 
-### Step 5
-Add Kanka related data:
+### Stap 5
+Voeg gerelateerde Kanka-data toe:
 - tags
-- relationships
+- relaties
 - posts
 
-## Recommended first build scope
-Start with:
+## Aanbevolen eerste scope
+Begin met:
 - Home
 - Brewery
 - Atlas
 - Chronicle
 
-These four pages are enough to make the site feel intentional and story-driven.
-
+Deze vier pagina's zijn genoeg om de site bewust ontworpen en verhaalgedreven te laten voelen.
