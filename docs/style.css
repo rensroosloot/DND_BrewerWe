@@ -238,7 +238,11 @@ body::before {
 }
 
 .map-viewport {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   overflow: hidden;
+  min-height: min(72vh, 860px);
   cursor: grab;
   touch-action: none;
   user-select: none;
@@ -251,13 +255,16 @@ body::before {
 .map-canvas {
   --pin-scale: 1;
   position: relative;
+  flex: 0 0 auto;
   transform-origin: top left;
   transition: transform 120ms ease;
 }
 
 .map-image {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: min(72vh, 860px);
   height: auto;
 }
 
@@ -268,9 +275,11 @@ body::before {
 }
 
 .map-pin {
+  appearance: none;
   position: absolute;
   width: 18px;
   height: 18px;
+  padding: 0;
   border: 2px solid #fff8eb;
   border-radius: 999px;
   background: var(--accent);
@@ -502,6 +511,33 @@ p {
 
   .map-layout {
     grid-template-columns: 1fr;
+  }
+
+  .module-map {
+    padding: 18px 16px 20px;
+  }
+
+  .map-toolbar {
+    top: 10px;
+    right: 10px;
+    gap: 6px;
+  }
+
+  .map-control {
+    padding: 7px 10px;
+  }
+
+  .map-viewport {
+    min-height: 56vh;
+  }
+
+  .map-image {
+    max-height: 56vh;
+  }
+
+  .map-pin {
+    width: 20px;
+    height: 20px;
   }
 
   .map-sidebar {
