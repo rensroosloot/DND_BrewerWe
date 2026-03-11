@@ -8,6 +8,20 @@ function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
 }
 
+function trySetPointerCapture(element, pointerId) {
+  try {
+    element.setPointerCapture(pointerId);
+  } catch {}
+}
+
+function tryReleasePointerCapture(element, pointerId) {
+  try {
+    if (element.hasPointerCapture(pointerId)) {
+      element.releasePointerCapture(pointerId);
+    }
+  } catch {}
+}
+
 function createMapController() {
   const viewport = document.querySelector("[data-map-viewport]");
   const canvas = document.querySelector("[data-map-canvas]");
@@ -25,12 +39,16 @@ function createMapController() {
     offsetX: 0,
     offsetY: 0,
     dragging: false,
+    pinching: false,
     moved: false,
     suppressClick: false,
     startX: 0,
     startY: 0,
     originX: 0,
-    originY: 0
+    originY: 0,
+    activePointers: new Map(),
+    pinchStartDistance: 0,
+    pinchStartScale: 1
   };
 
   function applyTransform() {
@@ -38,11 +56,11 @@ function createMapController() {
     canvas.style.setProperty("--pin-scale", `${1 / state.scale}`);
   }
 
-  function zoom(delta, clientX = null, clientY = null) {
+  function zoomToScale(nextScale, clientX = null, clientY = null) {
     const previousScale = state.scale;
-    const nextScale = clamp(state.scale + delta, MIN_SCALE, MAX_SCALE);
+    const clampedScale = clamp(nextScale, MIN_SCALE, MAX_SCALE);
 
-    if (nextScale === previousScale) {
+    if (clampedScale === previousScale) {
       return;
     }
 
@@ -53,11 +71,11 @@ function createMapController() {
       const contentX = (pointX - state.offsetX) / previousScale;
       const contentY = (pointY - state.offsetY) / previousScale;
 
-      state.scale = nextScale;
-      state.offsetX = pointX - contentX * nextScale;
-      state.offsetY = pointY - contentY * nextScale;
+      state.scale = clampedScale;
+      state.offsetX = pointX - contentX * clampedScale;
+      state.offsetY = pointY - contentY * clampedScale;
     } else {
-      state.scale = nextScale;
+      state.scale = clampedScale;
     }
 
     if (state.scale === 1) {
@@ -65,6 +83,46 @@ function createMapController() {
       state.offsetY = 0;
     }
     applyTransform();
+  }
+
+  function zoom(delta, clientX = null, clientY = null) {
+    zoomToScale(state.scale + delta, clientX, clientY);
+  }
+
+  function getPointerDistance() {
+    const [first, second] = [...state.activePointers.values()];
+    if (!first || !second) {
+      return 0;
+    }
+
+    return Math.hypot(second.clientX - first.clientX, second.clientY - first.clientY);
+  }
+
+  function getPointerCenter() {
+    const [first, second] = [...state.activePointers.values()];
+    if (!first || !second) {
+      return null;
+    }
+
+    return {
+      x: (first.clientX + second.clientX) / 2,
+      y: (first.clientY + second.clientY) / 2
+    };
+  }
+
+  function startPinch() {
+    state.pinching = true;
+    state.dragging = false;
+    state.moved = true;
+    state.pinchStartDistance = getPointerDistance();
+    state.pinchStartScale = state.scale;
+    viewport.classList.remove("is-dragging");
+  }
+
+  function stopPinch() {
+    state.pinching = false;
+    state.pinchStartDistance = 0;
+    state.pinchStartScale = state.scale;
   }
 
   function reset() {
@@ -88,20 +146,48 @@ function createMapController() {
   );
 
   viewport.addEventListener("pointerdown", (event) => {
-    if (state.scale <= 1) {
+    state.activePointers.set(event.pointerId, {
+      clientX: event.clientX,
+      clientY: event.clientY
+    });
+    trySetPointerCapture(viewport, event.pointerId);
+
+    if (state.activePointers.size === 2) {
+      startPinch();
       return;
     }
-    state.dragging = true;
-    state.moved = false;
-    state.startX = event.clientX;
-    state.startY = event.clientY;
-    state.originX = state.offsetX;
-    state.originY = state.offsetY;
-    viewport.setPointerCapture(event.pointerId);
-    viewport.classList.add("is-dragging");
+
+    if (state.activePointers.size === 1 && state.scale > 1) {
+      state.dragging = true;
+      state.moved = false;
+      state.startX = event.clientX;
+      state.startY = event.clientY;
+      state.originX = state.offsetX;
+      state.originY = state.offsetY;
+      viewport.classList.add("is-dragging");
+    }
   });
 
   viewport.addEventListener("pointermove", (event) => {
+    if (state.activePointers.has(event.pointerId)) {
+      state.activePointers.set(event.pointerId, {
+        clientX: event.clientX,
+        clientY: event.clientY
+      });
+    }
+
+    if (state.pinching && state.activePointers.size >= 2) {
+      const distance = getPointerDistance();
+      const center = getPointerCenter();
+      if (!distance || !center || !state.pinchStartDistance) {
+        return;
+      }
+
+      const nextScale = state.pinchStartScale * (distance / state.pinchStartDistance);
+      zoomToScale(nextScale, center.x, center.y);
+      return;
+    }
+
     if (!state.dragging) {
       return;
     }
@@ -116,21 +202,41 @@ function createMapController() {
   });
 
   function endDrag(event) {
-    if (!state.dragging) {
-      return;
-    }
-    if (state.moved) {
+    state.activePointers.delete(event.pointerId);
+
+    if (state.pinching && state.activePointers.size < 2) {
+      stopPinch();
       state.suppressClick = true;
     }
-    state.dragging = false;
-    viewport.classList.remove("is-dragging");
-    if (event?.pointerId !== undefined && viewport.hasPointerCapture(event.pointerId)) {
-      viewport.releasePointerCapture(event.pointerId);
+
+    if (state.dragging) {
+      if (state.moved) {
+        state.suppressClick = true;
+      }
+      state.dragging = false;
+      viewport.classList.remove("is-dragging");
+    }
+
+    if (event?.pointerId !== undefined) {
+      tryReleasePointerCapture(viewport, event.pointerId);
+    }
+
+    if (state.activePointers.size === 1 && state.scale > 1) {
+      const [remainingPointer] = state.activePointers.values();
+      if (remainingPointer) {
+        state.dragging = true;
+        state.startX = remainingPointer.clientX;
+        state.startY = remainingPointer.clientY;
+        state.originX = state.offsetX;
+        state.originY = state.offsetY;
+        viewport.classList.add("is-dragging");
+      }
     }
   }
 
   viewport.addEventListener("pointerup", endDrag);
   viewport.addEventListener("pointercancel", endDrag);
+  viewport.addEventListener("pointerleave", endDrag);
 
   applyTransform();
   return {
