@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { buildBreweryViewModel } from "./brewery-schema.mjs";
+import { extractLegacyLocationPin, extractMapPinsFromRecord } from "./map-pin-schema.mjs";
 
 const rootDir = process.cwd();
 const sourceFile = path.join(rootDir, "docs", "data", "kanka-public.json");
@@ -33,26 +34,9 @@ function slugify(value) {
     .replace(/\s+/g, "-");
 }
 
-function extractMapPin(location) {
-  const source = `${location.fullText || ""}\n${location.summary || ""}`;
-  const xMatch = source.match(/map_x:\s*([0-9]+(?:\.[0-9]+)?)/i);
-  const yMatch = source.match(/map_y:\s*([0-9]+(?:\.[0-9]+)?)/i);
-
-  if (!xMatch || !yMatch) {
-    return null;
-  }
-
-  return {
-    id: slugify(location.name || location.id),
-    label: location.name,
-    locationName: location.name,
-    x: Number.parseFloat(xMatch[1]),
-    y: Number.parseFloat(yMatch[1])
-  };
-}
-
 function stripMapMeta(text) {
   return String(text || "")
+    .replace(/\[map_pin\][\s\S]*?\[\/map_pin\]/gi, "")
     .replace(/naam:\s*[^\n]+/gi, "")
     .replace(/map_x:\s*[0-9]+(?:\.[0-9]+)?/gi, "")
     .replace(/map_y:\s*[0-9]+(?:\.[0-9]+)?/gi, "")
@@ -62,6 +46,7 @@ function stripMapMeta(text) {
 
 function stripMapMetaHtml(html) {
   return String(html || "")
+    .replace(/\[map_pin\](?:<br>\s*)*[\s\S]*?\[\/map_pin\](?:<br>\s*)*/gi, "")
     .replace(/naam:\s*[^<\n]+(?:<br>\s*)?/gi, "")
     .replace(/map_x:\s*[0-9]+(?:\.[0-9]+)?(?:<br>\s*)?/gi, "")
     .replace(/map_y:\s*[0-9]+(?:\.[0-9]+)?(?:<br>\s*)?/gi, "")
@@ -242,6 +227,15 @@ async function main() {
     item?.id === brewery?.id ? sanitizeBreweryDisplay(item, breweryModel) : item
   );
   const enrichedLocations = await enrichLocationsWithForgottenRealmsLinks(modules.locations || []);
+  const sourceModules = [
+    ["locations", enrichedLocations],
+    ["characters", modules.characters || []],
+    ["quests", modules.quests || []],
+    ["organisations", modules.organisations || []],
+    ["items", modules.items || []],
+    ["events", modules.events || []],
+    ["journals", modules.journals || []]
+  ];
 
   let existingPins = [];
   try {
@@ -250,10 +244,47 @@ async function main() {
     existingPins = [];
   }
 
-  const generatedPins = enrichedLocations.map(extractMapPin).filter(Boolean);
-  const generatedNames = new Set(generatedPins.map((pin) => pin.locationName));
-  const preservedPins = existingPins.filter((pin) => !generatedNames.has(pin.locationName));
-  const mapPins = [...generatedPins, ...preservedPins];
+  const generatedPins = sourceModules.flatMap(([moduleName, records]) =>
+    records.flatMap((record) =>
+      extractMapPinsFromRecord(record, moduleName).map((pin) => ({
+        ...pin,
+        x: pin.x,
+        y: pin.y,
+        locationName: pin.entityType === "location" ? pin.entityRef : null,
+        summary: stripMapMeta(record.summary),
+        fullText: stripMapMeta(record.fullText),
+        fullHtml: stripMapMetaHtml(record.fullHtml),
+        type: record.type ?? null,
+        url: record.url ?? null,
+        image: record.image ?? null,
+        module: moduleName
+      }))
+    )
+  );
+
+  const explicitLocationRefs = new Set(
+    generatedPins.filter((pin) => pin.entityType === "location").map((pin) => pin.entityRef)
+  );
+  const legacyPins = enrichedLocations
+    .filter((location) => !explicitLocationRefs.has(location.name))
+    .map((location) => extractLegacyLocationPin(location))
+    .filter(Boolean)
+    .map((pin) => ({
+      ...pin,
+      locationName: pin.entityRef,
+      summary: null,
+      fullText: null,
+      fullHtml: null,
+      type: null,
+      url: null,
+      image: null,
+      module: "locations"
+    }));
+
+  const nextPins = [...generatedPins, ...legacyPins];
+  const generatedIds = new Set(nextPins.map((pin) => pin.id));
+  const preservedPins = existingPins.filter((pin) => !generatedIds.has(pin.id));
+  const mapPins = [...nextPins, ...preservedPins];
   const locationById = new Map(enrichedLocations.map((location) => [location.id, location]));
 
   const atlasLocations = enrichedLocations.map((location) => {

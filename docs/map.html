@@ -57,6 +57,35 @@
             <h3>Kies een pin</h3>
             <p>Klik op een pin op de kaart om details van een locatie te bekijken. Gebruik het muiswiel of de knoppen om te zoomen en sleep om te bewegen.</p>
           </div>
+          <div class="map-legend">
+            <p class="eyebrow">Legenda</p>
+            <div class="map-legend-list">
+              <div class="map-legend-item">
+                <span class="map-pin map-pin-static pin-type-location" aria-hidden="true">
+                  <span class="map-pin-glyph">&#9679;</span>
+                </span>
+                <span>Locatie</span>
+              </div>
+              <div class="map-legend-item">
+                <span class="map-pin map-pin-static pin-type-person" aria-hidden="true">
+                  <span class="map-pin-glyph">&#128100;</span>
+                </span>
+                <span>Persoon</span>
+              </div>
+              <div class="map-legend-item">
+                <span class="map-pin map-pin-static pin-type-quest" aria-hidden="true">
+                  <span class="map-pin-glyph">&#9876;</span>
+                </span>
+                <span>Quest</span>
+              </div>
+              <div class="map-legend-item">
+                <span class="map-pin map-pin-static pin-type-misc" aria-hidden="true">
+                  <span class="map-pin-glyph">?</span>
+                </span>
+                <span>Overig</span>
+              </div>
+            </div>
+          </div>
           <div class="map-helper" data-map-helper>
             <p class="eyebrow">Pin-helper</p>
             <label class="map-helper-toggle">
@@ -75,11 +104,29 @@
                 <dd data-map-y>-</dd>
               </div>
             </dl>
-            <label class="map-helper-label" for="map-location-name">Locatienaam voor Kanka</label>
-            <input id="map-location-name" class="map-helper-input" type="text" placeholder="Bijvoorbeeld: Ebrius">
+            <label class="map-helper-label" for="map-pin-label">Label</label>
+            <input id="map-pin-label" class="map-helper-input" type="text" placeholder="Bijvoorbeeld: High Moor">
+            <div class="map-helper-grid">
+              <label class="map-helper-field">
+                <span>Entity type</span>
+                <select id="map-entity-type" class="map-helper-input">
+                  <option value="location">Location</option>
+                  <option value="person">Person</option>
+                  <option value="quest">Quest</option>
+                  <option value="misc">Misc</option>
+                </select>
+              </label>
+            </div>
+            <label class="map-helper-label" for="map-entity-ref">Entity ref voor Kanka</label>
+            <input id="map-entity-ref" class="map-helper-input" type="text" placeholder="Bijvoorbeeld: High Moor">
             <label class="map-helper-label" for="map-kanka-snippet">Kopieer naar Kanka</label>
-            <textarea id="map-kanka-snippet" class="map-helper-output" readonly>map_x:
-map_y:</textarea>
+            <textarea id="map-kanka-snippet" class="map-helper-output" readonly>[map_pin]
+label:
+entity_type: location
+entity_ref:
+map_x:
+map_y:
+[/map_pin]</textarea>
           </div>
         </aside>
       </div>

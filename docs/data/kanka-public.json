@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T08:40:06.054Z",
+  "generatedAt": "2026-03-15T14:39:46.691Z",
   "campaignId": 167950,
   "modules": {
     "characters": [
@@ -12,8 +12,8 @@
         "title": null,
         "image": "https://cdn-ugc.kanka.io/characters/z9MZBTznhgaEAcEw8dm3cL4aX0hGm7cudT7vOUgV.png",
         "summary": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep.",
-        "fullText": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep. RED used to have a name, however it was ehr.. redacted. The parrot is quite vulgar but luckily doesn't know the proper curse words. Her former owner programmed RED to provide any takers with more or less usefull information regarding the bar and brewery. RED is capable of understanding common language but might not always provide the answers some might hope for. Once everywhile RED will receive scheduled upgrades which will unlock additional information.",
-        "fullHtml": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep. RED used to have a name, however it was ehr.. redacted. The parrot is quite vulgar but luckily doesn't know the proper curse words.<br><br>Her former owner programmed RED to provide any takers with more or less usefull information regarding the bar and brewery. RED is capable of understanding common language but might not always provide the answers some might hope for.<br><br>Once everywhile RED will receive scheduled upgrades which will unlock additional information.",
+        "fullText": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep. RED used to have a name, however it was ehr.. redacted. The parrot is quite vulgar but luckily doesn't know the proper curse words. Her former owner programmed RED to provide any takers with more or less usefull information regarding the bar and brewery. RED is capable of understanding common language but might not always provide the answers some might hope for. Once everywhile RED will receive scheduled upgrades which will unlock additional information. [map_pin] id: red-the-robot-parrot label: RED the Robot Parrot entity_type: person entity_ref: RED the Robot Parrot map_x: 66.72 map_y: 50.68 [/map_pin]",
+        "fullHtml": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep. RED used to have a name, however it was ehr.. redacted. The parrot is quite vulgar but luckily doesn't know the proper curse words.<br><br>Her former owner programmed RED to provide any takers with more or less usefull information regarding the bar and brewery. RED is capable of understanding common language but might not always provide the answers some might hope for.<br><br>Once everywhile RED will receive scheduled upgrades which will unlock additional information.<br><br>[map_pin]<br><br>id: red-the-robot-parrot<br><br>label: RED the Robot Parrot<br><br>entity_type: person<br><br>entity_ref: RED the Robot Parrot<br><br>map_x: 66.72<br><br>map_y: 50.68<br><br>[/map_pin]",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/3770862",
         "updatedAt": "2026-03-10T19:55:08.000000Z"
@@ -28,9 +28,9 @@
         "type": "City",
         "title": null,
         "image": "",
-        "summary": "naam: Boareskyr Bridge map_x: 57.94 map_y: 54.37 dit is een test text",
-        "fullText": "naam: Boareskyr Bridge map_x: 57.94 map_y: 54.37 dit is een test text",
-        "fullHtml": "naam: Boareskyr Bridge<br><br>map_x: 57.94<br><br>map_y: 54.37<br><br>dit is een test text",
+        "summary": "[map_pin] id: boareskyr-bridge label: Boareskyr Bridge entity_type: location entity_ref: Boareskyr Bridge map_x: 58.36 map_y: 54.33 [/map_pin] dit is een test text",
+        "fullText": "[map_pin] id: boareskyr-bridge label: Boareskyr Bridge entity_type: location entity_ref: Boareskyr Bridge map_x: 58.36 map_y: 54.33 [/map_pin] dit is een test text",
+        "fullHtml": "[map_pin]<br><br>id: boareskyr-bridge<br><br>label: Boareskyr Bridge<br><br>entity_type: location<br><br>entity_ref: Boareskyr Bridge<br><br>map_x: 58.36<br><br>map_y: 54.33<br><br>[/map_pin]<br><br>dit is een test text",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/8992267",
         "updatedAt": "2026-03-10T20:53:56.000000Z"
@@ -58,9 +58,9 @@
         "type": null,
         "title": null,
         "image": "",
-        "summary": "map_x: 54.08 map_y: 45.14 The High Moor was a large, monster-infested, open moorland in western Faerûn , bordered on the east by the Serpent Hills and on the west by the Misty Forest .",
-        "fullText": "map_x: 54.08 map_y: 45.14 The High Moor was a large, monster-infested, open moorland in western Faerûn , bordered on the east by the Serpent Hills and on the west by the Misty Forest . [ 1 ]",
-        "fullHtml": "map_x: 54.08<br><br>map_y: 45.14<br><br>The High Moor was a large, monster-infested, open moorland in <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/West_Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">western</a> <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">Faerûn</a> , bordered on the east by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Serpent_Hills\" target=\"_blank\" rel=\"noreferrer noopener\">Serpent Hills</a> and on the west by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Misty_Forest\" target=\"_blank\" rel=\"noreferrer noopener\">Misty Forest</a> .",
+        "summary": "[map_pin] id: high-moor label: High Moor entity_type: location entity_ref: High Moor map_x: 54.08 map_y: 45.14 [/map_pin] The High Moor was a large, monster-infested, open moorland in western Faerûn , bordered on the east by the Serpent Hills and on the west by the Misty Forest .",
+        "fullText": "[map_pin] id: high-moor label: High Moor entity_type: location entity_ref: High Moor map_x: 54.08 map_y: 45.14 [/map_pin] The High Moor was a large, monster-infested, open moorland in western Faerûn , bordered on the east by the Serpent Hills and on the west by the Misty Forest . [ 1 ]",
+        "fullHtml": "[map_pin]<br><br>id: high-moor<br><br>label: High Moor<br><br>entity_type: location<br><br>entity_ref: High Moor<br><br>map_x: 54.08<br><br>map_y: 45.14<br><br>[/map_pin]<br><br>The High Moor was a large, monster-infested, open moorland in <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/West_Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">western</a> <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">Faerûn</a> , bordered on the east by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Serpent_Hills\" target=\"_blank\" rel=\"noreferrer noopener\">Serpent Hills</a> and on the west by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Misty_Forest\" target=\"_blank\" rel=\"noreferrer noopener\">Misty Forest</a> .",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/8994607",
         "updatedAt": "2026-03-11T08:49:27.000000Z"
@@ -88,9 +88,9 @@
         "type": "City",
         "title": null,
         "image": "",
-        "summary": "map_x: 58.19 map_y: 43.34 Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons .",
-        "fullText": "map_x: 58.19 map_y: 43.34 Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons . [ 5 ]",
-        "fullHtml": "map_x: 58.19<br><br>map_y: 43.34<br><br>Orogoth was one of the most dangerous locations in the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/High_Moor\" target=\"_blank\" rel=\"noreferrer noopener\">High Moor</a> and was known for the presence of <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Black_dragon\" target=\"_blank\" rel=\"noreferrer noopener\">black dragons</a> .",
+        "summary": "[map_pin] id: orogoth label: Orogoth entity_type: location entity_ref: Orogoth map_x: 58.19 map_y: 43.34 [/map_pin] Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons .",
+        "fullText": "[map_pin] id: orogoth label: Orogoth entity_type: location entity_ref: Orogoth map_x: 58.19 map_y: 43.34 [/map_pin] Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons . [ 5 ]",
+        "fullHtml": "[map_pin]<br><br>id: orogoth<br><br>label: Orogoth<br><br>entity_type: location<br><br>entity_ref: Orogoth<br><br>map_x: 58.19<br><br>map_y: 43.34<br><br>[/map_pin]<br><br>Orogoth was one of the most dangerous locations in the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/High_Moor\" target=\"_blank\" rel=\"noreferrer noopener\">High Moor</a> and was known for the presence of <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Black_dragon\" target=\"_blank\" rel=\"noreferrer noopener\">black dragons</a> .",
         "locationId": 2022248,
         "url": "https://app.kanka.io/w/167950/entities/8994608",
         "updatedAt": "2026-03-11T08:49:27.000000Z"

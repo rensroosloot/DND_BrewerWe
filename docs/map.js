@@ -283,24 +283,63 @@ function setupPinHelper(controller) {
   const xRoot = document.querySelector("[data-map-x]");
   const yRoot = document.querySelector("[data-map-y]");
   const snippetRoot = document.querySelector("#map-kanka-snippet");
-  const nameInput = document.querySelector("#map-location-name");
+  const labelInput = document.querySelector("#map-pin-label");
+  const entityRefInput = document.querySelector("#map-entity-ref");
+  const entityTypeSelect = document.querySelector("#map-entity-type");
   const toggle = document.querySelector("[data-map-helper-toggle]");
 
-  if (!viewport || !controller || !xRoot || !yRoot || !snippetRoot || !nameInput || !toggle) {
+  if (
+    !viewport ||
+    !controller ||
+    !xRoot ||
+    !yRoot ||
+    !snippetRoot ||
+    !labelInput ||
+    !entityRefInput ||
+    !entityTypeSelect ||
+    !toggle
+  ) {
     return;
   }
 
-  function updateSnippet(x, y) {
-    const locationName = nameInput.value.trim();
-    const nameLine = locationName ? `naam: ${locationName}\n` : "";
-    snippetRoot.value = `${nameLine}map_x: ${x}\nmap_y: ${y}`;
+  function toId(value) {
+    return String(value || "")
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, "")
+      .trim()
+      .replace(/\s+/g, "-");
   }
 
-  nameInput.addEventListener("input", () => {
+  function updateSnippet(x, y) {
+    const label = labelInput.value.trim();
+    const entityRef = entityRefInput.value.trim();
+    const entityType = entityTypeSelect.value;
+    const id = toId(label || entityRef);
+
+    snippetRoot.value = `[map_pin]
+id: ${id}
+label: ${label}
+entity_type: ${entityType}
+entity_ref: ${entityRef}
+map_x: ${x}
+map_y: ${y}
+[/map_pin]`;
+  }
+
+  function refreshFromForm() {
     const x = xRoot.textContent === "-" ? "" : xRoot.textContent;
     const y = yRoot.textContent === "-" ? "" : yRoot.textContent;
     updateSnippet(x, y);
+  }
+
+  labelInput.addEventListener("input", () => {
+    if (!entityRefInput.value.trim()) {
+      entityRefInput.value = labelInput.value.trim();
+    }
+    refreshFromForm();
   });
+  entityRefInput.addEventListener("input", refreshFromForm);
+  entityTypeSelect.addEventListener("change", refreshFromForm);
 
   viewport.addEventListener("click", (event) => {
     if (event.target.closest(".map-pin") || event.target.closest(".map-control")) {
@@ -338,6 +377,17 @@ function renderActionLinks(location) {
   return `<div class="action-links">${links.join("")}</div>`;
 }
 
+function renderPinActionLinks(pin) {
+  const links = [];
+  if (pin?.entityType === "location") {
+    links.push('<a class="action-link" href="./atlas.html">Atlas</a>');
+  }
+  if (pin?.url) {
+    links.push(`<a class="action-link" href="${pin.url}" target="_blank" rel="noreferrer noopener">Kanka</a>`);
+  }
+  return links.length ? `<div class="action-links">${links.join("")}</div>` : "";
+}
+
 function renderLocationRelations(location) {
   const parts = [];
 
@@ -363,9 +413,48 @@ function renderLocationRelations(location) {
   return parts.join("");
 }
 
+function buildMapPinSnippet(pin, location = null) {
+  const label = pin?.label || location?.name || "";
+  const entityType = pin?.entityType || "location";
+  const entityRef = pin?.entityRef || location?.name || label;
+  const x = Number.isFinite(Number(pin?.x)) ? Number(pin.x).toFixed(2) : "";
+  const y = Number.isFinite(Number(pin?.y)) ? Number(pin.y).toFixed(2) : "";
+  const id = String(pin?.id || "")
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+
+  return `[map_pin]
+id: ${id}
+label: ${label}
+entity_type: ${entityType}
+entity_ref: ${entityRef}
+map_x: ${x}
+map_y: ${y}
+[/map_pin]`;
+}
+
 function renderSidebar(pin, location) {
   const root = document.querySelector("[data-map-selection]");
   if (!root) {
+    return;
+  }
+
+  if (!location) {
+    const body = pin.fullHtml
+      ? `<div class="rich-text">${pin.fullHtml}</div>`
+      : `<p>${pin.notes || pin.summary || "Nog geen publieke samenvatting."}</p>`;
+
+    root.innerHTML = `
+      <p class="eyebrow">${pin.label}</p>
+      <h3>${pin.label}</h3>
+      ${pin.type ? `<p class="meta">${pin.type}</p>` : ""}
+      ${body}
+      <label class="map-helper-label" for="map-selection-snippet">Kanka snippet</label>
+      <textarea id="map-selection-snippet" class="map-helper-output map-selection-output" readonly>${buildMapPinSnippet(pin)}</textarea>
+      ${renderPinActionLinks(pin)}
+    `;
     return;
   }
 
@@ -379,6 +468,8 @@ function renderSidebar(pin, location) {
     ${renderLocationRelations(location)}
     ${body}
     ${location?.type ? `<p class="meta">${location.type}</p>` : ""}
+    <label class="map-helper-label" for="map-selection-snippet">Kanka snippet</label>
+    <textarea id="map-selection-snippet" class="map-helper-output map-selection-output" readonly>${buildMapPinSnippet(pin, location)}</textarea>
     ${renderActionLinks(location)}
   `;
 }
@@ -386,13 +477,16 @@ function renderSidebar(pin, location) {
 function createPin(pin, locations) {
   const button = document.createElement("button");
   button.type = "button";
-  button.className = "map-pin";
+  button.className = `map-pin pin-type-${pin.entityType || "location"}`;
   button.style.left = `${pin.x}%`;
   button.style.top = `${pin.y}%`;
   button.setAttribute("aria-label", pin.label);
   button.title = pin.label;
+  button.innerHTML = `<span class="map-pin-glyph" aria-hidden="true">${pinGlyph(pin.entityType)}</span>`;
 
-  const location = locations.find((item) => item.name === pin.locationName) || null;
+  const location = pin.entityType === "location"
+    ? locations.find((item) => item.name === (pin.entityRef || pin.locationName)) || null
+    : null;
 
   button.addEventListener("click", () => {
     document.querySelectorAll(".map-pin").forEach((item) => item.classList.remove("is-active"));
@@ -409,6 +503,13 @@ function createPin(pin, locations) {
   });
 
   return button;
+}
+
+function pinGlyph(entityType) {
+  if (entityType === "person") return "&#128100;";
+  if (entityType === "quest") return "&#9876;";
+  if (entityType === "misc") return "?";
+  return "&#9679;";
 }
 
 async function main() {

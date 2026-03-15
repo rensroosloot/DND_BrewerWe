@@ -1149,8 +1149,8 @@ body::before {
 .map-pin {
   appearance: none;
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   padding: 0;
   border: 2px solid #fff8eb;
   border-radius: 999px;
@@ -1166,13 +1166,48 @@ body::before {
 .map-pin::after {
   content: "";
   position: absolute;
-  inset: 3px;
+  inset: 4px;
   border-radius: 999px;
   background: rgba(255, 248, 235, 0.42);
 }
 
+.map-pin-glyph {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff8eb;
+  font-size: 12px;
+  line-height: 1;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.pin-type-person {
+  background: #7b4f26;
+}
+
+.pin-type-quest {
+  background: #8b3b17;
+  border-radius: 10px;
+}
+
+.pin-type-misc,
+.pin-type-unknown {
+  background: #6f6553;
+}
+
 .map-pin.is-active {
   background: #6d8f2f;
+}
+
+.map-pin-static {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  flex: 0 0 auto;
+  pointer-events: none;
 }
 
 .map-sidebar {
@@ -1181,6 +1216,24 @@ body::before {
   align-self: start;
   position: sticky;
   top: 20px;
+}
+
+.map-legend {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.map-legend-list {
+  display: grid;
+  gap: 10px;
+}
+
+.map-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
 }
 
 .map-helper {
@@ -1195,6 +1248,18 @@ body::before {
   gap: 8px;
   margin-bottom: 10px;
   color: var(--ink);
+}
+
+.map-helper-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.map-helper-field {
+  display: grid;
+  gap: 6px;
 }
 
 .map-coords {
@@ -1242,8 +1307,12 @@ body::before {
 }
 
 .map-helper-output {
-  min-height: 96px;
+  min-height: 156px;
   resize: vertical;
+}
+
+.map-selection-output {
+  min-height: 148px;
 }
 
 .module-map {

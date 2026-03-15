@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T08:40:06.054Z",
+  "generatedAt": "2026-03-15T14:39:46.691Z",
   "title": "BrewerWe",
   "intro": "Een spelergerichte campagnehub rond een kleine brouwerij, de bijbehorende bar en de plaatsen en personen die ermee verbonden zijn.",
   "stats": {
@@ -35,8 +35,8 @@
       "type": "City",
       "title": null,
       "image": "",
-      "summary": null,
-      "fullText": null,
+      "summary": "dit is een test text",
+      "fullText": "dit is een test text",
       "fullHtml": "dit is een test text",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/8992267",
@@ -51,9 +51,21 @@
       "mapPin": {
         "id": "boareskyr-bridge",
         "label": "Boareskyr Bridge",
+        "entityType": "location",
+        "entityRef": "Boareskyr Bridge",
+        "x": 58.36,
+        "y": 54.33,
+        "notes": null,
+        "sourceModule": "locations",
+        "sourceRecordId": 2021733,
         "locationName": "Boareskyr Bridge",
-        "x": 57.94,
-        "y": 54.37
+        "summary": "dit is een test text",
+        "fullText": "dit is een test text",
+        "fullHtml": "dit is een test text",
+        "type": "City",
+        "url": "https://app.kanka.io/w/167950/entities/8992267",
+        "image": "",
+        "module": "locations"
       },
       "mapLink": "./map.html?pin=boareskyr-bridge",
       "previewImage": "./assets/maps/previews/boareskyr-bridge.jpg"
