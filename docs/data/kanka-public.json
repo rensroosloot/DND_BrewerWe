@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T22:15:16.877Z",
+  "generatedAt": "2026-03-15T08:40:06.054Z",
   "campaignId": 167950,
   "modules": {
     "characters": [
@@ -13,6 +13,7 @@
         "image": "https://cdn-ugc.kanka.io/characters/z9MZBTznhgaEAcEw8dm3cL4aX0hGm7cudT7vOUgV.png",
         "summary": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep.",
         "fullText": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep. RED used to have a name, however it was ehr.. redacted. The parrot is quite vulgar but luckily doesn't know the proper curse words. Her former owner programmed RED to provide any takers with more or less usefull information regarding the bar and brewery. RED is capable of understanding common language but might not always provide the answers some might hope for. Once everywhile RED will receive scheduled upgrades which will unlock additional information.",
+        "fullHtml": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep. RED used to have a name, however it was ehr.. redacted. The parrot is quite vulgar but luckily doesn't know the proper curse words.<br><br>Her former owner programmed RED to provide any takers with more or less usefull information regarding the bar and brewery. RED is capable of understanding common language but might not always provide the answers some might hope for.<br><br>Once everywhile RED will receive scheduled upgrades which will unlock additional information.",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/3770862",
         "updatedAt": "2026-03-10T19:55:08.000000Z"
@@ -29,6 +30,7 @@
         "image": "",
         "summary": "naam: Boareskyr Bridge map_x: 57.94 map_y: 54.37 dit is een test text",
         "fullText": "naam: Boareskyr Bridge map_x: 57.94 map_y: 54.37 dit is een test text",
+        "fullHtml": "naam: Boareskyr Bridge<br><br>map_x: 57.94<br><br>map_y: 54.37<br><br>dit is een test text",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/8992267",
         "updatedAt": "2026-03-10T20:53:56.000000Z"
@@ -43,9 +45,25 @@
         "image": "",
         "summary": null,
         "fullText": null,
+        "fullHtml": null,
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/3784705",
         "updatedAt": "2023-11-03T15:41:49.000000Z"
+      },
+      {
+        "id": 2022248,
+        "entityId": 8994607,
+        "module": "locations",
+        "name": "High Moor",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "map_x: 54.08 map_y: 45.14 The High Moor was a large, monster-infested, open moorland in western Faerûn , bordered on the east by the Serpent Hills and on the west by the Misty Forest .",
+        "fullText": "map_x: 54.08 map_y: 45.14 The High Moor was a large, monster-infested, open moorland in western Faerûn , bordered on the east by the Serpent Hills and on the west by the Misty Forest . [ 1 ]",
+        "fullHtml": "map_x: 54.08<br><br>map_y: 45.14<br><br>The High Moor was a large, monster-infested, open moorland in <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/West_Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">western</a> <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">Faerûn</a> , bordered on the east by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Serpent_Hills\" target=\"_blank\" rel=\"noreferrer noopener\">Serpent Hills</a> and on the west by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Misty_Forest\" target=\"_blank\" rel=\"noreferrer noopener\">Misty Forest</a> .",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/8994607",
+        "updatedAt": "2026-03-11T08:49:27.000000Z"
       },
       {
         "id": 885310,
@@ -57,9 +75,25 @@
         "image": "",
         "summary": null,
         "fullText": null,
+        "fullHtml": null,
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/3784723",
         "updatedAt": "2023-11-03T15:42:57.000000Z"
+      },
+      {
+        "id": 2022249,
+        "entityId": 8994608,
+        "module": "locations",
+        "name": "Orogoth",
+        "type": "City",
+        "title": null,
+        "image": "",
+        "summary": "map_x: 58.19 map_y: 43.34 Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons .",
+        "fullText": "map_x: 58.19 map_y: 43.34 Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons . [ 5 ]",
+        "fullHtml": "map_x: 58.19<br><br>map_y: 43.34<br><br>Orogoth was one of the most dangerous locations in the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/High_Moor\" target=\"_blank\" rel=\"noreferrer noopener\">High Moor</a> and was known for the presence of <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Black_dragon\" target=\"_blank\" rel=\"noreferrer noopener\">black dragons</a> .",
+        "locationId": 2022248,
+        "url": "https://app.kanka.io/w/167950/entities/8994608",
+        "updatedAt": "2026-03-11T08:49:27.000000Z"
       }
     ],
     "organisations": [
@@ -71,8 +105,9 @@
         "type": "Brewery",
         "title": null,
         "image": "",
-        "summary": null,
-        "fullText": null,
+        "summary": "[brewery_plan] plan_date: 2026-03-12 planned_return_date: 2026-03-26 kettle_name: Copper Kettle batch_name: Copper Keg Ale kettle_start_volume_liters: 30 efficiency: 2 quality: 1 value: 1 oversight: 0 notes: Gebalanceerde batch voor een korte afwezigheid.",
+        "fullText": "[brewery_plan] plan_date: 2026-03-12 planned_return_date: 2026-03-26 kettle_name: Copper Kettle batch_name: Copper Keg Ale kettle_start_volume_liters: 30 efficiency: 2 quality: 1 value: 1 oversight: 0 notes: Gebalanceerde batch voor een korte afwezigheid. [/brewery_plan] [brewery_settlement] date: 2025-12-18 planned_return_date: 2025-12-18 kettle_name: Copper Kettle period_label: Winter Ale production_roll: 14 contamination_roll: 16 sales_roll: 15 net_result_gp: 81 volume_produced_liters: 17 volume_sold_liters: 17 volume_spoiled_liters: 1 batch_result: success incident: none notes: Sterke winterverkoop en een schone run. [/brewery_settlement] [brewery_settlement] date: 2026-01-08 planned_return_date: 2026-01-07 kettle_name: Copper Kettle period_label: Deep Cellar Bitter production_roll: 11 contamination_roll: 12 sales_roll: 10 net_result_gp: 42 volume_produced_liters: 19 volume_sold_liters: 14 volume_spoiled_liters: 4 batch_result: delayed incident: none notes: Iets later terug; bruikbaar volume bleef redelijk, maar de afzet was middelmatig. [/brewery_settlement] [brewery_settlement] date: 2026-01-29 planned_return_date: 2026-01-26 kettle_name: Copper Kettle period_label: Lantern Lager production_roll: 9 contamination_roll: 8 sales_roll: 12 net_result_gp: 18 volume_produced_liters: 12 volume_sold_liters: 6 volume_spoiled_liters: 4 batch_result: delayed incident: contamination notes: Zwakke productie en besmetting zorgden voor een teleurstellende run. [/brewery_settlement] [brewery_settlement] date: 2026-02-09 planned_return_date: 2026-02-09 kettle_name: Copper Kettle period_label: Red Kettle Bitter production_roll: 17 contamination_roll: 15 sales_roll: 13 net_result_gp: 66 volume_produced_liters: 25 volume_sold_liters: 22 volume_spoiled_liters: 2 batch_result: success incident: none notes: Goede opbrengst en stevige lokale afzet. [/brewery_settlement] [brewery_settlement] date: 2026-02-26 planned_return_date: 2026-02-23 kettle_name: Copper Kettle period_label: Copper Keg Ale I production_roll: 13 contamination_roll: 11 sales_roll: 16 net_result_gp: 60 volume_produced_liters: 19 volume_sold_liters: 15 volume_spoiled_liters: 4 batch_result: delayed incident: none notes: Drie dagen te laat terug, maar de batch verkocht alsnog goed. [/brewery_settlement] [brewery_settlement] date: 2026-03-11 planned_return_date: 2026-03-09 kettle_name: Copper Kettle period_label: Copper Keg Ale II production_roll: 15 contamination_roll: 13 sales_roll: 17 net_result_gp: 78 volume_produced_liters: 25 volume_sold_liters: 18 volume_spoiled_liters: 2 batch_result: delayed incident: none notes: Korte vertraging, maar nette output en goede marktfit. [/brewery_settlement] [brewery_settlement] date: 2026-03-26 planned_return_date: 2026-03-26 kettle_name: Copper Kettle period_label: Copper Keg Ale III production_roll: 18 contamination_roll: 17 sales_roll: 18 net_result_gp: 119 volume_produced_liters: 30 volume_sold_liters: 24 volume_spoiled_liters: 1 batch_result: success incident: none notes: Een van de beste runs tot nu toe; schoon, groot en goed verkocht. [/brewery_settlement] [brewery_settlement] date: 2026-04-16 planned_return_date: 2026-04-14 kettle_name: Copper Kettle period_label: Barley March production_roll: 12 contamination_roll: 9 sales_roll: 11 net_result_gp: 30 volume_produced_liters: 19 volume_sold_liters: 10 volume_spoiled_liters: 5 batch_result: delayed incident: storage-loss notes: Een matige batch die te lijden had onder late terugkeer en extra verlies. [/brewery_settlement]",
+        "fullHtml": "[brewery_plan]<br><br>plan_date: 2026-03-12<br><br>planned_return_date: 2026-03-26<br><br>kettle_name: Copper Kettle<br><br>batch_name: Copper Keg Ale<br><br>kettle_start_volume_liters: 30<br><br>efficiency: 2<br><br>quality: 1<br><br>value: 1<br><br>oversight: 0<br><br>notes: Gebalanceerde batch voor een korte afwezigheid.<br><br>[/brewery_plan]<br><br>[brewery_settlement]<br><br>date: 2025-12-18<br><br>planned_return_date: 2025-12-18<br><br>kettle_name: Copper Kettle<br><br>period_label: Winter Ale<br><br>production_roll: 14<br><br>contamination_roll: 16<br><br>sales_roll: 15<br><br>net_result_gp: 81<br><br>volume_produced_liters: 17<br><br>volume_sold_liters: 17<br><br>volume_spoiled_liters: 1<br><br>batch_result: success<br><br>incident: none<br><br>notes: Sterke winterverkoop en een schone run.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-01-08<br><br>planned_return_date: 2026-01-07<br><br>kettle_name: Copper Kettle<br><br>period_label: Deep Cellar Bitter<br><br>production_roll: 11<br><br>contamination_roll: 12<br><br>sales_roll: 10<br><br>net_result_gp: 42<br><br>volume_produced_liters: 19<br><br>volume_sold_liters: 14<br><br>volume_spoiled_liters: 4<br><br>batch_result: delayed<br><br>incident: none<br><br>notes: Iets later terug; bruikbaar volume bleef redelijk, maar de afzet was middelmatig.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-01-29<br><br>planned_return_date: 2026-01-26<br><br>kettle_name: Copper Kettle<br><br>period_label: Lantern Lager<br><br>production_roll: 9<br><br>contamination_roll: 8<br><br>sales_roll: 12<br><br>net_result_gp: 18<br><br>volume_produced_liters: 12<br><br>volume_sold_liters: 6<br><br>volume_spoiled_liters: 4<br><br>batch_result: delayed<br><br>incident: contamination<br><br>notes: Zwakke productie en besmetting zorgden voor een teleurstellende run.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-02-09<br><br>planned_return_date: 2026-02-09<br><br>kettle_name: Copper Kettle<br><br>period_label: Red Kettle Bitter<br><br>production_roll: 17<br><br>contamination_roll: 15<br><br>sales_roll: 13<br><br>net_result_gp: 66<br><br>volume_produced_liters: 25<br><br>volume_sold_liters: 22<br><br>volume_spoiled_liters: 2<br><br>batch_result: success<br><br>incident: none<br><br>notes: Goede opbrengst en stevige lokale afzet.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-02-26<br><br>planned_return_date: 2026-02-23<br><br>kettle_name: Copper Kettle<br><br>period_label: Copper Keg Ale I<br><br>production_roll: 13<br><br>contamination_roll: 11<br><br>sales_roll: 16<br><br>net_result_gp: 60<br><br>volume_produced_liters: 19<br><br>volume_sold_liters: 15<br><br>volume_spoiled_liters: 4<br><br>batch_result: delayed<br><br>incident: none<br><br>notes: Drie dagen te laat terug, maar de batch verkocht alsnog goed.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-03-11<br><br>planned_return_date: 2026-03-09<br><br>kettle_name: Copper Kettle<br><br>period_label: Copper Keg Ale II<br><br>production_roll: 15<br><br>contamination_roll: 13<br><br>sales_roll: 17<br><br>net_result_gp: 78<br><br>volume_produced_liters: 25<br><br>volume_sold_liters: 18<br><br>volume_spoiled_liters: 2<br><br>batch_result: delayed<br><br>incident: none<br><br>notes: Korte vertraging, maar nette output en goede marktfit.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-03-26<br><br>planned_return_date: 2026-03-26<br><br>kettle_name: Copper Kettle<br><br>period_label: Copper Keg Ale III<br><br>production_roll: 18<br><br>contamination_roll: 17<br><br>sales_roll: 18<br><br>net_result_gp: 119<br><br>volume_produced_liters: 30<br><br>volume_sold_liters: 24<br><br>volume_spoiled_liters: 1<br><br>batch_result: success<br><br>incident: none<br><br>notes: Een van de beste runs tot nu toe; schoon, groot en goed verkocht.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-04-16<br><br>planned_return_date: 2026-04-14<br><br>kettle_name: Copper Kettle<br><br>period_label: Barley March<br><br>production_roll: 12<br><br>contamination_roll: 9<br><br>sales_roll: 11<br><br>net_result_gp: 30<br><br>volume_produced_liters: 19<br><br>volume_sold_liters: 10<br><br>volume_spoiled_liters: 5<br><br>batch_result: delayed<br><br>incident: storage-loss<br><br>notes: Een matige batch die te lijden had onder late terugkeer en extra verlies.<br><br>[/brewery_settlement]",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/3784730",
         "updatedAt": "2023-11-03T13:09:15.000000Z"
