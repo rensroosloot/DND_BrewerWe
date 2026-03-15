@@ -6,6 +6,36 @@ export async function loadJson(fileName) {
   return response.json();
 }
 
+export function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+export function sanitizePublicUrl(value, { allowRelative = false } = {}) {
+  const raw = String(value ?? "").trim();
+  if (!raw) {
+    return null;
+  }
+
+  if (allowRelative && /^(?:\.{0,2}\/|\/(?!\/)|[?#])/.test(raw)) {
+    return raw;
+  }
+
+  try {
+    const url = new URL(raw);
+    if (url.protocol !== "http:" && url.protocol !== "https:") {
+      return null;
+    }
+    return url.toString();
+  } catch {
+    return null;
+  }
+}
+
 export function setGeneratedAt(value) {
   const root = document.querySelector("[data-generated-at]");
   if (!root) {
@@ -32,20 +62,22 @@ export function renderCard(item) {
 
   const meta = [item.type, item.title].filter(Boolean).join(" | ");
   const summary = item.summary || "Nog geen publieke samenvatting.";
-  const image = item.image
+  const imageUrl = sanitizePublicUrl(item.image, { allowRelative: true });
+  const externalUrl = sanitizePublicUrl(item.url);
+  const image = imageUrl
     ? `
       <div class="card-media">
-        <img src="${item.image}" alt="${item.name}">
+        <img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.name)}">
       </div>
     `
     : "";
   return `
     <article class="entry-card">
       ${image}
-      <h3>${item.name}</h3>
-      ${meta ? `<p class="meta">${meta}</p>` : ""}
-      <p>${summary}</p>
-      ${item.url ? `<p><a class="text-link" href="${item.url}" target="_blank" rel="noreferrer noopener">Bekijk in Kanka</a></p>` : ""}
+      <h3>${escapeHtml(item.name)}</h3>
+      ${meta ? `<p class="meta">${escapeHtml(meta)}</p>` : ""}
+      <p>${escapeHtml(summary)}</p>
+      ${externalUrl ? `<p><a class="text-link" href="${escapeHtml(externalUrl)}" target="_blank" rel="noreferrer noopener">Bekijk in Kanka</a></p>` : ""}
     </article>
   `;
 }

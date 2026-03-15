@@ -1,4 +1,4 @@
-import { loadJson, renderGrid, setError, setGeneratedAt } from "./site.js";
+import { escapeHtml, loadJson, renderGrid, sanitizePublicUrl, setError, setGeneratedAt } from "./site.js";
 
 function withMapZoom(url, scale = 10) {
   if (!url) {
@@ -13,15 +13,18 @@ function withMapZoom(url, scale = 10) {
 
 function renderActionLinks(item) {
   const links = [];
+  const mapUrl = sanitizePublicUrl(withMapZoom(item.mapLink), { allowRelative: true });
+  const kankaUrl = sanitizePublicUrl(item.url);
+  const wikiUrl = sanitizePublicUrl(item.forgottenRealms?.url);
 
-  if (item.mapLink) {
-    links.push(`<a class="action-link" href="${withMapZoom(item.mapLink)}">Kaart</a>`);
+  if (mapUrl) {
+    links.push(`<a class="action-link" href="${escapeHtml(mapUrl)}">Kaart</a>`);
   }
-  if (item.url) {
-    links.push(`<a class="action-link" href="${item.url}" target="_blank" rel="noreferrer noopener">Kanka</a>`);
+  if (kankaUrl) {
+    links.push(`<a class="action-link" href="${escapeHtml(kankaUrl)}" target="_blank" rel="noreferrer noopener">Kanka</a>`);
   }
-  if (item.forgottenRealms?.url) {
-    links.push(`<a class="action-link" href="${item.forgottenRealms.url}" target="_blank" rel="noreferrer noopener">Wiki</a>`);
+  if (wikiUrl) {
+    links.push(`<a class="action-link" href="${escapeHtml(wikiUrl)}" target="_blank" rel="noreferrer noopener">Wiki</a>`);
   }
 
   return links.length ? `<div class="action-links">${links.join("")}</div>` : "";
@@ -31,9 +34,10 @@ function renderLocationRelations(item) {
   const parts = [];
 
   if (item.parentLocation) {
+    const safeParentName = escapeHtml(item.parentLocation.name);
     const parentLink = item.parentLocation.mapPin
-      ? `<a class="text-link" href="${withMapZoom(`./map.html?pin=${encodeURIComponent(item.parentLocation.mapPin.id)}`)}">${item.parentLocation.name}</a>`
-      : item.parentLocation.name;
+      ? `<a class="text-link" href="${escapeHtml(withMapZoom(`./map.html?pin=${encodeURIComponent(item.parentLocation.mapPin.id)}`))}">${safeParentName}</a>`
+      : safeParentName;
     parts.push(`<p class="relation-line"><strong>Onder:</strong> ${parentLink}</p>`);
   }
 
@@ -41,9 +45,9 @@ function renderLocationRelations(item) {
     const children = item.childLocations
       .map((child) => {
         if (child.mapPin) {
-          return `<a class="text-link" href="${withMapZoom(`./map.html?pin=${encodeURIComponent(child.mapPin.id)}`)}">${child.name}</a>`;
+          return `<a class="text-link" href="${escapeHtml(withMapZoom(`./map.html?pin=${encodeURIComponent(child.mapPin.id)}`))}">${escapeHtml(child.name)}</a>`;
         }
-        return child.name;
+        return escapeHtml(child.name);
       })
       .join(", ");
     parts.push(`<p class="relation-line"><strong>Bevat:</strong> ${children}</p>`);
@@ -53,11 +57,11 @@ function renderLocationRelations(item) {
 }
 
 function renderLocationCard(item) {
-  const image = item.previewImage || item.image;
-  const mapPreviewLink = withMapZoom(item.mapLink);
+  const image = sanitizePublicUrl(item.previewImage || item.image, { allowRelative: true });
+  const mapPreviewLink = sanitizePublicUrl(withMapZoom(item.mapLink), { allowRelative: true });
   const body = item.fullHtml
     ? `<div class="rich-text">${item.fullHtml}</div>`
-    : `<p>${item.summary || item.fullText || "Nog geen publieke samenvatting."}</p>`;
+    : `<p>${escapeHtml(item.summary || item.fullText || "Nog geen publieke samenvatting.")}</p>`;
   const meta = [item.type, item.title].filter(Boolean).join(" | ");
 
   return `
@@ -65,13 +69,13 @@ function renderLocationCard(item) {
       ${image ? `
         <div class="card-media">
           ${mapPreviewLink
-            ? `<a class="card-media-link" href="${mapPreviewLink}" aria-label="Open ${item.name} op de kaart"><img src="${image}" alt="${item.name}"></a>`
-            : `<img src="${image}" alt="${item.name}">`
+            ? `<a class="card-media-link" href="${escapeHtml(mapPreviewLink)}" aria-label="Open ${escapeHtml(item.name)} op de kaart"><img src="${escapeHtml(image)}" alt="${escapeHtml(item.name)}"></a>`
+            : `<img src="${escapeHtml(image)}" alt="${escapeHtml(item.name)}">`
           }
         </div>
       ` : ""}
-      <h3>${item.name}</h3>
-      ${meta ? `<p class="meta">${meta}</p>` : ""}
+      <h3>${escapeHtml(item.name)}</h3>
+      ${meta ? `<p class="meta">${escapeHtml(meta)}</p>` : ""}
       ${renderLocationRelations(item)}
       ${body}
       ${renderActionLinks(item)}

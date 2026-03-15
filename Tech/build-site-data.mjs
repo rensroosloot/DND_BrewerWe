@@ -8,6 +8,8 @@ const sourceFile = path.join(rootDir, "docs", "data", "kanka-public.json");
 const outputDir = path.join(rootDir, "docs", "data");
 const mapPinsFile = path.join(outputDir, "map-pins.json");
 const FORGOTTEN_REALMS_API_URL = "https://forgottenrealms.fandom.com/api.php";
+const ENRICHMENT_TIMEOUT_MS = Number.parseInt(process.env.ENRICHMENT_TIMEOUT_MS || "6000", 10);
+const ENRICHMENT_RETRIES = Number.parseInt(process.env.ENRICHMENT_RETRIES || "1", 10);
 
 function summarizeCounts(modules) {
   const totalEntries = Object.values(modules).reduce((sum, items) => sum + items.length, 0);
@@ -113,13 +115,41 @@ async function fetchForgottenRealmsLink(name) {
   url.searchParams.set("redirects", "1");
   url.searchParams.set("format", "json");
   url.searchParams.set("formatversion", "2");
+  let lastError = null;
+  let payload = null;
 
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`Forgotten Realms lookup failed for "${name}": ${response.status} ${response.statusText}`);
+  for (let attempt = 0; attempt <= ENRICHMENT_RETRIES; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), ENRICHMENT_TIMEOUT_MS);
+
+    try {
+      const response = await fetch(url, { signal: controller.signal });
+      if (!response.ok) {
+        const retriable = response.status === 408 || response.status === 429 || response.status >= 500;
+        if (retriable && attempt < ENRICHMENT_RETRIES) {
+          await new Promise((resolve) => setTimeout(resolve, 300 * (attempt + 1)));
+          continue;
+        }
+        throw new Error(`Forgotten Realms lookup failed for "${name}": ${response.status} ${response.statusText}`);
+      }
+
+      payload = await response.json();
+      break;
+    } catch (error) {
+      lastError = error;
+      if (attempt >= ENRICHMENT_RETRIES) {
+        break;
+      }
+      await new Promise((resolve) => setTimeout(resolve, 300 * (attempt + 1)));
+    } finally {
+      clearTimeout(timeout);
+    }
   }
 
-  const payload = await response.json();
+  if (!payload) {
+    throw new Error(`Forgotten Realms lookup failed for "${name}": ${lastError?.message || "unknown error"}`);
+  }
+
   const page = payload?.query?.pages?.[0] ?? null;
 
   if (!page || page.missing) {
@@ -282,6 +312,12 @@ async function main() {
     }));
 
   const nextPins = [...generatedPins, ...legacyPins];
+  const duplicatePinIds = nextPins
+    .map((pin) => pin.id)
+    .filter((id, index, ids) => ids.indexOf(id) !== index);
+  if (duplicatePinIds.length) {
+    throw new Error(`Duplicate map pin ids detected: ${[...new Set(duplicatePinIds)].join(", ")}`);
+  }
   const generatedIds = new Set(nextPins.map((pin) => pin.id));
   const preservedPins = existingPins.filter((pin) => !generatedIds.has(pin.id));
   const mapPins = [...nextPins, ...preservedPins];

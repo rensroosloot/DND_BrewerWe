@@ -57,6 +57,12 @@ function parseNumericField(value) {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
+function validateCoordinate(name, value) {
+  if (value == null || value < 0 || value > 100) {
+    throw new Error(`Invalid ${name}: expected a number between 0 and 100`);
+  }
+}
+
 function extractBlocks(text, tagName) {
   const pattern = new RegExp(`\\[${tagName}\\]([\\s\\S]*?)\\[\\/${tagName}\\]`, "gi");
   return [...String(text || "").matchAll(pattern)].map((match) => match[1].trim()).filter(Boolean);
@@ -75,6 +81,8 @@ export function extractMapPinsFromRecord(record, moduleName) {
       if (x == null || y == null) {
         return null;
       }
+      validateCoordinate("map_x", x);
+      validateCoordinate("map_y", y);
 
       const entityType = normalizeEntityType(fields.entity_type, moduleName);
       const entityRef = fields.entity_ref || record?.name || null;
@@ -105,13 +113,18 @@ export function extractLegacyLocationPin(record) {
     return null;
   }
 
+  const x = Number.parseFloat(xMatch[1]);
+  const y = Number.parseFloat(yMatch[1]);
+  validateCoordinate("map_x", x);
+  validateCoordinate("map_y", y);
+
   return {
     id: slugify(record?.name || record?.id),
     label: record?.name || "Unnamed",
     entityType: "location",
     entityRef: record?.name || null,
-    x: Number.parseFloat(xMatch[1]),
-    y: Number.parseFloat(yMatch[1]),
+    x,
+    y,
     notes: null,
     sourceModule: "locations",
     sourceRecordId: record?.id ?? null

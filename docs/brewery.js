@@ -95,17 +95,17 @@ function diffWeeksRoundedUp(start, end) {
 function renderHistoryEntry(item) {
   return `
     <article class="entry-card">
-      <h3>${item.period_label || item.date}</h3>
-      <p class="meta">${item.date}</p>
+      <h3>${escapeHtml(item.period_label || item.date)}</h3>
+      <p class="meta">${escapeHtml(item.date)}</p>
       <div class="brewery-metrics">
         ${renderMetric("Productie", item.production_roll ?? item.profit_roll)}
         ${renderMetric("Contaminatie", item.contamination_roll ?? item.loss_roll)}
         ${renderMetric("Verkoop", item.sales_roll)}
         ${renderMetric("Netto gp", item.net_result_gp)}
       </div>
-      <p><strong>Batch:</strong> ${item.batch_result}</p>
-      <p><strong>Incident:</strong> ${item.incident}</p>
-      ${item.notes ? `<p>${item.notes}</p>` : ""}
+      <p><strong>Batch:</strong> ${escapeHtml(item.batch_result)}</p>
+      <p><strong>Incident:</strong> ${escapeHtml(item.incident)}</p>
+      ${item.notes ? `<p>${escapeHtml(item.notes)}</p>` : ""}
     </article>
   `;
 }
@@ -400,7 +400,7 @@ function renderCurrentPlan(plan) {
 
   return `
     <p class="eyebrow">Actieve brewery_plan</p>
-    <h3>${plan.batchName}</h3>
+    <h3>${escapeHtml(plan.batchName)}</h3>
     <p>Lees hier eerst terug wat er precies is gepland. Dit is het vertrekpunt voor de settlement die je hiernaast afhandelt.</p>
     <div class="planner-batch-grid run-detail-grid">
       ${renderReadOnlyCard(
@@ -457,7 +457,7 @@ function renderCurrentPlan(plan) {
       ${renderMetric("Punten gebruikt", `${plan.planningPointsUsed} / ${MAX_PLANNING_POINTS}`)}
       ${renderMetric("Geplande dagen", plannedDays == null ? "-" : Math.max(plannedDays, 0))}
     </div>
-    ${plan.notes ? `<p class="brewery-story-intro"><strong>Plan notitie.</strong> ${plan.notes}</p>` : ""}
+    ${plan.notes ? `<p class="brewery-story-intro"><strong>Plan notitie.</strong> ${escapeHtml(plan.notes)}</p>` : ""}
     <div class="snippet-card">
       <div class="snippet-head">
         <strong>Huidige plan-snippet</strong>

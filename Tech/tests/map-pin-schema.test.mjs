@@ -58,3 +58,14 @@ test("legacy location pins still parse", () => {
     sourceRecordId: 3
   });
 });
+
+test("reject out-of-range coordinates", () => {
+  const record = {
+    id: 4,
+    name: "Broken Pin",
+    fullHtml:
+      "[map_pin]<br><br>label: Broken Pin<br><br>entity_type: misc<br><br>entity_ref: Broken Pin<br><br>map_x: 101<br><br>map_y: 40<br><br>[/map_pin]"
+  };
+
+  assert.throws(() => extractMapPinsFromRecord(record, "items"), /Invalid map_x/);
+});

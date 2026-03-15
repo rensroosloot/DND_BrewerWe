@@ -32,6 +32,8 @@ const defaultHeaders = {
   "Content-Type": "application/json",
   Accept: "application/json"
 };
+const KANKA_FETCH_TIMEOUT_MS = Number.parseInt(process.env.KANKA_FETCH_TIMEOUT_MS || "15000", 10);
+const KANKA_FETCH_RETRIES = Number.parseInt(process.env.KANKA_FETCH_RETRIES || "2", 10);
 
 function loadEnvFile(filePath) {
   if (!existsSync(filePath)) {
@@ -178,14 +180,45 @@ function toPublicSummary(record, moduleName) {
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url, { headers: defaultHeaders });
+  let lastError = null;
 
-  if (!response.ok) {
-    const body = await response.text();
-    throw new Error(`Request failed: ${response.status} ${response.statusText}\n${body}`);
+  for (let attempt = 0; attempt <= KANKA_FETCH_RETRIES; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), KANKA_FETCH_TIMEOUT_MS);
+
+    try {
+      const response = await fetch(url, {
+        headers: defaultHeaders,
+        signal: controller.signal
+      });
+
+      if (!response.ok) {
+        const body = await response.text();
+        const retriable = response.status === 408 || response.status === 429 || response.status >= 500;
+        if (retriable && attempt < KANKA_FETCH_RETRIES) {
+          await new Promise((resolve) => setTimeout(resolve, 400 * (attempt + 1)));
+          continue;
+        }
+        throw new Error(`Request failed: ${response.status} ${response.statusText}\n${body}`);
+      }
+
+      return response.json();
+    } catch (error) {
+      lastError = error;
+      const isAbort = error?.name === "AbortError";
+      if (attempt >= KANKA_FETCH_RETRIES) {
+        break;
+      }
+      if (!isAbort && !/fetch/i.test(String(error?.message || ""))) {
+        break;
+      }
+      await new Promise((resolve) => setTimeout(resolve, 400 * (attempt + 1)));
+    } finally {
+      clearTimeout(timeout);
+    }
   }
 
-  return response.json();
+  throw new Error(`Kanka fetch failed for ${url}: ${lastError?.message || "unknown error"}`);
 }
 
 async function fetchAllPages(moduleName) {

@@ -1,4 +1,4 @@
-import { loadJson, setError, setGeneratedAt } from "./site.js";
+import { escapeHtml, loadJson, sanitizePublicUrl, setError, setGeneratedAt } from "./site.js";
 
 const MIN_SCALE = 1;
 const MAX_SCALE = 10;
@@ -366,12 +366,14 @@ map_y: ${y}
 
 function renderActionLinks(location) {
   const links = ['<a class="action-link" href="./atlas.html">Atlas</a>'];
+  const kankaUrl = sanitizePublicUrl(location?.url);
+  const wikiUrl = sanitizePublicUrl(location?.forgottenRealms?.url);
 
-  if (location?.url) {
-    links.push(`<a class="action-link" href="${location.url}" target="_blank" rel="noreferrer noopener">Kanka</a>`);
+  if (kankaUrl) {
+    links.push(`<a class="action-link" href="${escapeHtml(kankaUrl)}" target="_blank" rel="noreferrer noopener">Kanka</a>`);
   }
-  if (location?.forgottenRealms?.url) {
-    links.push(`<a class="action-link" href="${location.forgottenRealms.url}" target="_blank" rel="noreferrer noopener">Wiki</a>`);
+  if (wikiUrl) {
+    links.push(`<a class="action-link" href="${escapeHtml(wikiUrl)}" target="_blank" rel="noreferrer noopener">Wiki</a>`);
   }
 
   return `<div class="action-links">${links.join("")}</div>`;
@@ -379,11 +381,12 @@ function renderActionLinks(location) {
 
 function renderPinActionLinks(pin) {
   const links = [];
+  const kankaUrl = sanitizePublicUrl(pin?.url);
   if (pin?.entityType === "location") {
     links.push('<a class="action-link" href="./atlas.html">Atlas</a>');
   }
-  if (pin?.url) {
-    links.push(`<a class="action-link" href="${pin.url}" target="_blank" rel="noreferrer noopener">Kanka</a>`);
+  if (kankaUrl) {
+    links.push(`<a class="action-link" href="${escapeHtml(kankaUrl)}" target="_blank" rel="noreferrer noopener">Kanka</a>`);
   }
   return links.length ? `<div class="action-links">${links.join("")}</div>` : "";
 }
@@ -392,9 +395,10 @@ function renderLocationRelations(location) {
   const parts = [];
 
   if (location?.parentLocation) {
+    const safeName = escapeHtml(location.parentLocation.name);
     const parent = location.parentLocation.mapPin
-      ? `<a class="text-link" href="./map.html?pin=${encodeURIComponent(location.parentLocation.mapPin.id)}&zoom=1.5">${location.parentLocation.name}</a>`
-      : location.parentLocation.name;
+      ? `<a class="text-link" href="./map.html?pin=${encodeURIComponent(location.parentLocation.mapPin.id)}&zoom=1.5">${safeName}</a>`
+      : safeName;
     parts.push(`<p class="relation-line"><strong>Onder:</strong> ${parent}</p>`);
   }
 
@@ -402,9 +406,9 @@ function renderLocationRelations(location) {
     const children = location.childLocations
       .map((child) => {
         if (child.mapPin) {
-          return `<a class="text-link" href="./map.html?pin=${encodeURIComponent(child.mapPin.id)}&zoom=1.5">${child.name}</a>`;
+          return `<a class="text-link" href="./map.html?pin=${encodeURIComponent(child.mapPin.id)}&zoom=1.5">${escapeHtml(child.name)}</a>`;
         }
-        return child.name;
+        return escapeHtml(child.name);
       })
       .join(", ");
     parts.push(`<p class="relation-line"><strong>Bevat:</strong> ${children}</p>`);
@@ -444,15 +448,15 @@ function renderSidebar(pin, location) {
   if (!location) {
     const body = pin.fullHtml
       ? `<div class="rich-text">${pin.fullHtml}</div>`
-      : `<p>${pin.notes || pin.summary || "Nog geen publieke samenvatting."}</p>`;
+      : `<p>${escapeHtml(pin.notes || pin.summary || "Nog geen publieke samenvatting.")}</p>`;
 
     root.innerHTML = `
-      <p class="eyebrow">${pin.label}</p>
-      <h3>${pin.label}</h3>
-      ${pin.type ? `<p class="meta">${pin.type}</p>` : ""}
+      <p class="eyebrow">${escapeHtml(pin.label)}</p>
+      <h3>${escapeHtml(pin.label)}</h3>
+      ${pin.type ? `<p class="meta">${escapeHtml(pin.type)}</p>` : ""}
       ${body}
       <label class="map-helper-label" for="map-selection-snippet">Kanka snippet</label>
-      <textarea id="map-selection-snippet" class="map-helper-output map-selection-output" readonly>${buildMapPinSnippet(pin)}</textarea>
+      <textarea id="map-selection-snippet" class="map-helper-output map-selection-output" readonly>${escapeHtml(buildMapPinSnippet(pin))}</textarea>
       ${renderPinActionLinks(pin)}
     `;
     return;
@@ -460,16 +464,16 @@ function renderSidebar(pin, location) {
 
   const body = location?.fullHtml
     ? `<div class="rich-text">${location.fullHtml}</div>`
-    : `<p>${location?.summary || location?.fullText || "Nog geen publieke samenvatting."}</p>`;
+    : `<p>${escapeHtml(location?.summary || location?.fullText || "Nog geen publieke samenvatting.")}</p>`;
 
   root.innerHTML = `
-    <p class="eyebrow">${pin.label}</p>
-    <h3>${location?.name || pin.label}</h3>
+    <p class="eyebrow">${escapeHtml(pin.label)}</p>
+    <h3>${escapeHtml(location?.name || pin.label)}</h3>
     ${renderLocationRelations(location)}
     ${body}
-    ${location?.type ? `<p class="meta">${location.type}</p>` : ""}
+    ${location?.type ? `<p class="meta">${escapeHtml(location.type)}</p>` : ""}
     <label class="map-helper-label" for="map-selection-snippet">Kanka snippet</label>
-    <textarea id="map-selection-snippet" class="map-helper-output map-selection-output" readonly>${buildMapPinSnippet(pin, location)}</textarea>
+    <textarea id="map-selection-snippet" class="map-helper-output map-selection-output" readonly>${escapeHtml(buildMapPinSnippet(pin, location))}</textarea>
     ${renderActionLinks(location)}
   `;
 }

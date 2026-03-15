@@ -75,6 +75,13 @@ Pins are rendered from JSON with this normalized shape:
 - `entityType: misc` -> question-mark marker
 - active selection is visual highlight only and must not change the semantic icon
 
+## Validation Rules
+
+- `id` must be unique across the generated pin set
+- `map_x` must be numeric and within `0-100`
+- `map_y` must be numeric and within `0-100`
+- duplicate pin ids must fail the build instead of silently overwriting pins
+
 ## Migration Rule
 
 Legacy `map_x` / `map_y` metadata embedded directly in location text remains supported during transition, but `map_pin` blocks are the preferred format going forward.

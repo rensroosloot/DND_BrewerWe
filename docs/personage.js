@@ -1,8 +1,10 @@
-import { loadJson, setError } from "./site.js";
+import { escapeHtml, loadJson, sanitizePublicUrl, setError } from "./site.js";
 
 function renderDetail(item) {
-  const image = item.image
-    ? `<div class="card-media card-media-portrait card-media-detail"><img src="${item.image}" alt="${item.name}"></div>`
+  const imageUrl = sanitizePublicUrl(item.image);
+  const kankaUrl = sanitizePublicUrl(item.url);
+  const image = imageUrl
+    ? `<div class="card-media card-media-portrait card-media-detail"><img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.name)}"></div>`
     : "";
   const meta = [item.type, item.title].filter(Boolean).join(" | ");
   const fullText = item.fullText || item.summary || "Nog geen publieke samenvatting.";
@@ -10,10 +12,10 @@ function renderDetail(item) {
   return `
     ${image}
     <div class="detail-body">
-      ${meta ? `<p class="meta">${meta}</p>` : ""}
-      <p>${fullText}</p>
+      ${meta ? `<p class="meta">${escapeHtml(meta)}</p>` : ""}
+      <p>${escapeHtml(fullText)}</p>
       <p><a class="text-link" href="./people.html">Terug naar personages</a></p>
-      ${item.url ? `<p><a class="text-link" href="${item.url}" target="_blank" rel="noreferrer noopener">Bekijk in Kanka</a></p>` : ""}
+      ${kankaUrl ? `<p><a class="text-link" href="${escapeHtml(kankaUrl)}" target="_blank" rel="noreferrer noopener">Bekijk in Kanka</a></p>` : ""}
     </div>
   `;
 }

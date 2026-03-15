@@ -17,6 +17,29 @@ The public site is deployed as a static GitHub Pages site from the `docs/` direc
 4. Push to `main`.
 5. Allow GitHub Pages to publish the new version.
 
+### Release Checklist
+- Verify that only player-safe records are public in Kanka before syncing.
+- Review the diff of `docs/data/kanka-public.json` and derived JSON files.
+- Check new outbound links and image URLs for unexpected domains or malformed values.
+- Confirm that any newly added modules or fields are intended for public publication.
+
+## Browser Security Baseline
+Because GitHub Pages does not give this project application-level control over response headers, the site uses an in-document CSP baseline in the HTML entrypoints.
+
+Current baseline:
+- `default-src 'self'`
+- `script-src 'self'`
+- `img-src 'self' https: data:`
+- `style-src 'self' 'unsafe-inline'`
+- `connect-src 'self'`
+- `object-src 'none'`
+- `base-uri 'self'`
+- `form-action 'self'`
+
+Notes:
+- This is a static-site compromise; `style-src 'unsafe-inline'` remains enabled because the current pages rely on inline style attributes.
+- `frame-ancestors` and report directives are not enforced through meta CSP, so if the project later moves off GitHub Pages, prefer real response headers at the edge.
+
 ## Custom Domain
 Recommended approach: use a dedicated subdomain rather than an apex domain.
 
