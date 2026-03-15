@@ -52,6 +52,20 @@ body::before {
 
 .page-brewery {
   width: min(1540px, calc(100% - 18px));
+  position: relative;
+}
+
+.page-brewery::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(188, 116, 34, 0.13), transparent 24%),
+    radial-gradient(circle at 84% 10%, rgba(101, 50, 22, 0.1), transparent 20%),
+    linear-gradient(90deg, rgba(90, 53, 28, 0.045) 0, transparent 18%, transparent 82%, rgba(90, 53, 28, 0.045) 100%);
+  opacity: 0.9;
+  z-index: 0;
 }
 
 .topnav,
@@ -183,39 +197,186 @@ body::before {
 
 .brewery-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.9fr);
-  gap: 18px;
-  align-items: stretch;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(380px, 1.18fr);
+  gap: 8px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  padding: 22px 24px;
+  background:
+    radial-gradient(circle at 78% 48%, rgba(214, 140, 53, 0.2), transparent 20%),
+    linear-gradient(135deg, rgba(255, 248, 232, 0.98), rgba(239, 223, 190, 0.94));
+}
+
+.brewery-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(250, 242, 225, 0.84) 0%, rgba(250, 242, 225, 0.68) 28%, rgba(250, 242, 225, 0.22) 54%, rgba(250, 242, 225, 0.08) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 36%);
+  pointer-events: none;
 }
 
 .brewery-hero-copy {
   min-width: 0;
-}
-
-.brewery-journey {
+  position: relative;
+  z-index: 1;
   display: grid;
+  align-content: center;
   gap: 10px;
+  max-width: 340px;
 }
 
-.brewery-journey-step {
-  padding: 14px 16px;
-  border: 1px solid rgba(139, 59, 23, 0.14);
-  border-radius: 16px;
+.brewery-hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4.3vw, 3.3rem);
+  line-height: 0.96;
+}
+
+.brewery-hero-art {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  min-height: 272px;
+}
+
+.brewery-hero-art::before {
+  content: "";
+  position: absolute;
+  inset: auto 12% 4% 12%;
+  height: 72%;
+  background: radial-gradient(circle, rgba(214, 136, 48, 0.22), transparent 60%);
+  filter: blur(12px);
+}
+
+.brewery-hero-art img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: min(100%, 560px);
+  max-height: 340px;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 28px rgba(63, 31, 13, 0.16));
+}
+
+.hero-map {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(420px, 1.2fr);
+  gap: 8px;
+  align-items: center;
+  min-height: 320px;
+  padding: 22px 24px;
+  position: relative;
+  overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(255, 248, 235, 0.86), rgba(243, 232, 211, 0.72)),
-    linear-gradient(90deg, rgba(184, 130, 52, 0.08), transparent 40%);
+    radial-gradient(circle at 72% 44%, rgba(186, 129, 54, 0.18), transparent 18%),
+    linear-gradient(135deg, rgba(255, 248, 232, 0.98), rgba(239, 223, 190, 0.94));
 }
 
-.brewery-journey-step h3 {
-  margin: 2px 0 4px;
-  color: var(--wood);
+.hero-map::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(250, 242, 225, 0.84) 0%, rgba(250, 242, 225, 0.68) 34%, rgba(250, 242, 225, 0.12) 58%, rgba(250, 242, 225, 0.04) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 36%);
 }
 
-.brewery-step-index {
-  color: var(--accent);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+.map-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+}
+
+.map-hero-art {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 260px;
+}
+
+.map-hero-art::before {
+  content: "";
+  position: absolute;
+  inset: auto 10% 6% 10%;
+  height: 66%;
+  background: radial-gradient(circle, rgba(206, 132, 41, 0.16), transparent 60%);
+  filter: blur(12px);
+}
+
+.map-hero-art img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: min(100%, 680px);
+  max-height: 310px;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 26px rgba(63, 31, 13, 0.16));
+}
+
+.atlas-hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(300px, 1.1fr);
+  gap: 8px;
+  align-items: center;
+  min-height: 300px;
+  padding: 22px 24px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 74% 46%, rgba(186, 129, 54, 0.18), transparent 18%),
+    linear-gradient(135deg, rgba(255, 248, 232, 0.98), rgba(239, 223, 190, 0.94));
+}
+
+.atlas-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(250, 242, 225, 0.84) 0%, rgba(250, 242, 225, 0.68) 34%, rgba(250, 242, 225, 0.16) 58%, rgba(250, 242, 225, 0.06) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 36%);
+}
+
+.atlas-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+}
+
+.atlas-hero-art {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+}
+
+.atlas-hero-art::before {
+  content: "";
+  position: absolute;
+  inset: auto 18% 8% 18%;
+  height: 64%;
+  background: radial-gradient(circle, rgba(206, 132, 41, 0.16), transparent 60%);
+  filter: blur(12px);
+}
+
+.atlas-hero-art img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: min(100%, 420px);
+  max-height: 290px;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 26px rgba(63, 31, 13, 0.16));
 }
 
 .hero-map {
@@ -401,12 +562,14 @@ body::before {
   padding: 8px 14px;
   font: inherit;
   cursor: pointer;
-  transition: background 120ms ease, border-color 120ms ease, color 120ms ease, transform 120ms ease;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
 
 .brewery-tab:hover {
   color: var(--wood);
   border-color: rgba(139, 59, 23, 0.28);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(79, 38, 16, 0.08);
 }
 
 .brewery-tab.is-active {
@@ -430,10 +593,57 @@ body::before {
   border-left: 4px solid rgba(184, 130, 52, 0.64);
   border-radius: 12px;
   background: rgba(255, 248, 235, 0.55);
+  backdrop-filter: blur(2px);
 }
 
 .brewery-story-intro p {
   margin: 0;
+}
+
+.brewery-story-intro-with-art {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(140px, 220px);
+  gap: 16px;
+  align-items: center;
+}
+
+.brewery-story-copy {
+  min-width: 0;
+}
+
+.brewery-story-art {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  min-height: 118px;
+}
+
+.brewery-story-art::before {
+  content: "";
+  position: absolute;
+  inset: auto 10% 4% 10%;
+  height: 58%;
+  background: radial-gradient(circle, rgba(206, 132, 41, 0.18), transparent 64%);
+  filter: blur(10px);
+}
+
+.brewery-story-art img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: 100%;
+  max-height: 132px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 20px rgba(67, 31, 10, 0.14));
+}
+
+.brewery-story-art-spill img {
+  max-height: 140px;
+}
+
+.brewery-story-art-wagon img {
+  max-height: 148px;
 }
 
 .brewery-panel {
@@ -446,6 +656,22 @@ body::before {
   box-shadow:
     0 10px 22px rgba(49, 26, 12, 0.08),
     inset 0 1px 0 rgba(255, 248, 235, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.brewery-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 0 20%, rgba(255, 251, 242, 0.2) 32%, transparent 46%);
+  transform: translateX(-140%);
+  transition: transform 700ms ease;
+}
+
+.brewery-panel:hover::before {
+  transform: translateX(130%);
 }
 
 .brewery-panel h3 {
@@ -469,6 +695,13 @@ body::before {
   border: 1px solid rgba(139, 59, 23, 0.12);
   border-radius: 12px;
   background: rgba(251, 244, 228, 0.88);
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.brewery-metric:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 59, 23, 0.22);
+  box-shadow: 0 10px 18px rgba(73, 35, 12, 0.06);
 }
 
 .brewery-metric span {
@@ -590,6 +823,13 @@ body::before {
   background:
     linear-gradient(180deg, rgba(255, 248, 235, 0.84), rgba(243, 232, 211, 0.68)),
     linear-gradient(90deg, rgba(184, 130, 52, 0.08), transparent 45%);
+  transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
+}
+
+.planner-guide-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 59, 23, 0.24);
+  box-shadow: 0 14px 24px rgba(66, 31, 12, 0.08);
 }
 
 .planner-batch-card {
@@ -712,6 +952,18 @@ body::before {
   border: 1px solid rgba(139, 59, 23, 0.14);
   border-radius: 16px;
   background: rgba(255, 248, 235, 0.82);
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 246, 0.38), transparent 36%),
+    repeating-linear-gradient(90deg, rgba(160, 103, 55, 0.04) 0 1px, transparent 1px 56px);
 }
 
 .brewery-chart {
@@ -754,6 +1006,12 @@ body::before {
   border-radius: 16px;
   background: rgba(251, 244, 228, 0.74);
   overflow: hidden;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.brewery-disclosure:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 20px rgba(62, 29, 11, 0.06);
 }
 
 .brewery-disclosure summary {
@@ -771,6 +1029,42 @@ body::before {
 
 .brewery-disclosure-body {
   padding: 14px 16px 16px;
+}
+
+.brewery-reveal {
+  opacity: 0;
+  transform: translateY(18px) scale(0.985);
+  transition:
+    opacity 520ms ease,
+    transform 520ms ease;
+  transition-delay: var(--brewery-reveal-delay, 0ms);
+}
+
+.brewery-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brewery-reveal,
+  .brewery-tab,
+  .brewery-metric,
+  .planner-guide-card,
+  .brewery-disclosure,
+  .brewery-panel::before {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .brewery-reveal,
+  .brewery-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .brewery-panel::before {
+    display: none;
+  }
 }
 
 .brewery-world-grid {
@@ -1141,6 +1435,53 @@ p {
 
   .brewery-hero {
     grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .hero-map {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .atlas-hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .brewery-hero-copy {
+    max-width: none;
+  }
+
+  .atlas-hero-copy {
+    max-width: none;
+  }
+
+  .brewery-hero-art {
+    min-height: 220px;
+  }
+
+  .brewery-hero-art img {
+    max-height: 280px;
+  }
+
+  .map-hero-copy {
+    max-width: none;
+  }
+
+  .map-hero-art {
+    min-height: 220px;
+  }
+
+  .map-hero-art img {
+    max-height: 260px;
+  }
+
+  .atlas-hero-art {
+    min-height: 220px;
+  }
+
+  .atlas-hero-art img {
+    max-height: 240px;
   }
 
   .grid,
@@ -1272,6 +1613,24 @@ p {
 
   .planner-date-row {
     grid-template-columns: 1fr;
+  }
+
+  .planner-batch-grid,
+  .run-roll-grid,
+  .run-detail-grid,
+  .planner-guide-grid,
+  .brewery-story-intro-with-art {
+    grid-template-columns: 1fr;
+  }
+
+  .brewery-story-art {
+    justify-content: start;
+    min-height: 0;
+  }
+
+  .brewery-story-art img,
+  .brewery-story-art-spill img {
+    max-height: 120px;
   }
 
   .brewery-tablist {

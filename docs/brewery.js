@@ -33,6 +33,33 @@ function initTabs(root) {
   });
 }
 
+function initBreweryMotion(root = document) {
+  const animated = [...root.querySelectorAll(".brewery-panel, .brewery-story-intro, .brewery-disclosure")];
+  animated.forEach((node, index) => {
+    node.classList.add("brewery-reveal");
+    node.style.setProperty("--brewery-reveal-delay", `${Math.min(index, 8) * 55}ms`);
+  });
+
+  const observer = "IntersectionObserver" in window
+    ? new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 })
+    : null;
+
+  animated.forEach((node) => {
+    if (!observer) {
+      node.classList.add("is-visible");
+      return;
+    }
+    observer.observe(node);
+  });
+}
+
 function escapeHtml(value) {
   return String(value ?? "")
     .replace(/&/g, "&amp;")
@@ -385,7 +412,7 @@ function renderCurrentPlan(plan) {
       )}
       ${renderReadOnlyCard(
         "Geplande terugkeer",
-        "De datum waarop de groep volgens plan terug zou zijn om deze batch af te handelen.",
+        "De datum waarop de groep volgens plan terug zou zijn om deze batch te controleren en registreren.",
         "Datum",
         plan.plannedReturnDate ?? "-",
         "planner-batch-card"
@@ -480,7 +507,7 @@ function buildSettlementSnippet(plan, resolution, inputs) {
 function renderResolutionCalculator(plan, absence) {
   return `
     <p class="eyebrow">Settlement helper</p>
-    <h3>Werk de actieve run af</h3>
+    <h3>Verwerk de actieve run</h3>
     <p>Volg hier dezelfde volgorde als aan tafel: rol eerst de drie checks, leg daarna settlementdetails vast, en neem pas dan de uitkomst over in Kanka.</p>
     <div class="planner-guide">
       <p class="eyebrow">1. Rol de drie checks</p>
@@ -802,21 +829,38 @@ function updateStatsPanel(root, history) {
   }
 }
 
+function renderOptionalGrid(sectionName, items) {
+  const section = document.querySelector(`[data-world-section="${sectionName}"]`);
+  if (!section) {
+    return;
+  }
+  if (!items?.length) {
+    section.remove();
+    return;
+  }
+  renderGrid(`[data-list="${sectionName}"]`, items);
+}
+
+function pruneEmptyWorldDisclosure() {
+  const sections = [...document.querySelectorAll("[data-world-section]")];
+  const disclosure = sections[0]?.closest(".brewery-disclosure");
+  if (!disclosure) {
+    return;
+  }
+  const hasVisibleSection = sections.some((section) => section.isConnected);
+  if (!hasVisibleSection) {
+    disclosure.remove();
+  }
+}
+
 async function main() {
   try {
     const data = await loadJson("brewery.json");
     setGeneratedAt(data.generatedAt);
     const venture = data.venture || {};
 
-    const hero = document.querySelector("[data-brewery-main]");
-    if (hero) {
-      hero.innerHTML = `
-        <p class="eyebrow">Uitgelichte organisatie</p>
-        ${renderCard(data.brewery)}
-      `;
-    }
-
     document.querySelectorAll("[data-brewery-tabs]").forEach(initTabs);
+    initBreweryMotion(document);
 
     const planner = document.querySelector("[data-brewery-planner]");
     if (planner) {
@@ -842,7 +886,7 @@ async function main() {
         updateResolutionCalculator(resolution, venture.plannedBatch);
       } else {
         resolution.innerHTML =
-          '<p class="empty">Nog geen actieve run om af te handelen. Maak eerst een brewery_plan en plak die in Kanka.</p>';
+          '<p class="empty">Nog geen actieve run om te verwerken. Maak eerst een brewery_plan en plak die in Kanka.</p>';
       }
     }
 
@@ -873,9 +917,10 @@ async function main() {
         : '<p class="empty">Nog geen regelsamenvatting beschikbaar.</p>';
     }
 
-    renderGrid('[data-list="organisations"]', data.organisations || []);
-    renderGrid('[data-list="items"]', data.items || []);
-    renderGrid('[data-list="quests"]', data.quests || []);
+    renderOptionalGrid("organisations", data.organisations || []);
+    renderOptionalGrid("items", data.items || []);
+    renderOptionalGrid("quests", data.quests || []);
+    pruneEmptyWorldDisclosure();
   } catch (error) {
     setError(error);
   }

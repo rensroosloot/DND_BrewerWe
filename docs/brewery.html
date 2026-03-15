@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BrewerWe | Brouwerij</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css?v=20260314b">
-  <script type="module" src="brewery.js?v=20260314b"></script>
+  <link rel="stylesheet" href="style.css?v=20260315a">
+  <script type="module" src="brewery.js?v=20260315a"></script>
 </head>
 <body>
   <main class="page page-brewery">
@@ -23,31 +23,13 @@
 
     <section class="hero brewery-hero">
       <div class="brewery-hero-copy">
-        <p class="eyebrow">De Hub</p>
         <h1>Brouwerij</h1>
-        <p class="lead">Volg de batch van plan naar terugkeer. Eerst zet je de inzet klaar, daarna handel je de run af, en tenslotte kijk je wat de brouwerij op de lange lijn oplevert.</p>
         <p class="status" data-generated-at>Wachten op gegenereerde data.</p>
       </div>
-      <div class="brewery-journey">
-        <article class="brewery-journey-step">
-          <span class="brewery-step-index">01</span>
-          <h3>Plan</h3>
-          <p>Verdeel 4 punten en maak een snippet voor Kanka.</p>
-        </article>
-        <article class="brewery-journey-step">
-          <span class="brewery-step-index">02</span>
-          <h3>Resolve</h3>
-          <p>Gebruik de actieve run en werk de settlement uit.</p>
-        </article>
-        <article class="brewery-journey-step">
-          <span class="brewery-step-index">03</span>
-          <h3>Lees de lijn</h3>
-          <p>Bekijk historie, winst en trends door de tijd.</p>
-        </article>
+      <div class="brewery-hero-art" aria-hidden="true">
+        <img src="./assets/brewery/hero-kettle.png" alt="">
       </div>
     </section>
-
-    <section class="feature-card" data-brewery-main></section>
 
     <section class="module">
       <div class="section-head">
@@ -62,15 +44,25 @@
         </div>
 
         <section class="brewery-tabpanel is-active" role="tabpanel" id="brewery-tab-plan" aria-labelledby="brewery-tab-button-plan" data-tab-panel="plan">
-          <div class="brewery-story-intro">
-            <p>Hier zet je de volgende run klaar. De spelers bepalen de aanpak, en deze kaart maakt daar direct een Kanka-snippet van.</p>
+          <div class="brewery-story-intro brewery-story-intro-with-art">
+            <div class="brewery-story-copy">
+              <p>Hier zet je de volgende run klaar. De spelers bepalen de aanpak, en deze kaart maakt daar direct een Kanka-snippet van.</p>
+            </div>
+            <div class="brewery-story-art brewery-story-art-crate" aria-hidden="true">
+              <img src="./assets/brewery/bierkrat.png" alt="">
+            </div>
           </div>
           <section class="brewery-panel" data-brewery-planner></section>
         </section>
 
         <section class="brewery-tabpanel" role="tabpanel" id="brewery-tab-run" aria-labelledby="brewery-tab-button-run" data-tab-panel="run" hidden>
-          <div class="brewery-story-intro">
-            <p>Lees eerst het plan terug zoals het in Kanka staat. Werk daarna de settlement stap voor stap af in dezelfde volgorde als aan tafel.</p>
+          <div class="brewery-story-intro brewery-story-intro-with-art">
+            <div class="brewery-story-copy">
+              <p>Lees eerst het plan terug zoals het in Kanka staat. Werk daarna de settlement stap voor stap af in dezelfde volgorde als aan tafel.</p>
+            </div>
+            <div class="brewery-story-art brewery-story-art-spill" aria-hidden="true">
+              <img src="./assets/brewery/bierkratspilled.png" alt="">
+            </div>
           </div>
           <div class="brewery-run-flow">
             <section class="brewery-panel" data-brewery-plan></section>
@@ -79,8 +71,13 @@
         </section>
 
         <section class="brewery-tabpanel" role="tabpanel" id="brewery-tab-archive" aria-labelledby="brewery-tab-button-archive" data-tab-panel="archive" hidden>
-          <div class="brewery-story-intro">
-            <p>Als de stof is neergedaald, kijk je hier wat de brouwerij heeft opgeleverd en hoe de lijn zich ontwikkelt.</p>
+          <div class="brewery-story-intro brewery-story-intro-with-art">
+            <div class="brewery-story-copy">
+              <p>Als de stof is neergedaald, kijk je hier wat de brouwerij heeft opgeleverd en hoe de lijn zich ontwikkelt.</p>
+            </div>
+            <div class="brewery-story-art brewery-story-art-wagon" aria-hidden="true">
+              <img src="./assets/brewery/paard.png" alt="">
+            </div>
           </div>
           <div class="brewery-dashboard brewery-dashboard-2">
             <section class="brewery-panel" data-brewery-stats></section>
@@ -106,15 +103,15 @@
       <details class="brewery-disclosure">
         <summary>Wereld rond de brouwerij</summary>
         <div class="brewery-disclosure-body brewery-world-grid">
-          <section>
+          <section data-world-section="organisations">
             <p class="eyebrow">Bekende organisaties</p>
             <div class="grid" data-list="organisations"></div>
           </section>
-          <section>
+          <section data-world-section="items">
             <p class="eyebrow">Publieke voorraad</p>
             <div class="grid" data-list="items"></div>
           </section>
-          <section>
+          <section data-world-section="quests">
             <p class="eyebrow">Actieve leads</p>
             <div class="grid" data-list="quests"></div>
           </section>
