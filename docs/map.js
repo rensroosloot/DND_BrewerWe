@@ -325,19 +325,61 @@ function setupPinHelper(controller) {
   });
 }
 
+function renderActionLinks(location) {
+  const links = ['<a class="action-link" href="./atlas.html">Atlas</a>'];
+
+  if (location?.url) {
+    links.push(`<a class="action-link" href="${location.url}" target="_blank" rel="noreferrer noopener">Kanka</a>`);
+  }
+  if (location?.forgottenRealms?.url) {
+    links.push(`<a class="action-link" href="${location.forgottenRealms.url}" target="_blank" rel="noreferrer noopener">Wiki</a>`);
+  }
+
+  return `<div class="action-links">${links.join("")}</div>`;
+}
+
+function renderLocationRelations(location) {
+  const parts = [];
+
+  if (location?.parentLocation) {
+    const parent = location.parentLocation.mapPin
+      ? `<a class="text-link" href="./map.html?pin=${encodeURIComponent(location.parentLocation.mapPin.id)}&zoom=1.5">${location.parentLocation.name}</a>`
+      : location.parentLocation.name;
+    parts.push(`<p class="relation-line"><strong>Onder:</strong> ${parent}</p>`);
+  }
+
+  if (location?.childLocations?.length) {
+    const children = location.childLocations
+      .map((child) => {
+        if (child.mapPin) {
+          return `<a class="text-link" href="./map.html?pin=${encodeURIComponent(child.mapPin.id)}&zoom=1.5">${child.name}</a>`;
+        }
+        return child.name;
+      })
+      .join(", ");
+    parts.push(`<p class="relation-line"><strong>Bevat:</strong> ${children}</p>`);
+  }
+
+  return parts.join("");
+}
+
 function renderSidebar(pin, location) {
   const root = document.querySelector("[data-map-selection]");
   if (!root) {
     return;
   }
 
+  const body = location?.fullHtml
+    ? `<div class="rich-text">${location.fullHtml}</div>`
+    : `<p>${location?.summary || location?.fullText || "Nog geen publieke samenvatting."}</p>`;
+
   root.innerHTML = `
     <p class="eyebrow">${pin.label}</p>
     <h3>${location?.name || pin.label}</h3>
-    <p>${location?.summary || location?.fullText || "Nog geen publieke samenvatting."}</p>
+    ${renderLocationRelations(location)}
+    ${body}
     ${location?.type ? `<p class="meta">${location.type}</p>` : ""}
-    <p><a class="text-link" href="./atlas.html">Bekijk ook in de atlas</a></p>
-    ${location?.url ? `<p><a class="text-link" href="${location.url}" target="_blank" rel="noreferrer noopener">Bekijk in Kanka</a></p>` : ""}
+    ${renderActionLinks(location)}
   `;
 }
 
@@ -396,12 +438,18 @@ async function main() {
       }
     });
 
-    const focusPinId = new URLSearchParams(window.location.search).get("pin");
+    const params = new URLSearchParams(window.location.search);
+    const focusPinId = params.get("pin");
+    const requestedZoom = Number.parseFloat(params.get("zoom") || "");
     if (focusPinId && pinMap.has(focusPinId)) {
       const target = pinMap.get(focusPinId);
       target.element.click();
       requestAnimationFrame(() => {
-        controller.focusOnPoint(target.pin.x, target.pin.y, 3.8);
+        controller.focusOnPoint(
+          target.pin.x,
+          target.pin.y,
+          Number.isFinite(requestedZoom) ? requestedZoom : 3.8
+        );
       });
     }
   } catch (error) {

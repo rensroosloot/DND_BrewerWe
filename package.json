@@ -3,6 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "serve": "python -m http.server 4173",
+    "test:brewery": "node --test Tech/tests/brewery-schema.test.mjs",
     "kanka:fetch": "node Tech/fetch-kanka.mjs",
     "site:build": "node Tech/build-site-data.mjs && python Tech/generate-map-previews.py",
     "obsidian:sync": "node Tech/sync-obsidian.mjs",

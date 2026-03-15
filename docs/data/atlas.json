@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T22:15:16.877Z",
+  "generatedAt": "2026-03-15T08:40:06.054Z",
   "locations": [
     {
       "id": 2021733,
@@ -11,9 +11,17 @@
       "image": "",
       "summary": null,
       "fullText": null,
+      "fullHtml": "dit is een test text",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/8992267",
       "updatedAt": "2026-03-10T20:53:56.000000Z",
+      "forgottenRealms": {
+        "label": "Forgotten Realms Wiki",
+        "title": "Boareskyr Bridge",
+        "url": "https://forgottenrealms.fandom.com/wiki/Boareskyr%20Bridge"
+      },
+      "parentLocation": null,
+      "childLocations": [],
       "mapPin": {
         "id": "boareskyr-bridge",
         "label": "Boareskyr Bridge",
@@ -34,18 +42,60 @@
       "image": "",
       "summary": null,
       "fullText": null,
+      "fullHtml": null,
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/3784705",
       "updatedAt": "2023-11-03T15:41:49.000000Z",
-      "mapPin": {
-        "id": "ebrius",
-        "label": "Ebrius",
-        "locationName": "Ebrius",
-        "x": 41.8,
-        "y": 63.2
+      "forgottenRealms": null,
+      "parentLocation": null,
+      "childLocations": [],
+      "mapPin": null,
+      "mapLink": null,
+      "previewImage": null
+    },
+    {
+      "id": 2022248,
+      "entityId": 8994607,
+      "module": "locations",
+      "name": "High Moor",
+      "type": null,
+      "title": null,
+      "image": "",
+      "summary": "The High Moor was a large, monster-infested, open moorland in western Faerûn , bordered on the east by the Serpent Hills and on the west by the Misty Forest .",
+      "fullText": "The High Moor was a large, monster-infested, open moorland in western Faerûn , bordered on the east by the Serpent Hills and on the west by the Misty Forest . [ 1 ]",
+      "fullHtml": "The High Moor was a large, monster-infested, open moorland in <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/West_Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">western</a> <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">Faerûn</a> , bordered on the east by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Serpent_Hills\" target=\"_blank\" rel=\"noreferrer noopener\">Serpent Hills</a> and on the west by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Misty_Forest\" target=\"_blank\" rel=\"noreferrer noopener\">Misty Forest</a> .",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/8994607",
+      "updatedAt": "2026-03-11T08:49:27.000000Z",
+      "forgottenRealms": {
+        "label": "Forgotten Realms Wiki",
+        "title": "High Moor",
+        "url": "https://forgottenrealms.fandom.com/wiki/High%20Moor"
       },
-      "mapLink": "./map.html?pin=ebrius",
-      "previewImage": "./assets/maps/previews/ebrius.jpg"
+      "parentLocation": null,
+      "childLocations": [
+        {
+          "id": 2022249,
+          "name": "Orogoth",
+          "type": "City",
+          "mapPin": {
+            "id": "orogoth",
+            "label": "Orogoth",
+            "locationName": "Orogoth",
+            "x": 58.19,
+            "y": 43.34
+          }
+        }
+      ],
+      "mapPin": {
+        "id": "high-moor",
+        "label": "High Moor",
+        "locationName": "High Moor",
+        "x": 54.08,
+        "y": 45.14
+      },
+      "mapLink": "./map.html?pin=high-moor",
+      "previewImage": "./assets/maps/previews/high-moor.jpg"
     },
     {
       "id": 885310,
@@ -57,18 +107,58 @@
       "image": "",
       "summary": null,
       "fullText": null,
+      "fullHtml": null,
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/3784723",
       "updatedAt": "2023-11-03T15:42:57.000000Z",
-      "mapPin": {
-        "id": "macallan",
-        "label": "Macallan, Under Ebrius",
-        "locationName": "Macallan, Under Ebrius",
-        "x": 43.4,
-        "y": 65.4
+      "forgottenRealms": null,
+      "parentLocation": null,
+      "childLocations": [],
+      "mapPin": null,
+      "mapLink": null,
+      "previewImage": null
+    },
+    {
+      "id": 2022249,
+      "entityId": 8994608,
+      "module": "locations",
+      "name": "Orogoth",
+      "type": "City",
+      "title": null,
+      "image": "",
+      "summary": "Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons .",
+      "fullText": "Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons . [ 5 ]",
+      "fullHtml": "Orogoth was one of the most dangerous locations in the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/High_Moor\" target=\"_blank\" rel=\"noreferrer noopener\">High Moor</a> and was known for the presence of <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Black_dragon\" target=\"_blank\" rel=\"noreferrer noopener\">black dragons</a> .",
+      "locationId": 2022248,
+      "url": "https://app.kanka.io/w/167950/entities/8994608",
+      "updatedAt": "2026-03-11T08:49:27.000000Z",
+      "forgottenRealms": {
+        "label": "Forgotten Realms Wiki",
+        "title": "Orogoth",
+        "url": "https://forgottenrealms.fandom.com/wiki/Orogoth"
       },
-      "mapLink": "./map.html?pin=macallan",
-      "previewImage": "./assets/maps/previews/macallan.jpg"
+      "parentLocation": {
+        "id": 2022248,
+        "name": "High Moor",
+        "type": null,
+        "mapPin": {
+          "id": "high-moor",
+          "label": "High Moor",
+          "locationName": "High Moor",
+          "x": 54.08,
+          "y": 45.14
+        }
+      },
+      "childLocations": [],
+      "mapPin": {
+        "id": "orogoth",
+        "label": "Orogoth",
+        "locationName": "Orogoth",
+        "x": 58.19,
+        "y": 43.34
+      },
+      "mapLink": "./map.html?pin=orogoth",
+      "previewImage": "./assets/maps/previews/orogoth.jpg"
     }
   ],
   "maps": []

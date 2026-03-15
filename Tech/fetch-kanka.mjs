@@ -71,6 +71,79 @@ function stripHtml(value) {
     .trim();
 }
 
+function decodeHtmlEntities(value) {
+  return String(value || "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&#39;/g, "'")
+    .replace(/&quot;/g, "\"")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+function sanitizeHref(value) {
+  const href = String(value || "").trim();
+  if (!href) {
+    return null;
+  }
+
+  try {
+    const url = new URL(href);
+    if (url.protocol !== "http:" && url.protocol !== "https:") {
+      return null;
+    }
+    return url.toString();
+  } catch {
+    return null;
+  }
+}
+
+function sanitizeRichText(value) {
+  let html = String(value || "");
+  const linkPlaceholders = [];
+
+  html = html
+    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    .replace(/<style[\s\S]*?<\/style>/gi, "")
+    .replace(/<\/?(div|p|li|ul|ol)[^>]*>/gi, "\n")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<sup[\s\S]*?<\/sup>/gi, "");
+
+  html = html.replace(/<a\b[^>]*href=(['"])(.*?)\1[^>]*>([\s\S]*?)<\/a>/gi, (_, __, href, text) => {
+    const safeHref = sanitizeHref(href);
+    const label = decodeHtmlEntities(stripHtml(text));
+
+    if (!safeHref || !label) {
+      return label;
+    }
+
+    const token = `__LINK_${linkPlaceholders.length}__`;
+    linkPlaceholders.push(
+      `<a class="rich-link" href="${safeHref}" target="_blank" rel="noreferrer noopener">${label}</a>`
+    );
+    return token;
+  });
+
+  html = decodeHtmlEntities(html)
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\u00a0/g, " ")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n[ \t]+/g, "\n")
+    .replace(/[ \t]{2,}/g, " ")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+
+  for (const [index, linkHtml] of linkPlaceholders.entries()) {
+    html = html.replaceAll(`__LINK_${index}__`, linkHtml);
+  }
+
+  return html
+    .split(/\n{2,}/)
+    .map((block) => block.trim().replace(/[ \t]{2,}/g, " ").replace(/\n/g, "<br>"))
+    .filter(Boolean)
+    .join("<br><br>") || null;
+}
+
 function createSummary(fullText) {
   if (!fullText) {
     return null;
@@ -86,6 +159,7 @@ function createSummary(fullText) {
 
 function toPublicSummary(record, moduleName) {
   const fullText = stripHtml(record.entry) || null;
+  const fullHtml = sanitizeRichText(record.entry) || null;
   return {
     id: record.id,
     entityId: record.entity_id ?? null,
@@ -96,6 +170,7 @@ function toPublicSummary(record, moduleName) {
     image: record.image_full ?? record.image_thumb ?? record.image ?? null,
     summary: createSummary(fullText),
     fullText,
+    fullHtml,
     locationId: record.location_id ?? null,
     url: record.urls?.view ?? record.url ?? record.entity?.url ?? null,
     updatedAt: record.updated_at ?? null

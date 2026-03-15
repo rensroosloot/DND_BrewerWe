@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-03-10T22:15:16.877Z",
+  "generatedAt": "2026-03-15T08:40:06.054Z",
   "title": "BrewerWe",
   "intro": "Een spelergerichte campagnehub rond een kleine brouwerij, de bijbehorende bar en de plaatsen en personen die ermee verbonden zijn.",
   "stats": {
-    "totalEntries": 5,
-    "locations": 3,
+    "totalEntries": 7,
+    "locations": 5,
     "organisations": 1,
     "characters": 1,
     "quests": 0,
@@ -20,8 +20,9 @@
       "type": "Brewery",
       "title": null,
       "image": "",
-      "summary": null,
+      "summary": "Een matige batch die te lijden had onder late terugkeer en extra verlies.",
       "fullText": null,
+      "fullHtml": null,
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/3784730",
       "updatedAt": "2023-11-03T13:09:15.000000Z"
@@ -36,9 +37,17 @@
       "image": "",
       "summary": null,
       "fullText": null,
+      "fullHtml": "dit is een test text",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/8992267",
       "updatedAt": "2026-03-10T20:53:56.000000Z",
+      "forgottenRealms": {
+        "label": "Forgotten Realms Wiki",
+        "title": "Boareskyr Bridge",
+        "url": "https://forgottenrealms.fandom.com/wiki/Boareskyr%20Bridge"
+      },
+      "parentLocation": null,
+      "childLocations": [],
       "mapPin": {
         "id": "boareskyr-bridge",
         "label": "Boareskyr Bridge",

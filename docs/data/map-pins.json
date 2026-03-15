@@ -7,17 +7,17 @@
     "y": 54.37
   },
   {
-    "id": "ebrius",
-    "label": "Ebrius",
-    "locationName": "Ebrius",
-    "x": 41.8,
-    "y": 63.2
+    "id": "high-moor",
+    "label": "High Moor",
+    "locationName": "High Moor",
+    "x": 54.08,
+    "y": 45.14
   },
   {
-    "id": "macallan",
-    "label": "Macallan, Under Ebrius",
-    "locationName": "Macallan, Under Ebrius",
-    "x": 43.4,
-    "y": 65.4
+    "id": "orogoth",
+    "label": "Orogoth",
+    "locationName": "Orogoth",
+    "x": 58.19,
+    "y": 43.34
   }
 ]
