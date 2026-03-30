@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-03-30T19:04:22.800Z",
+  "generatedAt": "2026-03-30T19:14:46.052Z",
   "campaignId": 167950,
   "modules": {
     "characters": [
+      {
+        "id": 2347356,
+        "entityId": 9085133,
+        "module": "characters",
+        "name": "Harrie",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": null,
+        "fullText": null,
+        "fullHtml": null,
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9085133",
+        "updatedAt": "2026-03-30T19:14:40.000000Z"
+      },
       {
         "id": 981048,
         "entityId": 3770862,
@@ -34,6 +49,21 @@
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/8992267",
         "updatedAt": "2026-03-10T20:53:56.000000Z"
+      },
+      {
+        "id": 2043715,
+        "entityId": 9085128,
+        "module": "locations",
+        "name": "Daggerford",
+        "type": "City",
+        "title": null,
+        "image": "",
+        "summary": "Daggerford was a small but consequential town located in the Delimbiyr Vale within the greater Sword Coast.",
+        "fullText": "Daggerford was a small but consequential town located in the Delimbiyr Vale within the greater Sword Coast. Sitting atop a hill in the center of Daggerford was the grand Ducal Castle , which was technically older than the town itself. On a small hill near the town was an entrance to a nearby song path , a network of portals that were connected to works of oratorical art, such as songs and epic poems. The song path near Daggerford was referred to as the Voices of the Lost , named for the song that was required for its opening. Gillian's Hill , Liam's Hold , and Black Helm Tower were each within a day's travel of Daggerford. While people of Daggerford were largely self–sufficient, they did import lumber from Andalor's Mill in Bowshot .",
+        "fullHtml": "<a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Daggerford\" target=\"_blank\" rel=\"noreferrer noopener\">Daggerford</a> was a small but consequential town located in the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Delimbiyr_Vale\" target=\"_blank\" rel=\"noreferrer noopener\">Delimbiyr Vale</a> within the greater <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Sword_Coast\" target=\"_blank\" rel=\"noreferrer noopener\">Sword Coast.</a><br><br>Sitting atop a hill in the center of Daggerford was the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Ducal_Castle\" target=\"_blank\" rel=\"noreferrer noopener\">grand Ducal Castle</a>, which was technically older than the town itself.<br><br>On a small hill near the town was an entrance to a nearby song path , a network of <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Portal\" target=\"_blank\" rel=\"noreferrer noopener\">portals</a> that were connected to works of oratorical art, such as songs and epic poems. The song path near Daggerford was referred to as the Voices of the Lost , named for the song that was required for its opening.<br><br><a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Gillian%27s_Hill\" target=\"_blank\" rel=\"noreferrer noopener\">Gillian's Hill</a>, <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Liam%27s_Hold\" target=\"_blank\" rel=\"noreferrer noopener\">Liam's Hold</a>, and <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Black_Helm_Tower\" target=\"_blank\" rel=\"noreferrer noopener\">Black Helm Tower</a> were each within a day's travel of Daggerford.<br><br>While people of Daggerford were largely self–sufficient, they did import lumber from Andalor's Mill in <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Bowshot\" target=\"_blank\" rel=\"noreferrer noopener\">Bowshot</a>.",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9085128",
+        "updatedAt": "2026-03-30T19:11:56.000000Z"
       },
       {
         "id": 885305,
@@ -105,9 +135,9 @@
         "type": null,
         "title": null,
         "image": "",
-        "summary": "[map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40.38 [/map_pin]",
-        "fullText": "[map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40.38 [/map_pin]",
-        "fullHtml": "[map_pin]<br><br>id: brouwerij<br><br>label: Brouwerij<br><br>entity_type: location<br><br>entity_ref: Brouwerij<br><br>map_x: 49.33<br><br>map_y: 40.38<br><br>[/map_pin]",
+        "summary": "[map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40.67 [/map_pin]",
+        "fullText": "[map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40.67 [/map_pin]",
+        "fullHtml": "[map_pin]<br><br>id: brouwerij<br><br>label: Brouwerij<br><br>entity_type: location<br><br>entity_ref: Brouwerij<br><br>map_x: 49.33<br><br>map_y: 40.67<br><br>[/map_pin]",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9085100",
         "updatedAt": "2026-03-30T19:02:55.000000Z"

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T19:04:22.800Z",
+  "generatedAt": "2026-03-30T19:14:46.052Z",
   "brewery": {
     "id": 189284,
     "entityId": 3784730,
@@ -298,9 +298,9 @@
       "type": null,
       "title": null,
       "image": "",
-      "summary": "[map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40.38 [/map_pin]",
-      "fullText": "[map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40.38 [/map_pin]",
-      "fullHtml": "[map_pin]<br><br>id: brouwerij<br><br>label: Brouwerij<br><br>entity_type: location<br><br>entity_ref: Brouwerij<br><br>map_x: 49.33<br><br>map_y: 40.38<br><br>[/map_pin]",
+      "summary": "[map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40.67 [/map_pin]",
+      "fullText": "[map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40.67 [/map_pin]",
+      "fullHtml": "[map_pin]<br><br>id: brouwerij<br><br>label: Brouwerij<br><br>entity_type: location<br><br>entity_ref: Brouwerij<br><br>map_x: 49.33<br><br>map_y: 40.67<br><br>[/map_pin]",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/9085100",
       "updatedAt": "2026-03-30T19:02:55.000000Z"
