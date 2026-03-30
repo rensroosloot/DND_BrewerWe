@@ -38,6 +38,19 @@ test("default pin and entity types derive from module", () => {
   assert.equal(pins[0].id, "lost-ledger");
 });
 
+test("teleport pins keep their dedicated entity type", () => {
+  const record = {
+    id: 5,
+    name: "Circle of Brass",
+    fullHtml:
+      "[map_pin]<br><br>label: Circle of Brass<br><br>entity_type: teleport<br><br>entity_ref: Circle of Brass<br><br>map_x: 20.5<br><br>map_y: 18.25<br><br>[/map_pin]"
+  };
+
+  const pins = extractMapPinsFromRecord(record, "locations");
+  assert.equal(pins[0].entityType, "teleport");
+  assert.equal(pins[0].entityRef, "Circle of Brass");
+});
+
 test("legacy location pins still parse", () => {
   const record = {
     id: 3,

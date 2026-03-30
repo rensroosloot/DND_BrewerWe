@@ -68,6 +68,12 @@
                 <span>Locatie</span>
               </div>
               <div class="map-legend-item">
+                <span class="map-pin map-pin-static pin-type-teleport" aria-hidden="true">
+                  <span class="map-pin-glyph">◎</span>
+                </span>
+                <span>Teleportcirkel</span>
+              </div>
+              <div class="map-legend-item">
                 <span class="map-pin map-pin-static pin-type-person" aria-hidden="true">
                   <span class="map-pin-glyph">&#128100;</span>
                 </span>
@@ -112,6 +118,7 @@
                 <span>Entity type</span>
                 <select id="map-entity-type" class="map-helper-input">
                   <option value="location">Location</option>
+                  <option value="teleport">Teleport circle</option>
                   <option value="person">Person</option>
                   <option value="quest">Quest</option>
                   <option value="misc">Misc</option>

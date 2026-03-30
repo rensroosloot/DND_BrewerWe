@@ -1187,6 +1187,16 @@ body::before {
   background: #7b4f26;
 }
 
+.pin-type-teleport {
+  background: #2e6885;
+}
+
+.pin-type-teleport::after {
+  inset: 5px;
+  background: transparent;
+  border: 2px solid rgba(255, 248, 235, 0.52);
+}
+
 .pin-type-quest {
   background: #8b3b17;
   border-radius: 10px;

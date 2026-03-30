@@ -35,10 +35,11 @@ notes: Dangerous moorland with ruined sites.
   - user-facing label for map and sidebar
 - `entity_type`
   - required
-  - one of `location | person | quest | misc`
+  - one of `location | teleport | person | quest | misc`
 - `entity_ref`
   - required
   - name or reference of the linked public entity
+  - use a location reference for `teleport` pins so atlas links and sidebars stay attached to the linked place
 - `map_x`
   - required
   - percentage on the map, `0-100`
@@ -70,6 +71,7 @@ Pins are rendered from JSON with this normalized shape:
 ## Rendering Rules
 
 - `entityType: location` -> standard marker
+- `entityType: teleport` -> teleport-circle marker, still treated as location-linked content
 - `entityType: person` -> person marker
 - `entityType: quest` -> sword marker
 - `entityType: misc` -> question-mark marker

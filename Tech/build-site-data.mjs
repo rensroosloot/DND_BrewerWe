@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { buildBreweryViewModel } from "./brewery-schema.mjs";
-import { extractLegacyLocationPin, extractMapPinsFromRecord } from "./map-pin-schema.mjs";
+import { extractLegacyLocationPin, extractMapPinsFromRecord, isLocationLikeEntityType } from "./map-pin-schema.mjs";
 
 const rootDir = process.cwd();
 const sourceFile = path.join(rootDir, "docs", "data", "kanka-public.json");
@@ -280,7 +280,7 @@ async function main() {
         ...pin,
         x: pin.x,
         y: pin.y,
-        locationName: pin.entityType === "location" ? pin.entityRef : null,
+        locationName: isLocationLikeEntityType(pin.entityType) ? pin.entityRef : null,
         summary: stripMapMeta(record.summary),
         fullText: stripMapMeta(record.fullText),
         fullHtml: stripMapMetaHtml(record.fullHtml),
@@ -293,7 +293,7 @@ async function main() {
   );
 
   const explicitLocationRefs = new Set(
-    generatedPins.filter((pin) => pin.entityType === "location").map((pin) => pin.entityRef)
+    generatedPins.filter((pin) => isLocationLikeEntityType(pin.entityType)).map((pin) => pin.entityRef)
   );
   const legacyPins = enrichedLocations
     .filter((location) => !explicitLocationRefs.has(location.name))

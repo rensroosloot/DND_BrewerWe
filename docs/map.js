@@ -8,6 +8,10 @@ function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
 }
 
+function isLocationLikeEntityType(entityType) {
+  return entityType === "location" || entityType === "teleport";
+}
+
 function trySetPointerCapture(element, pointerId) {
   try {
     element.setPointerCapture(pointerId);
@@ -382,7 +386,7 @@ function renderActionLinks(location) {
 function renderPinActionLinks(pin) {
   const links = [];
   const kankaUrl = sanitizePublicUrl(pin?.url);
-  if (pin?.entityType === "location") {
+  if (isLocationLikeEntityType(pin?.entityType)) {
     links.push('<a class="action-link" href="./atlas.html">Atlas</a>');
   }
   if (kankaUrl) {
@@ -488,7 +492,7 @@ function createPin(pin, locations) {
   button.title = pin.label;
   button.innerHTML = `<span class="map-pin-glyph" aria-hidden="true">${pinGlyph(pin.entityType)}</span>`;
 
-  const location = pin.entityType === "location"
+  const location = isLocationLikeEntityType(pin.entityType)
     ? locations.find((item) => item.name === (pin.entityRef || pin.locationName)) || null
     : null;
 
@@ -511,6 +515,7 @@ function createPin(pin, locations) {
 
 function pinGlyph(entityType) {
   if (entityType === "person") return "&#128100;";
+  if (entityType === "teleport") return "◎";
   if (entityType === "quest") return "&#9876;";
   if (entityType === "misc") return "?";
   return "&#9679;";

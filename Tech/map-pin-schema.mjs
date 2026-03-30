@@ -35,9 +35,14 @@ function defaultEntityType(moduleName) {
   return "misc";
 }
 
+export function isLocationLikeEntityType(value) {
+  const raw = String(value || "").trim().toLowerCase();
+  return raw === "location" || raw === "teleport";
+}
+
 function normalizeEntityType(value, moduleName) {
   const raw = String(value || "").trim().toLowerCase();
-  if (raw === "location" || raw === "person" || raw === "quest" || raw === "misc") {
+  if (isLocationLikeEntityType(raw) || raw === "person" || raw === "quest" || raw === "misc") {
     return raw;
   }
   return defaultEntityType(moduleName);
