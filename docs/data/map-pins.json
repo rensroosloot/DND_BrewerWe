@@ -74,5 +74,24 @@
     "url": "https://app.kanka.io/w/167950/entities/3770862",
     "image": "https://cdn-ugc.kanka.io/characters/z9MZBTznhgaEAcEw8dm3cL4aX0hGm7cudT7vOUgV.png",
     "module": "characters"
+  },
+  {
+    "id": "brouwerij",
+    "label": "Brouwerij",
+    "entityType": "location",
+    "entityRef": "Brouwerij",
+    "x": 49.33,
+    "y": 40.38,
+    "notes": null,
+    "sourceModule": "organisations",
+    "sourceRecordId": 430337,
+    "locationName": "Brouwerij",
+    "summary": null,
+    "fullText": null,
+    "fullHtml": null,
+    "type": null,
+    "url": "https://app.kanka.io/w/167950/entities/9085100",
+    "image": "",
+    "module": "organisations"
   }
 ]
