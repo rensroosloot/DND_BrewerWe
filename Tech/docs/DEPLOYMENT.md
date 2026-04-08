@@ -11,6 +11,24 @@ The public site is deployed as a static GitHub Pages site from the `docs/` direc
 5. Select folder `/docs`.
 
 ## Publication Workflow
+
+### Automated (recommended)
+A GitHub Actions workflow (`.github/workflows/sync-kanka.yml`) runs daily at 06:00 UTC. It fetches Kanka data, builds the site, and commits any changed files automatically. It can also be triggered manually from the GitHub Actions tab.
+
+Required GitHub repository secrets:
+- `KANKA_TOKEN`
+- `KANKA_CAMPAIGN_ID`
+- `BREWERY_ORG_NAME`
+
+The workflow requires **Read and write** permissions under Settings → Actions → General → Workflow permissions.
+
+### Local one-command deploy
+```bash
+npm run deploy
+```
+Runs fetch + build, stages `docs/data` and `docs/assets/maps/previews`, commits if anything changed, and pushes to `main`.
+
+### Manual step-by-step
 1. Run the local fetch/build flow.
 2. Review generated content in `docs/`.
 3. Commit the updated static output.
@@ -31,7 +49,7 @@ Current baseline:
 - `script-src 'self'`
 - `img-src 'self' https: data:`
 - `style-src 'self' 'unsafe-inline'`
-- `connect-src 'self'`
+- `connect-src 'self' https://roosloot.com` — `roosloot.com` is permitted for the brewery sync button proxy
 - `object-src 'none'`
 - `base-uri 'self'`
 - `form-action 'self'`

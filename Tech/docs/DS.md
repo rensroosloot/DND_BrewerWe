@@ -7,7 +7,7 @@ The solution is a static website backed by generated JSON files. Structured camp
 - Static frontend
 - Local build pipeline
 - File-based data exchange
-- No public runtime backend
+- Thin PHP proxy on `roosloot.com` for the brewery sync button (triggers GitHub Actions; holds the GitHub PAT server-side)
 
 ## Source-of-Truth Model
 - Kanka: primary structured source of truth for shared public campaign data
