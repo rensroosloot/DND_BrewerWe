@@ -906,7 +906,7 @@ async function main() {
   }
 }
 
-const SYNC_URL    = "https://roosloot.com/Api/brewery-sync.php";
+const SYNC_URL    = "https://roosloot.com/api/brewery-sync.php";
 const SYNC_SECRET = "R8N8DPpFtksupZCr4qvrz";
 
 function initSyncButton() {
