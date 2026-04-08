@@ -906,4 +906,43 @@ async function main() {
   }
 }
 
+const SYNC_URL    = "https://roosloot.com/api/brewery-sync.php";
+const SYNC_SECRET = "R8N8DPpFtksupZCr4qvrz";
+
+function initSyncButton() {
+  const button = document.querySelector("[data-sync-button]");
+  const status = document.querySelector("[data-sync-status]");
+  if (!button) return;
+
+  button.addEventListener("click", async () => {
+    button.disabled = true;
+    button.textContent = "Bezig...";
+    if (status) { status.textContent = ""; status.hidden = true; }
+
+    try {
+      const response = await fetch(SYNC_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ secret: SYNC_SECRET })
+      });
+      const data = await response.json();
+      if (data.ok) {
+        if (status) { status.textContent = "Sync gestart. Duurt ~1 minuut, ververs daarna de pagina."; status.hidden = false; }
+        button.textContent = "Gestart!";
+      } else {
+        throw new Error(data.error || "Onbekende fout");
+      }
+    } catch (error) {
+      if (status) { status.textContent = `Mislukt: ${error.message}`; status.hidden = false; }
+      button.textContent = "Mislukt";
+    }
+
+    setTimeout(() => {
+      button.disabled = false;
+      button.textContent = "Synchroniseer met Kanka";
+    }, 15000);
+  });
+}
+
 main();
+initSyncButton();

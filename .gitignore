@@ -20,3 +20,4 @@ Tech/data/raw/
 Tech/.env
 Tech/.env.*
 !Tech/.env.example
+scripts/brewery-sync.php
