@@ -1,12 +1,27 @@
 {
-  "generatedAt": "2026-03-30T19:19:31.156Z",
+  "generatedAt": "2026-04-08T11:22:32.817Z",
   "characters": [
+    {
+      "id": 2347424,
+      "entityId": 9085399,
+      "module": "characters",
+      "name": "Grivvith Slurkraal",
+      "type": "NPC",
+      "title": "Wethouder van Daggerford",
+      "image": "https://cdn-ugc.kanka.io/campaigns/167950/a16d27c0-414b-485d-b3d1-6ef56315cb6e.png",
+      "summary": "Geeft ons de brouwerrij?",
+      "fullText": "Geeft ons de brouwerrij? Super knappe Bullywug, met staf, 2 meter lang \"Knappe kikker\" Valt op [character:9085736] , ondanks wat [character:9085401] eerder had gezegd. Maakt vervrissende drankjes met haar slijm",
+      "fullHtml": "Geeft ons de brouwerrij?<br><br>Super knappe Bullywug, met staf, 2 meter lang<br><br>\"Knappe kikker\"<br><br>Valt op [character:9085736] , ondanks wat [character:9085401] eerder had gezegd.<br><br>Maakt vervrissende drankjes met haar slijm",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9085399",
+      "updatedAt": "2026-04-03T11:51:31.000000Z"
+    },
     {
       "id": 2347356,
       "entityId": 9085133,
       "module": "characters",
       "name": "Harrie",
-      "type": null,
+      "type": "Player",
       "title": null,
       "image": "https://cdn-ugc.kanka.io/campaigns/167950/a16d1249-2477-4c7b-b07f-0340a13713a2.png",
       "summary": null,
@@ -14,7 +29,37 @@
       "fullHtml": null,
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/9085133",
-      "updatedAt": "2026-03-30T19:14:40.000000Z"
+      "updatedAt": "2026-04-03T11:47:44.000000Z"
+    },
+    {
+      "id": 2347551,
+      "entityId": 9085737,
+      "module": "characters",
+      "name": "Mumbi",
+      "type": "Player",
+      "title": null,
+      "image": "",
+      "summary": null,
+      "fullText": null,
+      "fullHtml": null,
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9085737",
+      "updatedAt": "2026-04-03T11:48:04.000000Z"
+    },
+    {
+      "id": 2347550,
+      "entityId": 9085736,
+      "module": "characters",
+      "name": "Otis",
+      "type": "Player",
+      "title": null,
+      "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1747b2b-348e-4594-8a54-78b4019337c9.png",
+      "summary": null,
+      "fullText": null,
+      "fullHtml": null,
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9085736",
+      "updatedAt": "2026-04-03T11:43:49.000000Z"
     },
     {
       "id": 981048,
@@ -29,7 +74,22 @@
       "fullHtml": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep. RED used to have a name, however it was ehr.. redacted. The parrot is quite vulgar but luckily doesn't know the proper curse words.<br><br>Her former owner programmed RED to provide any takers with more or less usefull information regarding the bar and brewery. RED is capable of understanding common language but might not always provide the answers some might hope for.<br><br>Once everywhile RED will receive scheduled upgrades which will unlock additional information.<br><br>[map_pin]<br><br>id: red-the-robot-parrot<br><br>label: RED the Robot Parrot<br><br>entity_type: person<br><br>entity_ref: RED the Robot Parrot<br><br>map_x: 66.72<br><br>map_y: 50.68<br><br>[/map_pin]",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/3770862",
-      "updatedAt": "2026-03-10T19:55:08.000000Z"
+      "updatedAt": "2026-03-15T14:03:44.000000Z"
+    },
+    {
+      "id": 2347425,
+      "entityId": 9085401,
+      "module": "characters",
+      "name": "Vrikkal Ploschnak",
+      "type": "NPC",
+      "title": "Assistent van Grivvith",
+      "image": "https://cdn-ugc.kanka.io/campaigns/167950/a16d261d-885c-40c1-8a06-24037b34f7e5.png",
+      "summary": "Hangt briefjes op op het quest bord Assistent van [character:9085399]",
+      "fullText": "Hangt briefjes op op het quest bord Assistent van [character:9085399]",
+      "fullHtml": "Hangt briefjes op op het quest bord<br><br>Assistent van [character:9085399]",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9085401",
+      "updatedAt": "2026-04-03T11:52:13.000000Z"
     }
   ]
 }

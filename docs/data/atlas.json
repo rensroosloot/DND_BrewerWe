@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T19:19:31.156Z",
+  "generatedAt": "2026-04-08T11:22:32.817Z",
   "locations": [
     {
       "id": 2021733,
@@ -14,7 +14,7 @@
       "fullHtml": "dit is een test text",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/8992267",
-      "updatedAt": "2026-03-10T20:53:56.000000Z",
+      "updatedAt": "2026-03-15T14:35:58.000000Z",
       "forgottenRealms": {
         "label": "Forgotten Realms Wiki",
         "title": "Boareskyr Bridge",
@@ -57,7 +57,7 @@
       "fullHtml": "<a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Daggerford\" target=\"_blank\" rel=\"noreferrer noopener\">Daggerford</a> was a small but consequential town located in the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Delimbiyr_Vale\" target=\"_blank\" rel=\"noreferrer noopener\">Delimbiyr Vale</a> within the greater <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Sword_Coast\" target=\"_blank\" rel=\"noreferrer noopener\">Sword Coast.</a><br><br>Sitting atop a hill in the center of Daggerford was the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Ducal_Castle\" target=\"_blank\" rel=\"noreferrer noopener\">grand Ducal Castle</a>, which was technically older than the town itself.<br><br>On a small hill near the town was an entrance to a nearby song path , a network of <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Portal\" target=\"_blank\" rel=\"noreferrer noopener\">portals</a> that were connected to works of oratorical art, such as songs and epic poems. The song path near Daggerford was referred to as the Voices of the Lost , named for the song that was required for its opening.<br><br><a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Gillian%27s_Hill\" target=\"_blank\" rel=\"noreferrer noopener\">Gillian's Hill</a>, <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Liam%27s_Hold\" target=\"_blank\" rel=\"noreferrer noopener\">Liam's Hold</a>, and <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Black_Helm_Tower\" target=\"_blank\" rel=\"noreferrer noopener\">Black Helm Tower</a> were each within a day's travel of Daggerford.<br><br>While people of Daggerford were largely self–sufficient, they did import lumber from Andalor's Mill in <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Bowshot\" target=\"_blank\" rel=\"noreferrer noopener\">Bowshot</a>.<br><br>/website location<br><br>",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/9085128",
-      "updatedAt": "2026-03-30T19:11:56.000000Z",
+      "updatedAt": "2026-03-30T19:18:52.000000Z",
       "forgottenRealms": {
         "label": "Forgotten Realms Wiki",
         "title": "Daggerford",
@@ -88,6 +88,31 @@
       "previewImage": "./assets/maps/previews/daggerford.jpg"
     },
     {
+      "id": 2043901,
+      "entityId": 9085738,
+      "module": "locations",
+      "name": "Delimbiyr River",
+      "type": null,
+      "title": null,
+      "image": "",
+      "summary": null,
+      "fullText": null,
+      "fullHtml": null,
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9085738",
+      "updatedAt": "2026-03-30T21:29:27.000000Z",
+      "forgottenRealms": {
+        "label": "Forgotten Realms Wiki",
+        "title": "Delimbiyr River",
+        "url": "https://forgottenrealms.fandom.com/wiki/Delimbiyr%20River"
+      },
+      "parentLocation": null,
+      "childLocations": [],
+      "mapPin": null,
+      "mapLink": null,
+      "previewImage": null
+    },
+    {
       "id": 885305,
       "entityId": 3784705,
       "module": "locations",
@@ -100,7 +125,7 @@
       "fullHtml": null,
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/3784705",
-      "updatedAt": "2023-11-03T15:41:49.000000Z",
+      "updatedAt": "2022-12-02T14:57:17.000000Z",
       "forgottenRealms": null,
       "parentLocation": null,
       "childLocations": [],
@@ -121,39 +146,14 @@
       "fullHtml": "The High Moor was a large, monster-infested, open moorland in <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/West_Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">western</a> <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">Faerûn</a> , bordered on the east by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Serpent_Hills\" target=\"_blank\" rel=\"noreferrer noopener\">Serpent Hills</a> and on the west by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Misty_Forest\" target=\"_blank\" rel=\"noreferrer noopener\">Misty Forest</a> .",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/8994607",
-      "updatedAt": "2026-03-11T08:49:27.000000Z",
+      "updatedAt": "2026-03-15T14:31:18.000000Z",
       "forgottenRealms": {
         "label": "Forgotten Realms Wiki",
         "title": "High Moor",
         "url": "https://forgottenrealms.fandom.com/wiki/High%20Moor"
       },
       "parentLocation": null,
-      "childLocations": [
-        {
-          "id": 2022249,
-          "name": "Orogoth",
-          "type": "City",
-          "mapPin": {
-            "id": "orogoth",
-            "label": "Orogoth",
-            "entityType": "location",
-            "entityRef": "Orogoth",
-            "x": 58.19,
-            "y": 43.34,
-            "notes": null,
-            "sourceModule": "locations",
-            "sourceRecordId": 2022249,
-            "locationName": "Orogoth",
-            "summary": "Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons .",
-            "fullText": "Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons . [ 5 ]",
-            "fullHtml": "Orogoth was one of the most dangerous locations in the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/High_Moor\" target=\"_blank\" rel=\"noreferrer noopener\">High Moor</a> and was known for the presence of <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Black_dragon\" target=\"_blank\" rel=\"noreferrer noopener\">black dragons</a> .",
-            "type": "City",
-            "url": "https://app.kanka.io/w/167950/entities/8994608",
-            "image": "",
-            "module": "locations"
-          }
-        }
-      ],
+      "childLocations": [],
       "mapPin": {
         "id": "high-moor",
         "label": "High Moor",
@@ -189,7 +189,7 @@
       "fullHtml": null,
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/3784723",
-      "updatedAt": "2023-11-03T15:42:57.000000Z",
+      "updatedAt": "2022-12-02T15:08:21.000000Z",
       "forgottenRealms": null,
       "parentLocation": null,
       "childLocations": [],
@@ -208,38 +208,15 @@
       "summary": "Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons .",
       "fullText": "Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons . [ 5 ]",
       "fullHtml": "Orogoth was one of the most dangerous locations in the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/High_Moor\" target=\"_blank\" rel=\"noreferrer noopener\">High Moor</a> and was known for the presence of <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Black_dragon\" target=\"_blank\" rel=\"noreferrer noopener\">black dragons</a> .",
-      "locationId": 2022248,
+      "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/8994608",
-      "updatedAt": "2026-03-11T08:49:27.000000Z",
+      "updatedAt": "2026-03-15T14:31:03.000000Z",
       "forgottenRealms": {
         "label": "Forgotten Realms Wiki",
         "title": "Orogoth",
         "url": "https://forgottenrealms.fandom.com/wiki/Orogoth"
       },
-      "parentLocation": {
-        "id": 2022248,
-        "name": "High Moor",
-        "type": null,
-        "mapPin": {
-          "id": "high-moor",
-          "label": "High Moor",
-          "entityType": "location",
-          "entityRef": "High Moor",
-          "x": 54.08,
-          "y": 45.14,
-          "notes": null,
-          "sourceModule": "locations",
-          "sourceRecordId": 2022248,
-          "locationName": "High Moor",
-          "summary": "The High Moor was a large, monster-infested, open moorland in western Faerûn , bordered on the east by the Serpent Hills and on the west by the Misty Forest .",
-          "fullText": "The High Moor was a large, monster-infested, open moorland in western Faerûn , bordered on the east by the Serpent Hills and on the west by the Misty Forest . [ 1 ]",
-          "fullHtml": "The High Moor was a large, monster-infested, open moorland in <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/West_Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">western</a> <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">Faerûn</a> , bordered on the east by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Serpent_Hills\" target=\"_blank\" rel=\"noreferrer noopener\">Serpent Hills</a> and on the west by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Misty_Forest\" target=\"_blank\" rel=\"noreferrer noopener\">Misty Forest</a> .",
-          "type": null,
-          "url": "https://app.kanka.io/w/167950/entities/8994607",
-          "image": "",
-          "module": "locations"
-        }
-      },
+      "parentLocation": null,
       "childLocations": [],
       "mapPin": {
         "id": "orogoth",
@@ -264,5 +241,21 @@
       "previewImage": "./assets/maps/previews/orogoth.jpg"
     }
   ],
-  "maps": []
+  "maps": [
+    {
+      "id": 130934,
+      "entityId": 9102361,
+      "module": "maps",
+      "name": "Map",
+      "type": null,
+      "title": null,
+      "image": "",
+      "summary": null,
+      "fullText": null,
+      "fullHtml": null,
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9102361",
+      "updatedAt": "2026-04-03T12:09:27.000000Z"
+    }
+  ]
 }

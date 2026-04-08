@@ -1,14 +1,29 @@
 {
-  "generatedAt": "2026-03-30T19:19:31.156Z",
+  "generatedAt": "2026-04-08T11:22:32.817Z",
   "campaignId": 167950,
   "modules": {
     "characters": [
+      {
+        "id": 2347424,
+        "entityId": 9085399,
+        "module": "characters",
+        "name": "Grivvith Slurkraal",
+        "type": "NPC",
+        "title": "Wethouder van Daggerford",
+        "image": "https://cdn-ugc.kanka.io/campaigns/167950/a16d27c0-414b-485d-b3d1-6ef56315cb6e.png",
+        "summary": "Geeft ons de brouwerrij?",
+        "fullText": "Geeft ons de brouwerrij? Super knappe Bullywug, met staf, 2 meter lang \"Knappe kikker\" Valt op [character:9085736] , ondanks wat [character:9085401] eerder had gezegd. Maakt vervrissende drankjes met haar slijm",
+        "fullHtml": "Geeft ons de brouwerrij?<br><br>Super knappe Bullywug, met staf, 2 meter lang<br><br>\"Knappe kikker\"<br><br>Valt op [character:9085736] , ondanks wat [character:9085401] eerder had gezegd.<br><br>Maakt vervrissende drankjes met haar slijm",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9085399",
+        "updatedAt": "2026-04-03T11:51:31.000000Z"
+      },
       {
         "id": 2347356,
         "entityId": 9085133,
         "module": "characters",
         "name": "Harrie",
-        "type": null,
+        "type": "Player",
         "title": null,
         "image": "https://cdn-ugc.kanka.io/campaigns/167950/a16d1249-2477-4c7b-b07f-0340a13713a2.png",
         "summary": null,
@@ -16,7 +31,37 @@
         "fullHtml": null,
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9085133",
-        "updatedAt": "2026-03-30T19:14:40.000000Z"
+        "updatedAt": "2026-04-03T11:47:44.000000Z"
+      },
+      {
+        "id": 2347551,
+        "entityId": 9085737,
+        "module": "characters",
+        "name": "Mumbi",
+        "type": "Player",
+        "title": null,
+        "image": "",
+        "summary": null,
+        "fullText": null,
+        "fullHtml": null,
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9085737",
+        "updatedAt": "2026-04-03T11:48:04.000000Z"
+      },
+      {
+        "id": 2347550,
+        "entityId": 9085736,
+        "module": "characters",
+        "name": "Otis",
+        "type": "Player",
+        "title": null,
+        "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1747b2b-348e-4594-8a54-78b4019337c9.png",
+        "summary": null,
+        "fullText": null,
+        "fullHtml": null,
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9085736",
+        "updatedAt": "2026-04-03T11:43:49.000000Z"
       },
       {
         "id": 981048,
@@ -31,7 +76,22 @@
         "fullHtml": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep. RED used to have a name, however it was ehr.. redacted. The parrot is quite vulgar but luckily doesn't know the proper curse words.<br><br>Her former owner programmed RED to provide any takers with more or less usefull information regarding the bar and brewery. RED is capable of understanding common language but might not always provide the answers some might hope for.<br><br>Once everywhile RED will receive scheduled upgrades which will unlock additional information.<br><br>[map_pin]<br><br>id: red-the-robot-parrot<br><br>label: RED the Robot Parrot<br><br>entity_type: person<br><br>entity_ref: RED the Robot Parrot<br><br>map_x: 66.72<br><br>map_y: 50.68<br><br>[/map_pin]",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/3770862",
-        "updatedAt": "2026-03-10T19:55:08.000000Z"
+        "updatedAt": "2026-03-15T14:03:44.000000Z"
+      },
+      {
+        "id": 2347425,
+        "entityId": 9085401,
+        "module": "characters",
+        "name": "Vrikkal Ploschnak",
+        "type": "NPC",
+        "title": "Assistent van Grivvith",
+        "image": "https://cdn-ugc.kanka.io/campaigns/167950/a16d261d-885c-40c1-8a06-24037b34f7e5.png",
+        "summary": "Hangt briefjes op op het quest bord Assistent van [character:9085399]",
+        "fullText": "Hangt briefjes op op het quest bord Assistent van [character:9085399]",
+        "fullHtml": "Hangt briefjes op op het quest bord<br><br>Assistent van [character:9085399]",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9085401",
+        "updatedAt": "2026-04-03T11:52:13.000000Z"
       }
     ],
     "locations": [
@@ -48,7 +108,7 @@
         "fullHtml": "[map_pin]<br><br>id: boareskyr-bridge<br><br>label: Boareskyr Bridge<br><br>entity_type: location<br><br>entity_ref: Boareskyr Bridge<br><br>map_x: 58.36<br><br>map_y: 54.33<br><br>[/map_pin]<br><br>dit is een test text",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/8992267",
-        "updatedAt": "2026-03-10T20:53:56.000000Z"
+        "updatedAt": "2026-03-15T14:35:58.000000Z"
       },
       {
         "id": 2043715,
@@ -63,7 +123,22 @@
         "fullHtml": "<a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Daggerford\" target=\"_blank\" rel=\"noreferrer noopener\">Daggerford</a> was a small but consequential town located in the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Delimbiyr_Vale\" target=\"_blank\" rel=\"noreferrer noopener\">Delimbiyr Vale</a> within the greater <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Sword_Coast\" target=\"_blank\" rel=\"noreferrer noopener\">Sword Coast.</a><br><br>Sitting atop a hill in the center of Daggerford was the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Ducal_Castle\" target=\"_blank\" rel=\"noreferrer noopener\">grand Ducal Castle</a>, which was technically older than the town itself.<br><br>On a small hill near the town was an entrance to a nearby song path , a network of <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Portal\" target=\"_blank\" rel=\"noreferrer noopener\">portals</a> that were connected to works of oratorical art, such as songs and epic poems. The song path near Daggerford was referred to as the Voices of the Lost , named for the song that was required for its opening.<br><br><a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Gillian%27s_Hill\" target=\"_blank\" rel=\"noreferrer noopener\">Gillian's Hill</a>, <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Liam%27s_Hold\" target=\"_blank\" rel=\"noreferrer noopener\">Liam's Hold</a>, and <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Black_Helm_Tower\" target=\"_blank\" rel=\"noreferrer noopener\">Black Helm Tower</a> were each within a day's travel of Daggerford.<br><br>While people of Daggerford were largely self–sufficient, they did import lumber from Andalor's Mill in <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Bowshot\" target=\"_blank\" rel=\"noreferrer noopener\">Bowshot</a>.<br><br>/website location<br><br>[map_pin]<br>id: daggerford<br>label: Daggerford<br>entity_type: location<br>entity_ref: Daggerford<br>map_x: 48.52<br>map_y: 40.43<br>[/map_pin]",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9085128",
-        "updatedAt": "2026-03-30T19:11:56.000000Z"
+        "updatedAt": "2026-03-30T19:18:52.000000Z"
+      },
+      {
+        "id": 2043901,
+        "entityId": 9085738,
+        "module": "locations",
+        "name": "Delimbiyr River",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": null,
+        "fullText": null,
+        "fullHtml": null,
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9085738",
+        "updatedAt": "2026-03-30T21:29:27.000000Z"
       },
       {
         "id": 885305,
@@ -78,7 +153,7 @@
         "fullHtml": null,
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/3784705",
-        "updatedAt": "2023-11-03T15:41:49.000000Z"
+        "updatedAt": "2022-12-02T14:57:17.000000Z"
       },
       {
         "id": 2022248,
@@ -93,7 +168,7 @@
         "fullHtml": "[map_pin]<br><br>id: high-moor<br><br>label: High Moor<br><br>entity_type: location<br><br>entity_ref: High Moor<br><br>map_x: 54.08<br><br>map_y: 45.14<br><br>[/map_pin]<br><br>The High Moor was a large, monster-infested, open moorland in <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/West_Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">western</a> <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Faer%C3%BBn\" target=\"_blank\" rel=\"noreferrer noopener\">Faerûn</a> , bordered on the east by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Serpent_Hills\" target=\"_blank\" rel=\"noreferrer noopener\">Serpent Hills</a> and on the west by the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Misty_Forest\" target=\"_blank\" rel=\"noreferrer noopener\">Misty Forest</a> .",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/8994607",
-        "updatedAt": "2026-03-11T08:49:27.000000Z"
+        "updatedAt": "2026-03-15T14:31:18.000000Z"
       },
       {
         "id": 885310,
@@ -108,7 +183,7 @@
         "fullHtml": null,
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/3784723",
-        "updatedAt": "2023-11-03T15:42:57.000000Z"
+        "updatedAt": "2022-12-02T15:08:21.000000Z"
       },
       {
         "id": 2022249,
@@ -121,9 +196,9 @@
         "summary": "[map_pin] id: orogoth label: Orogoth entity_type: location entity_ref: Orogoth map_x: 58.19 map_y: 43.34 [/map_pin] Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons .",
         "fullText": "[map_pin] id: orogoth label: Orogoth entity_type: location entity_ref: Orogoth map_x: 58.19 map_y: 43.34 [/map_pin] Orogoth was one of the most dangerous locations in the High Moor [ 1 ] [ 4 ] and was known for the presence of black dragons . [ 5 ]",
         "fullHtml": "[map_pin]<br><br>id: orogoth<br><br>label: Orogoth<br><br>entity_type: location<br><br>entity_ref: Orogoth<br><br>map_x: 58.19<br><br>map_y: 43.34<br><br>[/map_pin]<br><br>Orogoth was one of the most dangerous locations in the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/High_Moor\" target=\"_blank\" rel=\"noreferrer noopener\">High Moor</a> and was known for the presence of <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Black_dragon\" target=\"_blank\" rel=\"noreferrer noopener\">black dragons</a> .",
-        "locationId": 2022248,
+        "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/8994608",
-        "updatedAt": "2026-03-11T08:49:27.000000Z"
+        "updatedAt": "2026-03-15T14:31:03.000000Z"
       }
     ],
     "organisations": [
@@ -140,7 +215,22 @@
         "fullHtml": "[map_pin]<br><br>id: brouwerij<br><br>label: Brouwerij<br><br>entity_type: location<br><br>entity_ref: Brouwerij<br><br>map_x: 49.33<br><br>map_y: 40.67<br><br>[/map_pin]",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9085100",
-        "updatedAt": "2026-03-30T19:02:55.000000Z"
+        "updatedAt": "2026-03-30T19:09:14.000000Z"
+      },
+      {
+        "id": 431180,
+        "entityId": 9102312,
+        "module": "organisations",
+        "name": "Gemeente Daggerford",
+        "type": "Stad",
+        "title": null,
+        "image": "",
+        "summary": null,
+        "fullText": null,
+        "fullHtml": null,
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9102312",
+        "updatedAt": "2026-04-03T11:51:06.000000Z"
       },
       {
         "id": 189284,
@@ -155,12 +245,60 @@
         "fullHtml": "[brewery_plan]<br><br>plan_date: 2026-03-12<br><br>planned_return_date: 2026-03-26<br><br>kettle_name: Copper Kettle<br><br>batch_name: Copper Keg Ale<br><br>kettle_start_volume_liters: 30<br><br>efficiency: 2<br><br>quality: 1<br><br>value: 1<br><br>oversight: 0<br><br>notes: Gebalanceerde batch voor een korte afwezigheid.<br><br>[/brewery_plan]<br><br>[brewery_settlement]<br><br>date: 2025-12-18<br><br>planned_return_date: 2025-12-18<br><br>kettle_name: Copper Kettle<br><br>period_label: Winter Ale<br><br>production_roll: 14<br><br>contamination_roll: 16<br><br>sales_roll: 15<br><br>net_result_gp: 81<br><br>volume_produced_liters: 17<br><br>volume_sold_liters: 17<br><br>volume_spoiled_liters: 1<br><br>batch_result: success<br><br>incident: none<br><br>notes: Sterke winterverkoop en een schone run.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-01-08<br><br>planned_return_date: 2026-01-07<br><br>kettle_name: Copper Kettle<br><br>period_label: Deep Cellar Bitter<br><br>production_roll: 11<br><br>contamination_roll: 12<br><br>sales_roll: 10<br><br>net_result_gp: 42<br><br>volume_produced_liters: 19<br><br>volume_sold_liters: 14<br><br>volume_spoiled_liters: 4<br><br>batch_result: delayed<br><br>incident: none<br><br>notes: Iets later terug; bruikbaar volume bleef redelijk, maar de afzet was middelmatig.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-01-29<br><br>planned_return_date: 2026-01-26<br><br>kettle_name: Copper Kettle<br><br>period_label: Lantern Lager<br><br>production_roll: 9<br><br>contamination_roll: 8<br><br>sales_roll: 12<br><br>net_result_gp: 18<br><br>volume_produced_liters: 12<br><br>volume_sold_liters: 6<br><br>volume_spoiled_liters: 4<br><br>batch_result: delayed<br><br>incident: contamination<br><br>notes: Zwakke productie en besmetting zorgden voor een teleurstellende run.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-02-09<br><br>planned_return_date: 2026-02-09<br><br>kettle_name: Copper Kettle<br><br>period_label: Red Kettle Bitter<br><br>production_roll: 17<br><br>contamination_roll: 15<br><br>sales_roll: 13<br><br>net_result_gp: 66<br><br>volume_produced_liters: 25<br><br>volume_sold_liters: 22<br><br>volume_spoiled_liters: 2<br><br>batch_result: success<br><br>incident: none<br><br>notes: Goede opbrengst en stevige lokale afzet.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-02-26<br><br>planned_return_date: 2026-02-23<br><br>kettle_name: Copper Kettle<br><br>period_label: Copper Keg Ale I<br><br>production_roll: 13<br><br>contamination_roll: 11<br><br>sales_roll: 16<br><br>net_result_gp: 60<br><br>volume_produced_liters: 19<br><br>volume_sold_liters: 15<br><br>volume_spoiled_liters: 4<br><br>batch_result: delayed<br><br>incident: none<br><br>notes: Drie dagen te laat terug, maar de batch verkocht alsnog goed.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-03-11<br><br>planned_return_date: 2026-03-09<br><br>kettle_name: Copper Kettle<br><br>period_label: Copper Keg Ale II<br><br>production_roll: 15<br><br>contamination_roll: 13<br><br>sales_roll: 17<br><br>net_result_gp: 78<br><br>volume_produced_liters: 25<br><br>volume_sold_liters: 18<br><br>volume_spoiled_liters: 2<br><br>batch_result: delayed<br><br>incident: none<br><br>notes: Korte vertraging, maar nette output en goede marktfit.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-03-26<br><br>planned_return_date: 2026-03-26<br><br>kettle_name: Copper Kettle<br><br>period_label: Copper Keg Ale III<br><br>production_roll: 18<br><br>contamination_roll: 17<br><br>sales_roll: 18<br><br>net_result_gp: 119<br><br>volume_produced_liters: 30<br><br>volume_sold_liters: 24<br><br>volume_spoiled_liters: 1<br><br>batch_result: success<br><br>incident: none<br><br>notes: Een van de beste runs tot nu toe; schoon, groot en goed verkocht.<br><br>[/brewery_settlement]<br><br>[brewery_settlement]<br><br>date: 2026-04-16<br><br>planned_return_date: 2026-04-14<br><br>kettle_name: Copper Kettle<br><br>period_label: Barley March<br><br>production_roll: 12<br><br>contamination_roll: 9<br><br>sales_roll: 11<br><br>net_result_gp: 30<br><br>volume_produced_liters: 19<br><br>volume_sold_liters: 10<br><br>volume_spoiled_liters: 5<br><br>batch_result: delayed<br><br>incident: storage-loss<br><br>notes: Een matige batch die te lijden had onder late terugkeer en extra verlies.<br><br>[/brewery_settlement]",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/3784730",
-        "updatedAt": "2023-11-03T13:09:15.000000Z"
+        "updatedAt": "2026-03-14T19:49:58.000000Z"
       }
     ],
-    "quests": [],
-    "maps": [],
-    "journals": [],
+    "quests": [
+      {
+        "id": 151871,
+        "entityId": 9085735,
+        "module": "quests",
+        "name": "POTENTIAL - Ooze in de rivier",
+        "type": "Not yet claimed",
+        "title": null,
+        "image": "https://cdn-ugc.kanka.io/campaigns/167950/a16d4124-45c3-4cb8-84d6-6f88e0a59b1e.png",
+        "summary": "Toen [character:9085133] , [character:9085736] en [character:9085737] de brouwerij gingen opknappen om de plek te bemachtigen, moesten ze af van een soort slijm/ooze wat zich in de kelder van de brouwerij bevond.",
+        "fullText": "Toen [character:9085133] , [character:9085736] en [character:9085737] de brouwerij gingen opknappen om de plek te bemachtigen, moesten ze af van een soort slijm/ooze wat zich in de kelder van de brouwerij bevond. Dit slijm groeide door nootjes op te eten. Hun oplossing was om het slijm naar de rivier te begeleiden en deze in de rivier te dumpen, de [location:9085738]. Wat er daarna is gebeurd met de ooze of waar het is uitgekomen, of hoe groot het is, is onbekend... Wat we weten van ooze: het gaat op nootjes af er zaten skeletten in van onder andere ratten, vogels en andere kleine knaagdieren het rook behoorlijk zuur. het lijkt niet of nauwelijks schade te krijgen van poison het kan kleiner worden door er stukjes af te hakken & te cleanen (met prestidigitation)",
+        "fullHtml": "Toen [character:9085133] , [character:9085736] en [character:9085737] de brouwerij gingen opknappen om de plek te bemachtigen, moesten ze af van een soort slijm/ooze wat zich in de kelder van de brouwerij bevond.<br><br>Dit slijm groeide door nootjes op te eten.<br><br>Hun oplossing was om het slijm naar de rivier te begeleiden en deze in de rivier te dumpen, de [location:9085738].<br><br>Wat er daarna is gebeurd met de ooze of waar het is uitgekomen, of hoe groot het is, is onbekend...<br><br>Wat we weten van ooze:<br><br>het gaat op nootjes af<br><br>er zaten skeletten in van onder andere ratten, vogels en andere kleine knaagdieren<br><br>het rook behoorlijk zuur.<br><br>het lijkt niet of nauwelijks schade te krijgen van poison<br><br>het kan kleiner worden door er stukjes af te hakken & te cleanen (met prestidigitation)",
+        "locationId": 2043715,
+        "url": "https://app.kanka.io/w/167950/entities/9085735",
+        "updatedAt": "2026-03-31T19:09:24.000000Z"
+      }
+    ],
+    "maps": [
+      {
+        "id": 130934,
+        "entityId": 9102361,
+        "module": "maps",
+        "name": "Map",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": null,
+        "fullText": null,
+        "fullHtml": null,
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9102361",
+        "updatedAt": "2026-04-03T12:09:27.000000Z"
+      }
+    ],
+    "journals": [
+      {
+        "id": 171304,
+        "entityId": 9090027,
+        "module": "journals",
+        "name": "Sessie 1 - Leven in de brouwerij",
+        "type": "Samenvatting",
+        "title": null,
+        "image": "",
+        "summary": "Sessie 1 Er wordt door [character:9085401] een plakkaat namens [character:9085399] op het bord in het centrum van het stadje [location:9085128] opgehangen met daarop de volgende tekst: ------------- Aankondiging van Overdracht – Brouwerij aan den Oude Stroom Aan hen die kundig zijn in ambacht, handel of ondernemerschap, Namens het stadsbestuur wordt hierbij de voormalige brouwerij gelegen aan de Oude Stroom, net buiten de oostelijke rand van onze nederzetting, ter overname aangeboden.",
+        "fullText": "Sessie 1 Er wordt door [character:9085401] een plakkaat namens [character:9085399] op het bord in het centrum van het stadje [location:9085128] opgehangen met daarop de volgende tekst: ------------- Aankondiging van Overdracht – Brouwerij aan den Oude Stroom Aan hen die kundig zijn in ambacht, handel of ondernemerschap, Namens het stadsbestuur wordt hierbij de voormalige brouwerij gelegen aan de Oude Stroom, net buiten de oostelijke rand van onze nederzetting, ter overname aangeboden. De brouwerij heeft lange tijd leeggestaan gedurende de lange jaren van drooglegging en verkeert thans in een staat die men met enige mildheid zou omschrijven als “een opknappertje”. Desondanks zijn de fundamenten solide en is de ligging — met directe toegang tot stromend water voor transport — bijzonder gunstig voor hen die het vak verstaan. De gemeenteraad heeft besloten het eigendom over te dragen aan hen die bereid zijn het pand te herstellen en opnieuw in gebruik te nemen, ten bate van zowel eigen gewin als het welzijn van onze gemeenschap. Geïnteresseerden dienen zich te melden bij het raadhuis voor een korte beoordeling van geschiktheid en intentie. Met hoogachting, Grivveth Slurkraal Wethouder van Handel, Ambachten en Openbare Werken Namens de Raad ------------- [character:9085133], vers ontslagen wegens overmatig gebruik van middelen (beslist geen alcohol). Is op zoek naar een nieuwe geldinkomst en ziet naast een nieuwe baan ook een mogelijkheid voor goedkope (lees; gratis) alcohol om eventuele gebrek aan middelen te overbruggen. Echter beseft Harrie zich ook dat hij wellicht niet de beste man voor de baan is en gezien hij toch al wat honger had, eet hij het pamflet op in een onhandige poging de competitie uit te schakelen. Ook [character:9085736] bevindt zich op het desbetreffende pleintje en heeft het aanbod kunnen lezen voordat deze \"vakkundig\" werd vernietigd. Dit ziet hij zeker als een goede mogelijkheid om zijn voormalig illegale moonshine makerij tot een groter succes te maken, gezien deze enige schade heeft opgelopen nu alcohol weer legaal is. Otis ziet competitie ook niet zo zitten en probeert Vrikkal met een stevige doch vriendelijke houdgreep weg te leiden van het bord om te voorkomen dat er een nieuw plakaat wordt opgeplakt. Zonder succes... Hoewel [character:9085737] niet heeft gelezen wat er op het pamflet stond heeft het wel haar aandacht getrokken. En dus gaat zij richting Harrie om verhaal te halen. In een niet overtuigende poging om (wederom) minder competitie te krijgen vertelt Harrie haar over een niet bestaande schoonheidswedstrijd waar hij aan mee wil doen. En gezien Harrie niet bepaald recht loopt & ze benieuwd is naar het echte verhaal besluit ze hem te begeleiden naar het raadshuis. Als zowel Otis als Harrie en Mumbi aankomen bij het raadshuis gaat Harrie zich opfrissen in de wc (of whatever de dnd variant daarvan is). Mumbi gaat met Otis praten over wat er daadwerkelijk op het plakkaat stond. En na een voorstelronde lijkt het Otis verstandig om samen een voorstel aan Grivveth te doen in het kader van samen staan we sterker. Otis als brouwer en Mumbi (volgens Otis) als marketingsexpert, hoewel Mumbi dat laatste enigzins ander lijkt in te vullen. Harrie weet zich als hij terugkomt - en er een stuk netter uitziet - erbij te lullen met de gedachte, if you can't beat them; join them. Grivveth verteld hen na hun overtuigende verkooppraatje en wat geflirt met otis over de staat van de voormalige brouwerij, en het feit dat er een probleem is die opgelost moet worden voordat zij de brouwerij kunnen overnemen. Ze blijft daarbij wel wat vaag over wat er daadwerkelijk aan de hand is. Wel benadrukt ze dat de staat van de brouwerij gecontroleerd moet worden voordat ze het in handen krijgen. Echter hebben de kersverse collega's niet persé heel veel andere opties/zijn wel in voor een avontuur en dus vertrekken zij richting de brouwerij. Eenmaal bij de brouwerij aangekomen, voert Mumbi wat nootjes aan de kraaien (en Harrie) en gaan ze op onderzoek uit. De staat van [organisation:9085100] is ronduit slecht. Het is er donker en er is veel kapot en verrot. Maar, oude ketels en gereedschap lijken nog wel aanwezig te zijn. Ook hangt er een zure lucht die erger wordt naarmate ze dichter bij een bepaalde kamer komen. Al snel wordt duidelijk wat het probleem is; een grote blubberende soort slijm dat leven lijkt te hebben. Het beweegt zich richting Mumbi, op zoek naar voedsel. Mumbi weet de slijm te vertragen door een pijl. Ook wordt duidelijk dat de slijm niet haar volgt maar haar nootjes. De stukjes slijm die door Mumbi's pijlen worden afgehakt worden door Harries prestidigation (of hoe je dat ook schrijft) schoongemaakt. Samen met Otis leiden ze het slijm dat door Mumbi's nootjes ook steeds groter wordt naar een bruggetje dat zich naast de brouwerij in een zelfde staat bevindt. Deze houdt het inmiddels nog zwaarder geworden slijm niet, en dus stroomt de slijm weg als deze in het water valt. Niet wetend waar deze zal eindigen. Maar dat is niet hun probleem, toch...? Harrie gaat weer naar binnen en vind daar naast een skelet, leven in de brouwerij. Tldr: Harrie, Mumbi en Otis ontmoeten elkaar naar aanleiding van interesse in een plakkaat die door Vrikkal in opdracht van raadslid Grivveth opgehangen is met het aanbod van een oude brouwerij. Daarvoor moesten ze eerst een soort slijm uit de desbetreffende brouwerij verwijderen. Dit hebben ze gedaan door het slijm in de rivier te lokken.",
+        "fullHtml": "Sessie 1<br><br>Er wordt door [character:9085401] een plakkaat namens [character:9085399] op het bord in het centrum van het stadje [location:9085128] opgehangen met daarop de volgende tekst:<br><br>-------------<br><br>Aankondiging van Overdracht – Brouwerij aan den Oude Stroom<br><br>Aan hen die kundig zijn in ambacht, handel of ondernemerschap,<br><br>Namens het stadsbestuur wordt hierbij de voormalige brouwerij gelegen aan de Oude Stroom, net buiten de oostelijke rand van onze nederzetting, ter overname aangeboden.<br><br>De brouwerij heeft lange tijd leeggestaan gedurende de lange jaren van drooglegging en verkeert thans in een staat die men met enige mildheid zou omschrijven als “een opknappertje”. Desondanks zijn de fundamenten solide en is de ligging — met directe toegang tot stromend water voor transport — bijzonder gunstig voor hen die het vak verstaan.<br><br>De gemeenteraad heeft besloten het eigendom over te dragen aan hen die bereid zijn het pand te herstellen en opnieuw in gebruik te nemen, ten bate van zowel eigen gewin als het welzijn van onze gemeenschap.<br><br>Geïnteresseerden dienen zich te melden bij het raadhuis voor een korte beoordeling van geschiktheid en intentie.<br><br>Met hoogachting,<br><br>Grivveth Slurkraal<br><br>Wethouder van Handel, Ambachten en Openbare Werken<br><br>Namens de Raad<br><br>-------------<br><br>[character:9085133], vers ontslagen wegens overmatig gebruik van middelen (beslist geen alcohol). Is op zoek naar een nieuwe geldinkomst en ziet naast een nieuwe baan ook een mogelijkheid voor goedkope (lees; gratis) alcohol om eventuele gebrek aan middelen te overbruggen. Echter beseft Harrie zich ook dat hij wellicht niet de beste man voor de baan is en gezien hij toch al wat honger had, eet hij het pamflet op in een onhandige poging de competitie uit te schakelen.<br><br>Ook [character:9085736] bevindt zich op het desbetreffende pleintje en heeft het aanbod kunnen lezen voordat deze \"vakkundig\" werd vernietigd. Dit ziet hij zeker als een goede mogelijkheid om zijn voormalig illegale moonshine makerij tot een groter succes te maken, gezien deze enige schade heeft opgelopen nu alcohol weer legaal is. Otis ziet competitie ook niet zo zitten en probeert Vrikkal met een stevige doch vriendelijke houdgreep weg te leiden van het bord om te voorkomen dat er een nieuw plakaat wordt opgeplakt. Zonder succes...<br><br>Hoewel [character:9085737] niet heeft gelezen wat er op het pamflet stond heeft het wel haar aandacht getrokken. En dus gaat zij richting Harrie om verhaal te halen. In een niet overtuigende poging om (wederom) minder competitie te krijgen vertelt Harrie haar over een niet bestaande schoonheidswedstrijd waar hij aan mee wil doen. En gezien Harrie niet bepaald recht loopt & ze benieuwd is naar het echte verhaal besluit ze hem te begeleiden naar het raadshuis.<br><br>Als zowel Otis als Harrie en Mumbi aankomen bij het raadshuis gaat Harrie zich opfrissen in de wc (of whatever de dnd variant daarvan is). Mumbi gaat met Otis praten over wat er daadwerkelijk op het plakkaat stond. En na een voorstelronde lijkt het Otis verstandig om samen een voorstel aan Grivveth te doen in het kader van samen staan we sterker. Otis als brouwer en Mumbi (volgens Otis) als marketingsexpert, hoewel Mumbi dat laatste enigzins ander lijkt in te vullen. Harrie weet zich als hij terugkomt - en er een stuk netter uitziet - erbij te lullen met de gedachte, if you can't beat them; join them.<br><br>Grivveth verteld hen na hun overtuigende verkooppraatje en wat geflirt met otis over de staat van de voormalige brouwerij, en het feit dat er een probleem is die opgelost moet worden voordat zij de brouwerij kunnen overnemen. Ze blijft daarbij wel wat vaag over wat er daadwerkelijk aan de hand is. Wel benadrukt ze dat de staat van de brouwerij gecontroleerd moet worden voordat ze het in handen krijgen. Echter hebben de kersverse collega's niet persé heel veel andere opties/zijn wel in voor een avontuur en dus vertrekken zij richting de brouwerij.<br><br>Eenmaal bij de brouwerij aangekomen, voert Mumbi wat nootjes aan de kraaien (en Harrie) en gaan ze op onderzoek uit. De staat van [organisation:9085100] is ronduit slecht. Het is er donker en er is veel kapot en verrot. Maar, oude ketels en gereedschap lijken nog wel aanwezig te zijn. Ook hangt er een zure lucht die erger wordt naarmate ze dichter bij een bepaalde kamer komen. Al snel wordt duidelijk wat het probleem is; een grote blubberende soort slijm dat leven lijkt te hebben. Het beweegt zich richting Mumbi, op zoek naar voedsel. Mumbi weet de slijm te vertragen door een pijl. Ook wordt duidelijk dat de slijm niet haar volgt maar haar nootjes. De stukjes slijm die door Mumbi's pijlen worden afgehakt worden door Harries prestidigation (of hoe je dat ook schrijft) schoongemaakt. Samen met Otis leiden ze het slijm dat door Mumbi's nootjes ook steeds groter wordt naar een bruggetje dat zich naast de brouwerij in een zelfde staat bevindt. Deze houdt het inmiddels nog zwaarder geworden slijm niet, en dus stroomt de slijm weg als deze in het water valt. Niet wetend waar deze zal eindigen. Maar dat is niet hun probleem, toch...?<br><br>Harrie gaat weer naar binnen en vind daar naast een skelet, leven in de brouwerij.<br><br>Tldr:<br><br>Harrie, Mumbi en Otis ontmoeten elkaar naar aanleiding van interesse in een plakkaat die door Vrikkal in opdracht van raadslid Grivveth opgehangen is met het aanbod van een oude brouwerij. Daarvoor moesten ze eerst een soort slijm uit de desbetreffende brouwerij verwijderen. Dit hebben ze gedaan door het slijm in de rivier te lokken.",
+        "locationId": 2043715,
+        "url": "https://app.kanka.io/w/167950/entities/9090027",
+        "updatedAt": "2026-03-31T19:03:41.000000Z"
+      }
+    ],
     "items": [],
     "events": []
   }
