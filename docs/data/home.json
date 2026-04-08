@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-08T12:25:43.104Z",
+  "generatedAt": "2026-04-08T12:32:00.553Z",
   "title": "BrewerWe",
   "intro": "Een spelergerichte campagnehub rond een kleine brouwerij, de bijbehorende bar en de plaatsen en personen die ermee verbonden zijn.",
   "stats": {
@@ -20,12 +20,12 @@
       "type": null,
       "title": null,
       "image": "",
-      "summary": "[map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40.67 [/map_pin]",
-      "fullText": "[map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40.67 [/map_pin]",
-      "fullHtml": "[map_pin]<br><br>id: brouwerij<br><br>label: Brouwerij<br><br>entity_type: location<br><br>entity_ref: Brouwerij<br><br>map_x: 49.33<br><br>map_y: 40.67<br><br>[/map_pin]",
+      "summary": "Dit is de brouwerij die Otis, Harrie en Mumbi hebben weten te bemachigen [map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40",
+      "fullText": "Dit is de brouwerij die Otis, Harrie en Mumbi hebben weten te bemachigen [map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij map_x: 49.33 map_y: 40.67 [/map_pin]",
+      "fullHtml": "Dit is de brouwerij die Otis, Harrie en Mumbi hebben weten te bemachigen<br><br>[map_pin]<br><br>id: brouwerij<br><br>label: Brouwerij<br><br>entity_type: location<br><br>entity_ref: Brouwerij<br><br>map_x: 49.33<br><br>map_y: 40.67<br><br>[/map_pin]",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/9085100",
-      "updatedAt": "2026-03-30T19:09:14.000000Z"
+      "updatedAt": "2026-04-08T12:30:27.000000Z"
     },
     "location": {
       "id": 2021733,
