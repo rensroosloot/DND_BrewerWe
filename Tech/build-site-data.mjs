@@ -1,9 +1,24 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { buildBreweryViewModel } from "./brewery-schema.mjs";
-import { extractLegacyLocationPin, extractMapPinsFromRecord, isLocationLikeEntityType } from "./map-pin-schema.mjs";
+import { extractLegacyLocationPin, extractMapPinsFromRecord, isLocationLikeEntityType, slugify } from "./map-pin-schema.mjs";
 
 const rootDir = process.cwd();
+
+(function loadEnvFile(filePath) {
+  if (!existsSync(filePath)) return;
+  for (const line of readFileSync(filePath, "utf8").split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    const sep = trimmed.indexOf("=");
+    if (sep === -1) continue;
+    const key = trimmed.slice(0, sep).trim();
+    const value = trimmed.slice(sep + 1).trim();
+    if (!(key in process.env)) process.env[key] = value;
+  }
+}(path.join(rootDir, "Tech", ".env.local")));
+
 const sourceFile = path.join(rootDir, "docs", "data", "kanka-public.json");
 const outputDir = path.join(rootDir, "docs", "data");
 const mapPinsFile = path.join(outputDir, "map-pins.json");
@@ -26,14 +41,6 @@ function summarizeCounts(modules) {
 
 function pickLatest(items) {
   return [...items].sort((a, b) => String(b.updatedAt || "").localeCompare(String(a.updatedAt || "")))[0] ?? null;
-}
-
-function slugify(value) {
-  return String(value || "")
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
 }
 
 function stripMapMeta(text) {
@@ -250,7 +257,13 @@ async function main() {
   const raw = JSON.parse(await readFile(sourceFile, "utf8"));
   const modules = raw.modules || {};
   const counts = summarizeCounts(modules);
-  const brewery = modules.organisations?.find((item) => /brew/i.test(item.name) || /brew/i.test(item.type || "")) ?? modules.organisations?.[0] ?? null;
+  const breweryOrgName = process.env.BREWERY_ORG_NAME || null;
+  const brewery = breweryOrgName
+    ? (modules.organisations?.find((item) => item.name === breweryOrgName) ?? null)
+    : (modules.organisations?.find((item) => /brew/i.test(item.name) || /brew/i.test(item.type || "")) ?? null);
+  if (!brewery) {
+    console.warn("Warning: No brewery organisation found. Set BREWERY_ORG_NAME in Tech/.env.local to pin a specific organisation.");
+  }
   const breweryModel = buildBreweryViewModel(brewery?.fullText || "");
   const displayBrewery = sanitizeBreweryDisplay(brewery, breweryModel);
   const displayOrganisations = (modules.organisations || []).map((item) =>

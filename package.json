@@ -9,6 +9,7 @@
     "site:build": "node Tech/build-site-data.mjs && python Tech/generate-map-previews.py",
     "obsidian:sync": "node Tech/sync-obsidian.mjs",
     "kanka:sync": "node Tech/fetch-kanka.mjs && npm run site:build",
-    "kanka:sync:all": "node Tech/fetch-kanka.mjs && npm run site:build && node Tech/sync-obsidian.mjs"
+    "kanka:sync:all": "node Tech/fetch-kanka.mjs && npm run site:build && node Tech/sync-obsidian.mjs",
+    "deploy": "bash scripts/sync.sh"
   }
 }

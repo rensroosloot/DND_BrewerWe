@@ -20,7 +20,7 @@ function htmlToBlockText(value) {
     .trim();
 }
 
-function slugify(value) {
+export function slugify(value) {
   return String(value || "")
     .toLowerCase()
     .replace(/[^\w\s-]/g, "")

@@ -1,4 +1,4 @@
-import { loadJson, renderCard, renderGrid, setError, setGeneratedAt } from "./site.js";
+import { loadJson, renderGrid, setError, setGeneratedAt, escapeHtml } from "./site.js";
 
 const MAX_PLANNING_POINTS = 4;
 
@@ -60,14 +60,6 @@ function initBreweryMotion(root = document) {
   });
 }
 
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
 function formatIsoDate(date = new Date()) {
   return date.toISOString().slice(0, 10);
 }
@@ -113,9 +105,9 @@ function renderHistoryEntry(item) {
 function renderRuleCard(item) {
   return `
     <article class="entry-card">
-      <h3>${item.name}</h3>
-      ${item.formula ? `<p class="meta">${item.formula}</p>` : ""}
-      <p>${item.summary || item.outcome || ""}</p>
+      <h3>${escapeHtml(item.name)}</h3>
+      ${item.formula ? `<p class="meta">${escapeHtml(item.formula)}</p>` : ""}
+      <p>${escapeHtml(item.summary || item.outcome || "")}</p>
     </article>
   `;
 }
@@ -490,7 +482,7 @@ function buildSettlementSnippet(plan, resolution, inputs) {
     `production_roll: ${inputs.productionRoll}`,
     `contamination_roll: ${inputs.contaminationRoll}`,
     `sales_roll: ${inputs.salesRoll}`,
-    `net_result_gp: ${resolution.netGp}`,
+    `net_result_gp: ${resolution.grossGp}`,
     `volume_produced_liters: ${resolution.produced}`,
     `volume_sold_liters: ${resolution.sold}`,
     `volume_spoiled_liters: ${resolution.spoiled}`,
@@ -504,7 +496,7 @@ function buildSettlementSnippet(plan, resolution, inputs) {
   return lines.join("\n");
 }
 
-function renderResolutionCalculator(plan, absence) {
+function renderResolutionCalculator(plan) {
   return `
     <p class="eyebrow">Settlement helper</p>
     <h3>Verwerk de actieve run</h3>
@@ -600,14 +592,6 @@ function renderResolutionCalculator(plan, absence) {
       </div>
       <textarea class="snippet-output" data-resolution-snippet readonly></textarea>
     </div>
-    <input type="hidden" data-plan-start-volume value="${plan.kettleStartVolumeLiters}">
-    <input type="hidden" data-plan-efficiency value="${plan.efficiency}">
-    <input type="hidden" data-plan-quality value="${plan.quality}">
-    <input type="hidden" data-plan-value value="${plan.value}">
-    <input type="hidden" data-plan-oversight value="${plan.oversight}">
-    <input type="hidden" data-plan-date value="${plan.planDate ?? ""}">
-    <input type="hidden" data-plan-return-date value="${plan.plannedReturnDate ?? ""}">
-    <input type="hidden" data-plan-kettle-name value="${escapeHtml(plan.kettleName ?? "")}">
   `;
 }
 
@@ -624,13 +608,13 @@ function updateResolutionCalculator(root, plan) {
     notes: readText('[data-roll="notes"]')
   };
 
-  const startVolumeLiters = readNumber("[data-plan-start-volume]");
-  const efficiency = readNumber("[data-plan-efficiency]");
-  const quality = readNumber("[data-plan-quality]");
-  const value = readNumber("[data-plan-value]");
-  const oversight = readNumber("[data-plan-oversight]");
-  const planDate = readText("[data-plan-date]");
-  const plannedReturnDate = readText("[data-plan-return-date]");
+  const startVolumeLiters = plan.kettleStartVolumeLiters ?? 0;
+  const efficiency = plan.efficiency ?? 0;
+  const quality = plan.quality ?? 0;
+  const value = plan.value ?? 0;
+  const oversight = plan.oversight ?? 0;
+  const planDate = plan.planDate ?? "";
+  const plannedReturnDate = plan.plannedReturnDate ?? "";
 
   const potentialOutput = startVolumeLiters;
   const productionTotal = inputs.productionRoll + (2 * efficiency);
@@ -668,7 +652,6 @@ function updateResolutionCalculator(root, plan) {
 
   const bonusGp = value >= 2 && contaminationTotal >= 15 && salesTotal >= 20 ? 4 : 0;
   const grossGp = sold * price + bonusGp;
-  const netGp = grossGp;
   const batchResult = determineBatchOutcome({ produced, spoiled, contaminationTotal, overdueWeeks });
   const incident = determineIncident({ contaminationTotal, overdueWeeks });
 
@@ -685,7 +668,6 @@ function updateResolutionCalculator(root, plan) {
     grossGp,
     plannedAbsenceWeeks,
     actualAbsenceWeeks,
-    netGp,
     batchResult,
     incident
   };
@@ -710,8 +692,7 @@ function updateResolutionCalculator(root, plan) {
       renderMetric("Bruikbaar volume", formatLiters(usable)),
       renderMetric("Verkocht volume", formatLiters(sold)),
       renderMetric("Prijs per liter", price),
-      renderMetric("Bruto gp", grossGp),
-      renderMetric("Netto gp", netGp),
+      renderMetric("Netto gp", grossGp),
       renderMetric("Batchresultaat", batchResult),
       renderMetric("Incident", incident)
     ].join("");
@@ -781,8 +762,7 @@ function buildChartSvg(history, metricKey) {
           const y = scaleY(value);
           const label = `${dates[index]}: ${value}`;
           return `
-            <circle class="brewery-chart-point" cx="${x}" cy="${y}" r="4"></circle>
-            <title>${label}</title>
+            <circle class="brewery-chart-point" cx="${x}" cy="${y}" r="4"><title>${escapeHtml(label)}</title></circle>
           `;
         })
         .join("")}
@@ -879,7 +859,7 @@ async function main() {
     const resolution = document.querySelector("[data-brewery-resolution]");
     if (resolution) {
       if (venture.plannedBatch) {
-        resolution.innerHTML = renderResolutionCalculator(venture.plannedBatch, venture.absence);
+        resolution.innerHTML = renderResolutionCalculator(venture.plannedBatch);
         resolution.querySelectorAll("[data-roll]").forEach((input) => {
           input.addEventListener("input", () => updateResolutionCalculator(resolution, venture.plannedBatch));
         });

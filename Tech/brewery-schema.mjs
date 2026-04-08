@@ -8,7 +8,6 @@ const BREWERY_PLAN_FIELDS = {
   quality: "number",
   value: "number",
   oversight: "number",
-  planned_absence_weeks: "number",
   notes: "string"
 };
 
