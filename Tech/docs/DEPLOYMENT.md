@@ -15,6 +15,8 @@ The public site is deployed as a static GitHub Pages site from the `docs/` direc
 ### Automated (recommended)
 A GitHub Actions workflow (`.github/workflows/sync-kanka.yml`) runs daily at 06:00 UTC. It fetches Kanka data, builds the site, and commits any changed files automatically. It can also be triggered manually from the GitHub Actions tab.
 
+The brewery page also includes a manual sync button that calls a thin PHP proxy on `https://roosloot.com/api/brewery-sync.php`. That endpoint dispatches the same workflow through the GitHub Actions API.
+
 Required GitHub repository secrets:
 - `KANKA_TOKEN`
 - `KANKA_CAMPAIGN_ID`
@@ -53,6 +55,9 @@ Current baseline:
 - `object-src 'none'`
 - `base-uri 'self'`
 - `form-action 'self'`
+
+Operational note:
+- The brewery sync proxy path is case-sensitive in production and must be referenced as `/api/brewery-sync.php`, not `/Api/brewery-sync.php`.
 
 Notes:
 - This is a static-site compromise; `style-src 'unsafe-inline'` remains enabled because the current pages rely on inline style attributes.

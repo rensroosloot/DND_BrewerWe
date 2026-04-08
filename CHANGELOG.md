@@ -9,9 +9,10 @@
 
 ### Sync button on brewery page
 - Added "Synchroniseer met Kanka" button to the brewery hero section.
-- Button calls a PHP proxy on `roosloot.com/Api/brewery-sync.php` which triggers the GitHub Actions workflow via the GitHub API.
+- Button calls a PHP proxy on `roosloot.com/api/brewery-sync.php` which triggers the GitHub Actions workflow via the GitHub API.
 - The GitHub PAT lives server-side in the PHP file on Plesk; it is never committed to the repository.
 - Updated `connect-src` in the brewery CSP to allow outbound fetch to `roosloot.com`.
+- Verified the manual sync flow end to end from `brewery.html`; fixed a production 404 caused by `/Api/` vs `/api/` path casing.
 
 ### Code review fixes
 - Fixed SVG chart tooltip: moved `<title>` inside `<circle>` so hover labels work.
