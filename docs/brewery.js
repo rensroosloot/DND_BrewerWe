@@ -922,8 +922,8 @@ function initSyncButton() {
     try {
       const response = await fetch(SYNC_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ secret: SYNC_SECRET })
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `secret=${encodeURIComponent(SYNC_SECRET)}`
       });
       const data = await response.json();
       if (data.ok) {
