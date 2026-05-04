@@ -19,6 +19,25 @@
     "module": "locations"
   },
   {
+    "id": "burcht-doornhorst-rune",
+    "label": "Burcht Doornhorst (ruïne)",
+    "entityType": "location",
+    "entityRef": "Burcht Doornhorst",
+    "x": 54.15,
+    "y": 41.81,
+    "notes": null,
+    "sourceModule": "locations",
+    "sourceRecordId": 2079411,
+    "locationName": "Burcht Doornhorst",
+    "summary": "Een burcht die ooit echt heeft bestaan, ongeveer 3 eeuwen geleden, ergens in de heuvels van het Doornveld.",
+    "fullText": "Een burcht die ooit echt heeft bestaan, ongeveer 3 eeuwen geleden, ergens in de heuvels van het Doornveld. Nu een ruïne. In Harrie's hallucinatie staat ze er nog gloednieuw bij.",
+    "fullHtml": "Een burcht die ooit echt heeft bestaan, ongeveer 3 eeuwen geleden, ergens in de heuvels van het Doornveld. Nu een ruïne. In Harrie's hallucinatie staat ze er nog gloednieuw bij.<br><br>",
+    "type": "ruin",
+    "url": "https://app.kanka.io/w/167950/entities/9234850",
+    "image": "",
+    "module": "locations"
+  },
+  {
     "id": "daggerford",
     "label": "Daggerford",
     "entityType": "location",

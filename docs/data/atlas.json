@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-04T08:28:45.832Z",
+  "generatedAt": "2026-05-04T20:30:25.721Z",
   "locations": [
     {
       "id": 2021733,
@@ -43,6 +43,45 @@
       },
       "mapLink": "./map.html?pin=boareskyr-bridge",
       "previewImage": "./assets/maps/previews/boareskyr-bridge.jpg"
+    },
+    {
+      "id": 2079411,
+      "entityId": 9234850,
+      "module": "locations",
+      "name": "Burcht Doornhorst",
+      "type": "ruin",
+      "title": null,
+      "image": "",
+      "summary": "Een burcht die ooit echt heeft bestaan, ongeveer 3 eeuwen geleden, ergens in de heuvels van het Doornveld.",
+      "fullText": "Een burcht die ooit echt heeft bestaan, ongeveer 3 eeuwen geleden, ergens in de heuvels van het Doornveld. Nu een ruïne. In Harrie's hallucinatie staat ze er nog gloednieuw bij.",
+      "fullHtml": "Een burcht die ooit echt heeft bestaan, ongeveer 3 eeuwen geleden, ergens in de heuvels van het Doornveld. Nu een ruïne. In Harrie's hallucinatie staat ze er nog gloednieuw bij.<br><br>",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9234850",
+      "updatedAt": "2026-05-04T20:29:47.000000Z",
+      "forgottenRealms": null,
+      "parentLocation": null,
+      "childLocations": [],
+      "mapPin": {
+        "id": "burcht-doornhorst-rune",
+        "label": "Burcht Doornhorst (ruïne)",
+        "entityType": "location",
+        "entityRef": "Burcht Doornhorst",
+        "x": 54.15,
+        "y": 41.81,
+        "notes": null,
+        "sourceModule": "locations",
+        "sourceRecordId": 2079411,
+        "locationName": "Burcht Doornhorst",
+        "summary": "Een burcht die ooit echt heeft bestaan, ongeveer 3 eeuwen geleden, ergens in de heuvels van het Doornveld.",
+        "fullText": "Een burcht die ooit echt heeft bestaan, ongeveer 3 eeuwen geleden, ergens in de heuvels van het Doornveld. Nu een ruïne. In Harrie's hallucinatie staat ze er nog gloednieuw bij.",
+        "fullHtml": "Een burcht die ooit echt heeft bestaan, ongeveer 3 eeuwen geleden, ergens in de heuvels van het Doornveld. Nu een ruïne. In Harrie's hallucinatie staat ze er nog gloednieuw bij.<br><br>",
+        "type": "ruin",
+        "url": "https://app.kanka.io/w/167950/entities/9234850",
+        "image": "",
+        "module": "locations"
+      },
+      "mapLink": "./map.html?pin=burcht-doornhorst-rune",
+      "previewImage": "./assets/maps/previews/burcht-doornhorst-rune.jpg"
     },
     {
       "id": 2043715,
