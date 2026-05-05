@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-04T20:30:25.721Z",
+  "generatedAt": "2026-05-05T08:08:34.318Z",
   "characters": [
     {
       "id": 2347424,
@@ -75,6 +75,21 @@
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/3770862",
       "updatedAt": "2026-03-15T14:03:44.000000Z"
+    },
+    {
+      "id": 2388281,
+      "entityId": 9234881,
+      "module": "characters",
+      "name": "Vondela van Doornhorst",
+      "type": null,
+      "title": null,
+      "image": "",
+      "summary": "Wie ze was Titel: Burchtvrouw, \"Vrouwe van het Doornveld\", \"De Schuimkoningin\" (spotnaam onder rivalen) Tijdperk: ~280-310 jaar geleden, voor Daggerford zijn huidige stadsmuren had Verschijning in leven: Forse, brede vrouw met hoge stem en zware lach.",
+      "fullText": "Wie ze was Titel: Burchtvrouw, \"Vrouwe van het Doornveld\", \"De Schuimkoningin\" (spotnaam onder rivalen) Tijdperk: ~280-310 jaar geleden, voor Daggerford zijn huidige stadsmuren had Verschijning in leven: Forse, brede vrouw met hoge stem en zware lach. Grijs-blond haar in vlechten. Altijd in donkergroene wol met een zilveren bierkroes-broche. Reputatie: Hard maar redelijk regent over haar leen Beruchte korte lont, gooide ooit een vazal door een glas-in-loodraam wegens \"een laffe slok\" Onbetwiste smaakkenner van bier — haar burcht had drie brouwketels en een eigen hopveld Eiste dat elke gast minstens één pul bier dronk voordat zaken gedaan werden",
+      "fullHtml": "Wie ze was<br><br>Titel: Burchtvrouw, \"Vrouwe van het Doornveld\", \"De Schuimkoningin\" (spotnaam onder rivalen)<br><br>Tijdperk: ~280-310 jaar geleden, voor Daggerford zijn huidige stadsmuren had<br><br>Verschijning in leven: Forse, brede vrouw met hoge stem en zware lach. Grijs-blond haar in vlechten. Altijd in donkergroene wol met een zilveren bierkroes-broche.<br><br>Reputatie:<br><br>Hard maar redelijk regent over haar leen<br><br>Beruchte korte lont, gooide ooit een vazal door een glas-in-loodraam wegens \"een laffe slok\"<br><br>Onbetwiste smaakkenner van bier — haar burcht had drie brouwketels en een eigen hopveld<br><br>Eiste dat elke gast minstens één pul bier dronk voordat zaken gedaan werden",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9234881",
+      "updatedAt": "2026-05-04T20:34:42.000000Z"
     },
     {
       "id": 2347425,
