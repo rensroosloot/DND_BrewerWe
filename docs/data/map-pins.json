@@ -53,8 +53,27 @@
     "fullHtml": "<a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Daggerford\" target=\"_blank\" rel=\"noreferrer noopener\">Daggerford</a> was a small but consequential town located in the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Delimbiyr_Vale\" target=\"_blank\" rel=\"noreferrer noopener\">Delimbiyr Vale</a> within the greater <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Sword_Coast\" target=\"_blank\" rel=\"noreferrer noopener\">Sword Coast.</a><br><br>Sitting atop a hill in the center of Daggerford was the <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Ducal_Castle\" target=\"_blank\" rel=\"noreferrer noopener\">grand Ducal Castle</a>, which was technically older than the town itself.<br><br>On a small hill near the town was an entrance to a nearby song path , a network of <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Portal\" target=\"_blank\" rel=\"noreferrer noopener\">portals</a> that were connected to works of oratorical art, such as songs and epic poems. The song path near Daggerford was referred to as the Voices of the Lost , named for the song that was required for its opening.<br><br><a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Gillian%27s_Hill\" target=\"_blank\" rel=\"noreferrer noopener\">Gillian's Hill</a>, <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Liam%27s_Hold\" target=\"_blank\" rel=\"noreferrer noopener\">Liam's Hold</a>, and <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Black_Helm_Tower\" target=\"_blank\" rel=\"noreferrer noopener\">Black Helm Tower</a> were each within a day's travel of Daggerford.<br><br>While people of Daggerford were largely self–sufficient, they did import lumber from Andalor's Mill in <a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Bowshot\" target=\"_blank\" rel=\"noreferrer noopener\">Bowshot</a>.<br><br>/website location<br><br>",
     "type": "City",
     "url": "https://app.kanka.io/w/167950/entities/9085128",
-    "image": "",
+    "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1cfad35-2d42-42bb-b93a-4f16c9172265.jpg",
     "module": "locations"
+  },
+  {
+    "id": "brouwerij",
+    "label": "Brouwerij",
+    "entityType": "location",
+    "entityRef": "Brouwerij",
+    "x": 49.33,
+    "y": 40.67,
+    "notes": null,
+    "sourceModule": "organisations",
+    "sourceRecordId": 430337,
+    "locationName": "Brouwerij",
+    "summary": "Dit is de brouwerij die Otis, Harrie en Mumbi hebben weten te bemachigen [map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij",
+    "fullText": "Dit is de brouwerij die Otis, Harrie en Mumbi hebben weten te bemachigen",
+    "fullHtml": "Dit is de brouwerij die Otis, Harrie en Mumbi hebben weten te bemachigen<br><br>",
+    "type": null,
+    "url": "https://app.kanka.io/w/167950/entities/9085100",
+    "image": "",
+    "module": "organisations"
   },
   {
     "id": "high-moor",
@@ -112,24 +131,5 @@
     "url": "https://app.kanka.io/w/167950/entities/3770862",
     "image": "https://cdn-ugc.kanka.io/characters/z9MZBTznhgaEAcEw8dm3cL4aX0hGm7cudT7vOUgV.png",
     "module": "characters"
-  },
-  {
-    "id": "brouwerij",
-    "label": "Brouwerij",
-    "entityType": "location",
-    "entityRef": "Brouwerij",
-    "x": 49.33,
-    "y": 40.67,
-    "notes": null,
-    "sourceModule": "organisations",
-    "sourceRecordId": 430337,
-    "locationName": "Brouwerij",
-    "summary": "Dit is de brouwerij die Otis, Harrie en Mumbi hebben weten te bemachigen [map_pin] id: brouwerij label: Brouwerij entity_type: location entity_ref: Brouwerij",
-    "fullText": "Dit is de brouwerij die Otis, Harrie en Mumbi hebben weten te bemachigen",
-    "fullHtml": "Dit is de brouwerij die Otis, Harrie en Mumbi hebben weten te bemachigen<br><br>",
-    "type": null,
-    "url": "https://app.kanka.io/w/167950/entities/9085100",
-    "image": "",
-    "module": "organisations"
   }
 ]

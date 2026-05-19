@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-05-18T17:35:27.112Z",
+  "generatedAt": "2026-05-19T09:40:52.739Z",
   "characters": [
+    {
+      "id": 2402849,
+      "entityId": 9291041,
+      "module": "characters",
+      "name": "Fester O'Connel",
+      "type": "NPC",
+      "title": null,
+      "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1cfcaf7-40b5-4697-be29-9984fb4dcd7d.jpg",
+      "summary": "De vorige eigenaar van de brouwerrij, hij heeft zichzelf dood gedronken.",
+      "fullText": "De vorige eigenaar van de brouwerrij, hij heeft zichzelf dood gedronken.",
+      "fullHtml": "De vorige eigenaar van de brouwerrij, hij heeft zichzelf dood gedronken.",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9291041",
+      "updatedAt": "2026-05-18T21:05:57.000000Z"
+    },
     {
       "id": 2347424,
       "entityId": 9085399,
@@ -32,19 +47,34 @@
       "updatedAt": "2026-04-03T11:47:44.000000Z"
     },
     {
+      "id": 2402844,
+      "entityId": 9291024,
+      "module": "characters",
+      "name": "Meneer Fairly Honest",
+      "type": null,
+      "title": null,
+      "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1cfbf56-1be1-4e24-8dde-864c02290ad4.png",
+      "summary": "Man met een stok en een zakhorloge die Otis en Harrie aanspreken over het overnemen van de Brouwerrij.",
+      "fullText": "Man met een stok en een zakhorloge die Otis en Harrie aanspreken over het overnemen van de Brouwerrij. Hij wilt het heel graag hebben en geeft ons een week (vanaf dag van brouwerrij krijgen) om de akte over te dragen (15dagen). Zijn vader is Ferry. Hij is de heir van het Honest Kapitaal",
+      "fullHtml": "Man met een stok en een zakhorloge die Otis en Harrie aanspreken over het overnemen van de Brouwerrij.<br><br>Hij wilt het heel graag hebben en geeft ons een week (vanaf dag van brouwerrij krijgen) om de akte over te dragen (15dagen).<br><br>Zijn vader is Ferry.<br><br>Hij is de heir van het Honest Kapitaal",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9291024",
+      "updatedAt": "2026-05-18T21:03:15.000000Z"
+    },
+    {
       "id": 2347551,
       "entityId": 9085737,
       "module": "characters",
-      "name": "Mumbi",
+      "name": "Mina",
       "type": "Player",
       "title": null,
-      "image": "",
-      "summary": null,
-      "fullText": null,
-      "fullHtml": null,
+      "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1cf97cb-94d7-4def-97e4-eadf2141b992.jpg",
+      "summary": "- Heeft altijd koude handen",
+      "fullText": "- Heeft altijd koude handen",
+      "fullHtml": "- Heeft altijd koude handen",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/9085737",
-      "updatedAt": "2026-04-03T11:48:04.000000Z"
+      "updatedAt": "2026-05-18T18:43:02.000000Z"
     },
     {
       "id": 2347550,
@@ -62,19 +92,19 @@
       "updatedAt": "2026-04-03T11:43:49.000000Z"
     },
     {
-      "id": 981048,
-      "entityId": 3770862,
+      "id": 2402759,
+      "entityId": 9290628,
       "module": "characters",
-      "name": "RED the Robot Parrot",
+      "name": "Victor van Harrysian",
       "type": "NPC",
-      "title": null,
-      "image": "https://cdn-ugc.kanka.io/characters/z9MZBTznhgaEAcEw8dm3cL4aX0hGm7cudT7vOUgV.png",
-      "summary": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep.",
-      "fullText": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep. RED used to have a name, however it was ehr.. redacted. The parrot is quite vulgar but luckily doesn't know the proper curse words. Her former owner programmed RED to provide any takers with more or less usefull information regarding the bar and brewery. RED is capable of understanding common language but might not always provide the answers some might hope for. Once everywhile RED will receive scheduled upgrades which will unlock additional information. [map_pin] id: red-the-robot-parrot label: RED the Robot Parrot entity_type: person entity_ref: RED the Robot Parrot map_x: 66.72 map_y: 50.68 [/map_pin]",
-      "fullHtml": "RED, short for REDACTED, is a robot parrot previously owned by the former brewer and barkeep. RED used to have a name, however it was ehr.. redacted. The parrot is quite vulgar but luckily doesn't know the proper curse words.<br><br>Her former owner programmed RED to provide any takers with more or less usefull information regarding the bar and brewery. RED is capable of understanding common language but might not always provide the answers some might hope for.<br><br>Once everywhile RED will receive scheduled upgrades which will unlock additional information.<br><br>[map_pin]<br><br>id: red-the-robot-parrot<br><br>label: RED the Robot Parrot<br><br>entity_type: person<br><br>entity_ref: RED the Robot Parrot<br><br>map_x: 66.72<br><br>map_y: 50.68<br><br>[/map_pin]",
+      "title": "Guard",
+      "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1cfa383-20fd-4f1a-9588-d7c05cd6f9ae.png",
+      "summary": "Victor is een man die bij de ingang van Daggerford wacht houdt.",
+      "fullText": "Victor is een man die bij de ingang van Daggerford wacht houdt. Hij had stiekem veel liever een stadsgids willen zijn. Maar hij zegt heel hard, heel blij te zijn met zijn huidige baan. Zijn grootvader was Harrysian die de fietsenwinkel op het plein van Daggerford had. Hij is ontzettend aantrekkelijk met blauwe ogen. Familie van [character:9085133], ergens ver weg.",
+      "fullHtml": "Victor is een man die bij de ingang van Daggerford wacht houdt.<br><br>Hij had stiekem veel liever een stadsgids willen zijn. Maar hij zegt heel hard, heel blij te zijn met zijn huidige baan.<br><br>Zijn grootvader was Harrysian die de fietsenwinkel op het plein van Daggerford had.<br><br>Hij is ontzettend aantrekkelijk met blauwe ogen.<br><br>Familie van [character:9085133], ergens ver weg.",
       "locationId": null,
-      "url": "https://app.kanka.io/w/167950/entities/3770862",
-      "updatedAt": "2026-03-15T14:03:44.000000Z"
+      "url": "https://app.kanka.io/w/167950/entities/9290628",
+      "updatedAt": "2026-05-18T20:52:44.000000Z"
     },
     {
       "id": 2388281,
