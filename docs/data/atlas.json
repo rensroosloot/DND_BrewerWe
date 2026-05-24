@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T08:18:53.518Z",
+  "generatedAt": "2026-05-24T08:28:22.421Z",
   "locations": [
     {
       "id": 2021733,
@@ -187,6 +187,56 @@
       "url": "https://app.kanka.io/w/167950/entities/9290863",
       "updatedAt": "2026-05-18T20:08:07.000000Z",
       "forgottenRealms": null,
+      "parentLocation": null,
+      "childLocations": [],
+      "mapPin": null,
+      "mapLink": null,
+      "previewImage": null
+    },
+    {
+      "id": 2096165,
+      "entityId": 9309841,
+      "module": "locations",
+      "name": "Lizard's Gizzard",
+      "type": null,
+      "title": null,
+      "image": "",
+      "summary": null,
+      "fullText": null,
+      "fullHtml": null,
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9309841",
+      "updatedAt": "2026-05-23T12:22:51.000000Z",
+      "forgottenRealms": {
+        "label": "Forgotten Realms Wiki",
+        "title": "Lizard's Gizzard",
+        "url": "https://forgottenrealms.fandom.com/wiki/Lizard's%20Gizzard"
+      },
+      "parentLocation": null,
+      "childLocations": [],
+      "mapPin": null,
+      "mapLink": null,
+      "previewImage": null
+    },
+    {
+      "id": 2096166,
+      "entityId": 9309843,
+      "module": "locations",
+      "name": "River Shining Tavern",
+      "type": null,
+      "title": null,
+      "image": "",
+      "summary": null,
+      "fullText": null,
+      "fullHtml": null,
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9309843",
+      "updatedAt": "2026-05-23T12:24:14.000000Z",
+      "forgottenRealms": {
+        "label": "Forgotten Realms Wiki",
+        "title": "River Shining Tavern",
+        "url": "https://forgottenrealms.fandom.com/wiki/River%20Shining%20Tavern"
+      },
       "parentLocation": null,
       "childLocations": [],
       "mapPin": null,
