@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T08:43:41.351Z",
+  "generatedAt": "2026-06-01T11:31:52.748Z",
   "campaignId": 167950,
   "modules": {
     "characters": [
@@ -41,12 +41,12 @@
         "type": "Player",
         "title": null,
         "image": "https://cdn-ugc.kanka.io/campaigns/167950/a16d1249-2477-4c7b-b07f-0340a13713a2.png",
-        "summary": null,
-        "fullText": null,
-        "fullHtml": null,
+        "summary": "&gt;&gt; Bang voor spinnen ( Sessie3)",
+        "fullText": "&gt;&gt; Bang voor spinnen ( Sessie3)",
+        "fullHtml": ">><br>Bang voor spinnen ( Sessie3)",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9085133",
-        "updatedAt": "2026-04-03T11:47:44.000000Z"
+        "updatedAt": "2026-06-01T10:06:09.000000Z"
       },
       {
         "id": 2402844,
@@ -71,12 +71,12 @@
         "type": "Player",
         "title": null,
         "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1cf97cb-94d7-4def-97e4-eadf2141b992.jpg",
-        "summary": "- Heeft altijd koude handen",
-        "fullText": "- Heeft altijd koude handen",
-        "fullHtml": "- Heeft altijd koude handen",
+        "summary": "- Heeft altijd koude handen (SESSIE3)",
+        "fullText": "- Heeft altijd koude handen (SESSIE3)",
+        "fullHtml": "- Heeft altijd koude handen (SESSIE3)",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9085737",
-        "updatedAt": "2026-05-18T18:43:02.000000Z"
+        "updatedAt": "2026-06-01T10:07:54.000000Z"
       },
       {
         "id": 2347550,
@@ -86,12 +86,12 @@
         "type": "Player",
         "title": null,
         "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1747b2b-348e-4594-8a54-78b4019337c9.png",
-        "summary": null,
-        "fullText": null,
-        "fullHtml": null,
+        "summary": "&gt;&gt; Heeft een princes uit een toren gered ( sessie 3)",
+        "fullText": "&gt;&gt; Heeft een princes uit een toren gered ( sessie 3)",
+        "fullHtml": ">><br><br>Heeft een princes uit een toren gered ( sessie 3)",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9085736",
-        "updatedAt": "2026-04-03T11:43:49.000000Z"
+        "updatedAt": "2026-06-01T10:07:00.000000Z"
       },
       {
         "id": 2402759,
@@ -396,12 +396,12 @@
         "type": "Session",
         "title": null,
         "image": "",
-        "summary": null,
-        "fullText": null,
-        "fullHtml": null,
+        "summary": "Start: Otis heeft vorige week nog een princes gered uit een toren Mina heeft altijd koude handen Harrie is bang voor spinnen",
+        "fullText": "Start: Otis heeft vorige week nog een princes gered uit een toren Mina heeft altijd koude handen Harrie is bang voor spinnen",
+        "fullHtml": "Start:<br><br>Otis heeft vorige week nog een princes gered uit een toren<br><br>Mina heeft altijd koude handen<br><br>Harrie is bang voor spinnen",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9291206",
-        "updatedAt": "2026-05-18T21:07:44.000000Z"
+        "updatedAt": "2026-06-01T10:04:49.000000Z"
       }
     ],
     "items": [
