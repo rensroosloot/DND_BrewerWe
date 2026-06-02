@@ -1,8 +1,38 @@
 {
-  "generatedAt": "2026-06-01T11:31:52.748Z",
+  "generatedAt": "2026-06-02T10:22:19.431Z",
   "campaignId": 167950,
   "modules": {
     "characters": [
+      {
+        "id": 2420300,
+        "entityId": 9355221,
+        "module": "characters",
+        "name": "'Alsutlukt'",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "Pratende wezel vanuit magische toren Raehorn Deblar",
+        "fullText": "Pratende wezel vanuit magische toren Raehorn Deblar",
+        "fullHtml": "Pratende wezel vanuit magische toren Raehorn Deblar",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355221",
+        "updatedAt": "2026-06-01T19:39:47.000000Z"
+      },
+      {
+        "id": 2420402,
+        "entityId": 9355613,
+        "module": "characters",
+        "name": "Diana",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "Human Sorcerer Oude hero die 114 jaar geleden in Daggerford was en een elemental shard uit de brouwerij stal voor [character:9355616] Ze hebben later in [location:9355639] gevochten tegen Taskor de Terrible.",
+        "fullText": "Human Sorcerer Oude hero die 114 jaar geleden in Daggerford was en een elemental shard uit de brouwerij stal voor [character:9355616] Ze hebben later in [location:9355639] gevochten tegen Taskor de Terrible. Heeft het ooit met [character:9355619] gedaan",
+        "fullHtml": "Human Sorcerer<br><br>Oude hero die 114 jaar geleden in Daggerford was en een elemental shard uit de brouwerij stal voor [character:9355616]<br><br>Ze hebben later in [location:9355639] gevochten tegen Taskor de Terrible.<br><br>Heeft het ooit met [character:9355619] gedaan",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355613",
+        "updatedAt": "2026-06-01T21:28:54.000000Z"
+      },
       {
         "id": 2402849,
         "entityId": 9291041,
@@ -32,6 +62,21 @@
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9085399",
         "updatedAt": "2026-04-03T11:51:31.000000Z"
+      },
+      {
+        "id": 2420403,
+        "entityId": 9355614,
+        "module": "characters",
+        "name": "Handriroat",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "Leonin Paladin Oude hero die 114 jaar geleden in Daggerford was en een elemental shard uit de brouwerij stal voor Naelith Longtooth Ze hebben later in [location:9355639] gevochten tegen Taskor de Terrible.",
+        "fullText": "Leonin Paladin Oude hero die 114 jaar geleden in Daggerford was en een elemental shard uit de brouwerij stal voor Naelith Longtooth Ze hebben later in [location:9355639] gevochten tegen Taskor de Terrible.",
+        "fullHtml": "Leonin Paladin<br><br>Oude hero die 114 jaar geleden in Daggerford was en een elemental shard uit de brouwerij stal voor <a class=\"rich-link\" href=\"https://app.kanka.io/w/167950/entities/9355616\" target=\"_blank\" rel=\"noreferrer noopener\">Naelith Longtooth</a><br><br>Ze hebben later in [location:9355639] gevochten tegen Taskor de Terrible.",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355614",
+        "updatedAt": "2026-06-01T21:28:06.000000Z"
       },
       {
         "id": 2347356,
@@ -70,13 +115,43 @@
         "name": "Mina",
         "type": "Player",
         "title": null,
-        "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1cf97cb-94d7-4def-97e4-eadf2141b992.jpg",
+        "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1ec00a6-a417-477f-99a3-d2a98d55e971.png",
         "summary": "- Heeft altijd koude handen (SESSIE3)",
         "fullText": "- Heeft altijd koude handen (SESSIE3)",
         "fullHtml": "- Heeft altijd koude handen (SESSIE3)",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9085737",
-        "updatedAt": "2026-06-01T10:07:54.000000Z"
+        "updatedAt": "2026-06-01T21:39:15.000000Z"
+      },
+      {
+        "id": 2420405,
+        "entityId": 9355616,
+        "module": "characters",
+        "name": "Naelith Longtooth",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "De zoon van [character:9355617] , een nepo baby die probeerde iets voor en van zichzelf op te richten.",
+        "fullText": "De zoon van [character:9355617] , een nepo baby die probeerde iets voor en van zichzelf op te richten. Hij is een elf sorcerer die een wizard's tower oprichtte. Hij raakte bored an zijn vader haalde hem weg van Daggerford. Zijn toren is de [location:9355621]",
+        "fullHtml": "De zoon van [character:9355617] , een nepo baby die probeerde iets voor en van zichzelf op te richten.<br><br>Hij is een elf sorcerer die een wizard's tower oprichtte.<br><br>Hij raakte bored an zijn vader haalde hem weg van Daggerford.<br><br>Zijn toren is de [location:9355621]",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355616",
+        "updatedAt": "2026-06-01T21:30:21.000000Z"
+      },
+      {
+        "id": 2420404,
+        "entityId": 9355615,
+        "module": "characters",
+        "name": "Nova",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "Air Genasi Warlock Oude hero die 114 jaar geleden in Daggerford was en een elemental shard uit de brouwerij stal voor [character:9355616] Ze hebben later in [location:9355639] gevochten tegen Taskor de Terrible.",
+        "fullText": "Air Genasi Warlock Oude hero die 114 jaar geleden in Daggerford was en een elemental shard uit de brouwerij stal voor [character:9355616] Ze hebben later in [location:9355639] gevochten tegen Taskor de Terrible.",
+        "fullHtml": "Air Genasi Warlock<br><br>Oude hero die 114 jaar geleden in Daggerford was en een elemental shard uit de brouwerij stal voor [character:9355616]<br><br>Ze hebben later in [location:9355639] gevochten tegen Taskor de Terrible.",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355615",
+        "updatedAt": "2026-06-01T21:29:11.000000Z"
       },
       {
         "id": 2347550,
@@ -94,6 +169,51 @@
         "updatedAt": "2026-06-01T10:07:00.000000Z"
       },
       {
+        "id": 2420409,
+        "entityId": 9355620,
+        "module": "characters",
+        "name": "Reyhorn Dabelar",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "Een oudere (100 jaar ofzo) half elf wizard/artificer.",
+        "fullText": "Een oudere (100 jaar ofzo) half elf wizard/artificer. Hij woont in [location:9355659] in Daggerford en is de plaatselijke wizard. Hij kan ons helpen met het opkopen van speciale materialen en het maken van common en uncommon magic items. (Misschien ook rare items als hij de blueprints heeft?) Hij heeft een familiar [character:9355221] een wezel, die heeft hij een halsband gegeven met een magic stone waarmee hij simpelere berichten kan overbrengen.",
+        "fullHtml": "Een oudere (100 jaar ofzo) half elf wizard/artificer.<br><br>Hij woont in [location:9355659] in Daggerford en is de plaatselijke wizard. Hij kan ons helpen met het opkopen van speciale materialen en het maken van common en uncommon magic items. (Misschien ook rare items als hij de blueprints heeft?)<br><br>Hij heeft een familiar [character:9355221] een wezel, die heeft hij een halsband gegeven met een magic stone waarmee hij simpelere berichten kan overbrengen.",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355620",
+        "updatedAt": "2026-06-01T21:48:15.000000Z"
+      },
+      {
+        "id": 2420407,
+        "entityId": 9355618,
+        "module": "characters",
+        "name": "Sasha",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "Een orc barvrouw De eigenaar en barvrouw van [location:9309841] Ze is gespierd, en staat altijd voor mede Daggerfordians klaar",
+        "fullText": "Een orc barvrouw De eigenaar en barvrouw van [location:9309841] Ze is gespierd, en staat altijd voor mede Daggerfordians klaar",
+        "fullHtml": "Een orc barvrouw<br><br>De eigenaar en barvrouw van [location:9309841]<br><br>Ze is gespierd, en staat altijd voor mede Daggerfordians klaar",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355618",
+        "updatedAt": "2026-06-01T21:31:20.000000Z"
+      },
+      {
+        "id": 2420408,
+        "entityId": 9355619,
+        "module": "characters",
+        "name": "Ulfgar",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "Een oudere dwerg die soms in de [location:9309843] te vinden is.",
+        "fullText": "Een oudere dwerg die soms in de [location:9309843] te vinden is. Hij is een oud adventurer die sterke verhalen heeft. Hij stond ooit bekend als \"Hij die stoelen kopt\" en heeft ooit tegen Strahd gevochten in Barrovia.",
+        "fullHtml": "Een oudere dwerg die soms in de [location:9309843] te vinden is.<br><br>Hij is een oud adventurer die sterke verhalen heeft.<br><br>Hij stond ooit bekend als \"Hij die stoelen kopt\" en heeft ooit tegen Strahd gevochten in Barrovia.",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355619",
+        "updatedAt": "2026-06-01T21:32:14.000000Z"
+      },
+      {
         "id": 2402759,
         "entityId": 9290628,
         "module": "characters",
@@ -102,11 +222,11 @@
         "title": "Guard",
         "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1cfa383-20fd-4f1a-9588-d7c05cd6f9ae.png",
         "summary": "Victor is een man die bij de ingang van Daggerford wacht houdt.",
-        "fullText": "Victor is een man die bij de ingang van Daggerford wacht houdt. Hij had stiekem veel liever een stadsgids willen zijn. Maar hij zegt heel hard, heel blij te zijn met zijn huidige baan. Zijn grootvader was Harrysian die de fietsenwinkel op het plein van Daggerford had. Hij is ontzettend aantrekkelijk met blauwe ogen. Familie van [character:9085133], ergens ver weg.",
-        "fullHtml": "Victor is een man die bij de ingang van Daggerford wacht houdt.<br><br>Hij had stiekem veel liever een stadsgids willen zijn. Maar hij zegt heel hard, heel blij te zijn met zijn huidige baan.<br><br>Zijn grootvader was Harrysian die de fietsenwinkel op het plein van Daggerford had.<br><br>Hij is ontzettend aantrekkelijk met blauwe ogen.<br><br>Familie van [character:9085133], ergens ver weg.",
+        "fullText": "Victor is een man die bij de ingang van Daggerford wacht houdt. Hij had stiekem veel liever een stadsgids willen zijn. Maar hij zegt heel hard, heel blij te zijn met zijn huidige baan. Zijn grootvader was Harrysian die de fietsenwinkel op het plein van Daggerford had. Hij is ontzettend aantrekkelijk met blauwe ogen. Victor is erg ongelukkig met zijn huidige baan, en vindt het fijn als iemand dat kan zien. Tegelijkertijd is hij dankbaar om een baan te hebben in deze tijden. Geen fan van elementals. Wel van wezels zoals [character:9355221], Familie van [character:9085133], ergens ver weg.",
+        "fullHtml": "Victor is een man die bij de ingang van Daggerford wacht houdt.<br><br>Hij had stiekem veel liever een stadsgids willen zijn. Maar hij zegt heel hard, heel blij te zijn met zijn huidige baan.<br><br>Zijn grootvader was Harrysian die de fietsenwinkel op het plein van Daggerford had.<br><br>Hij is ontzettend aantrekkelijk met blauwe ogen.<br><br>Victor is erg ongelukkig met zijn huidige baan, en vindt het fijn als iemand dat kan zien. Tegelijkertijd is hij dankbaar om een baan te hebben in deze tijden.<br><br>Geen fan van elementals. Wel van wezels zoals [character:9355221],<br><br>Familie van [character:9085133], ergens ver weg.",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9290628",
-        "updatedAt": "2026-05-18T20:52:44.000000Z"
+        "updatedAt": "2026-06-01T21:06:56.000000Z"
       },
       {
         "id": 2388281,
@@ -137,6 +257,21 @@
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9085401",
         "updatedAt": "2026-04-03T11:52:13.000000Z"
+      },
+      {
+        "id": 2420406,
+        "entityId": 9355617,
+        "module": "characters",
+        "name": "William Longtooth",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "Een beruchte en befaamde piraat.",
+        "fullText": "Een beruchte en befaamde piraat. Een sea elf Vader van [character:9355616] Bekend in Waterdeep",
+        "fullHtml": "Een beruchte en befaamde piraat.<br><br>Een sea elf<br><br>Vader van [character:9355616]<br><br>Bekend in Waterdeep",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355617",
+        "updatedAt": "2026-06-01T21:30:46.000000Z"
       }
     ],
     "locations": [
@@ -201,6 +336,21 @@
         "updatedAt": "2026-05-18T19:42:45.000000Z"
       },
       {
+        "id": 2106770,
+        "entityId": 9355659,
+        "module": "locations",
+        "name": "Delfen's Tower",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "[character:9355620] en [character:9355221] wonen hier Staat IN [location:9085128] Wiki link: (Delfen zelf was voor onze tijd)",
+        "fullText": "[character:9355620] en [character:9355221] wonen hier Staat IN [location:9085128] Wiki link: (Delfen zelf was voor onze tijd)",
+        "fullHtml": "[character:9355620] en [character:9355221] wonen hier<br><br>Staat IN [location:9085128]<br><br><a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Delfen's_Tower\" target=\"_blank\" rel=\"noreferrer noopener\">Wiki link:</a>(Delfen zelf was voor onze tijd)",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355659",
+        "updatedAt": "2026-06-01T21:43:37.000000Z"
+      },
+      {
         "id": 2043901,
         "entityId": 9085738,
         "module": "locations",
@@ -231,6 +381,21 @@
         "updatedAt": "2026-05-18T20:08:07.000000Z"
       },
       {
+        "id": 2106767,
+        "entityId": 9355639,
+        "module": "locations",
+        "name": "Iriaebor",
+        "type": "City",
+        "title": null,
+        "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1ec02ad-9ebf-430d-b224-be3f561d0bbe.png",
+        "summary": "Een andere stad in Faerun/Forgotten Realm Hier was ooit lang geleden Tuskar the Terrible oid.",
+        "fullText": "Een andere stad in Faerun/Forgotten Realm Hier was ooit lang geleden Tuskar the Terrible oid. Wiki link:",
+        "fullHtml": "Een andere stad in Faerun/Forgotten Realm<br><br>Hier was ooit lang geleden Tuskar the Terrible oid.<br><br><a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Iriaebor\" target=\"_blank\" rel=\"noreferrer noopener\">Wiki link:</a>",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355639",
+        "updatedAt": "2026-06-01T21:44:54.000000Z"
+      },
+      {
         "id": 2096165,
         "entityId": 9309841,
         "module": "locations",
@@ -238,12 +403,27 @@
         "type": null,
         "title": null,
         "image": "",
-        "summary": null,
-        "fullText": null,
-        "fullHtml": null,
+        "summary": "[character:9355618] mant deze bar 2sp per persoon per nacht - \"poor\" rooms Ligt in het woongedeelte van [location:9085128] en is meer de kroeg voor lokale mensen Wiki link",
+        "fullText": "[character:9355618] mant deze bar 2sp per persoon per nacht - \"poor\" rooms Ligt in het woongedeelte van [location:9085128] en is meer de kroeg voor lokale mensen Wiki link",
+        "fullHtml": "[character:9355618] mant deze bar<br><br>2sp per persoon per nacht - \"poor\" rooms<br><br>Ligt in het woongedeelte van [location:9085128] en is meer de kroeg voor lokale mensen<br><br><a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/Lizard%27s_Gizzard\" target=\"_blank\" rel=\"noreferrer noopener\">Wiki link</a>",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9309841",
-        "updatedAt": "2026-05-23T12:22:51.000000Z"
+        "updatedAt": "2026-06-01T21:46:41.000000Z"
+      },
+      {
+        "id": 2106761,
+        "entityId": 9355621,
+        "module": "locations",
+        "name": "Naelith's neat magic spire",
+        "type": "Tower",
+        "title": null,
+        "image": "",
+        "summary": "De \"wizard's\" tower van [character:9355616] het is tegen de noordkant van de berg ten noord oosten van Daggerford gebouwd.",
+        "fullText": "De \"wizard's\" tower van [character:9355616] het is tegen de noordkant van de berg ten noord oosten van Daggerford gebouwd. Zo'n 115 jaar geleden trok hij in en 48 jaar geleden trok hij er weer uit. Tegenwoordig wonen er vooral een hoop kenku/raven in de toren. De toren is door meerdere groepen leeg gehaald qua loot. Little Ki is hier gevonden door de spelers. De weg naar de toren toe is opgeblazen door [character:9085736] Door het onzorgvuldige gebruik van magic is in de omgeving verschillende speciale en magische planten te vinden, zoals \"Glowing daisies\" en \"Zuchtende Aleppodennen\" waar je Witherbark vanaf kan halen.",
+        "fullHtml": "De \"wizard's\" tower van [character:9355616] het is tegen de noordkant van de berg ten noord oosten van Daggerford gebouwd.<br><br>Zo'n 115 jaar geleden trok hij in en 48 jaar geleden trok hij er weer uit.<br><br>Tegenwoordig wonen er vooral een hoop kenku/raven in de toren. De toren is door meerdere groepen leeg gehaald qua loot.<br><br>Little Ki is hier gevonden door de spelers.<br><br>De weg naar de toren toe is opgeblazen door [character:9085736]<br><br>Door het onzorgvuldige gebruik van magic is in de omgeving verschillende speciale en magische planten te vinden, zoals \"Glowing daisies\" en \"Zuchtende Aleppodennen\" waar je Witherbark vanaf kan halen.",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355621",
+        "updatedAt": "2026-06-01T21:36:46.000000Z"
       },
       {
         "id": 2096166,
@@ -252,13 +432,13 @@
         "name": "River Shining Tavern",
         "type": null,
         "title": null,
-        "image": "",
-        "summary": null,
-        "fullText": null,
-        "fullHtml": null,
+        "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1ec02f5-91c7-42dd-b712-7c204aaacab1.png",
+        "summary": "Barman (human) - server (half elf) Vaste kroeg van Ulfgar wanneer hij in town is Harrie heeft een open rekening van 3,5 gp Ligt in het Markt gedeelte van [location:9085128] aan de",
+        "fullText": "Barman (human) - server (half elf) Vaste kroeg van Ulfgar wanneer hij in town is Harrie heeft een open rekening van 3,5 gp Ligt in het Markt gedeelte van [location:9085128] aan de rivier Dit is een taverne voor markthandelaren en reizigers, voor mensen met geld Wiki link",
+        "fullHtml": "Barman (human) - server (half elf)<br><br>Vaste kroeg van Ulfgar wanneer hij in town is<br><br>Harrie heeft een open rekening van 3,5 gp<br><br>Ligt in het Markt gedeelte van [location:9085128] aan de rivier<br><br>Dit is een taverne voor markthandelaren en reizigers, voor mensen met geld<br><br><a class=\"rich-link\" href=\"https://forgottenrealms.fandom.com/wiki/River_Shining_Tavern\" target=\"_blank\" rel=\"noreferrer noopener\">Wiki link</a>",
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/9309843",
-        "updatedAt": "2026-05-23T12:24:14.000000Z"
+        "updatedAt": "2026-06-01T21:47:06.000000Z"
       },
       {
         "id": 2092086,
@@ -277,6 +457,21 @@
       }
     ],
     "organisations": [
+      {
+        "id": 445718,
+        "entityId": 9355176,
+        "module": "organisations",
+        "name": "Bloemenzaak Vergeet Me Niet",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "Harrie is een vaste klant.",
+        "fullText": "Harrie is een vaste klant. Ook sommige kruiden te koop.",
+        "fullHtml": "Harrie is een vaste klant.<br><br>Ook sommige kruiden te koop.",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355176",
+        "updatedAt": "2026-06-01T19:27:37.000000Z"
+      },
       {
         "id": 430337,
         "entityId": 9085100,
@@ -321,6 +516,21 @@
         "locationId": null,
         "url": "https://app.kanka.io/w/167950/entities/3784730",
         "updatedAt": "2026-03-14T19:49:58.000000Z"
+      },
+      {
+        "id": 445719,
+        "entityId": 9355193,
+        "module": "organisations",
+        "name": "The Curious Cask",
+        "type": null,
+        "title": null,
+        "image": "",
+        "summary": "Eigenaar = Marrick Vale Veel general supplies Aantal eenvoudige magic items",
+        "fullText": "Eigenaar = Marrick Vale Veel general supplies Aantal eenvoudige magic items",
+        "fullHtml": "Eigenaar = Marrick Vale<br><br>Veel general supplies<br><br>Aantal eenvoudige magic items",
+        "locationId": null,
+        "url": "https://app.kanka.io/w/167950/entities/9355193",
+        "updatedAt": "2026-06-01T19:29:33.000000Z"
       }
     ],
     "quests": [

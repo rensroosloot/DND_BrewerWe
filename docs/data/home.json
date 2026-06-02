@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-01T11:31:52.748Z",
+  "generatedAt": "2026-06-02T10:22:19.431Z",
   "title": "BrewerWe",
   "intro": "Een spelergerichte campagnehub rond een kleine brouwerij, de bijbehorende bar en de plaatsen en personen die ermee verbonden zijn.",
   "stats": {
-    "totalEntries": 27,
-    "locations": 9,
-    "organisations": 3,
-    "characters": 9,
+    "totalEntries": 41,
+    "locations": 12,
+    "organisations": 5,
+    "characters": 18,
     "quests": 1,
     "journals": 3,
     "events": 0

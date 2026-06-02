@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T11:31:52.748Z",
+  "generatedAt": "2026-06-02T10:22:19.431Z",
   "brewery": {
     "id": 430337,
     "entityId": 9085100,
@@ -70,6 +70,21 @@
   },
   "organisations": [
     {
+      "id": 445718,
+      "entityId": 9355176,
+      "module": "organisations",
+      "name": "Bloemenzaak Vergeet Me Niet",
+      "type": null,
+      "title": null,
+      "image": "",
+      "summary": "Harrie is een vaste klant.",
+      "fullText": "Harrie is een vaste klant. Ook sommige kruiden te koop.",
+      "fullHtml": "Harrie is een vaste klant.<br><br>Ook sommige kruiden te koop.",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9355176",
+      "updatedAt": "2026-06-01T19:27:37.000000Z"
+    },
+    {
       "id": 430337,
       "entityId": 9085100,
       "module": "organisations",
@@ -113,6 +128,21 @@
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/3784730",
       "updatedAt": "2026-03-14T19:49:58.000000Z"
+    },
+    {
+      "id": 445719,
+      "entityId": 9355193,
+      "module": "organisations",
+      "name": "The Curious Cask",
+      "type": null,
+      "title": null,
+      "image": "",
+      "summary": "Eigenaar = Marrick Vale Veel general supplies Aantal eenvoudige magic items",
+      "fullText": "Eigenaar = Marrick Vale Veel general supplies Aantal eenvoudige magic items",
+      "fullHtml": "Eigenaar = Marrick Vale<br><br>Veel general supplies<br><br>Aantal eenvoudige magic items",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9355193",
+      "updatedAt": "2026-06-01T19:29:33.000000Z"
     }
   ],
   "items": [
