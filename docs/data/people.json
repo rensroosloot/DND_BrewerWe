@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T10:22:19.431Z",
+  "generatedAt": "2026-06-03T10:57:14.491Z",
   "characters": [
     {
       "id": 2420300,
@@ -30,6 +30,21 @@
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/9355613",
       "updatedAt": "2026-06-01T21:28:54.000000Z"
+    },
+    {
+      "id": 2421942,
+      "entityId": 9362165,
+      "module": "characters",
+      "name": "Doa",
+      "type": "Player",
+      "title": null,
+      "image": "",
+      "summary": "- Enige warforgde die kan fluiten ( sessie4)",
+      "fullText": "- Enige warforgde die kan fluiten ( sessie4)",
+      "fullHtml": "- Enige warforgde die kan fluiten ( sessie4)",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9362165",
+      "updatedAt": "2026-06-03T07:17:02.000000Z"
     },
     {
       "id": 2402849,
@@ -84,12 +99,12 @@
       "type": "Player",
       "title": null,
       "image": "https://cdn-ugc.kanka.io/campaigns/167950/a16d1249-2477-4c7b-b07f-0340a13713a2.png",
-      "summary": "&gt;&gt; Bang voor spinnen ( Sessie3)",
-      "fullText": "&gt;&gt; Bang voor spinnen ( Sessie3)",
-      "fullHtml": ">><br>Bang voor spinnen ( Sessie3)",
+      "summary": "&gt;&gt; Bang voor spinnen ( Sessie3) Heeft al 1000 legpuzzels gemaakt, maar nog niet 1 afgemaakt (seesie4)",
+      "fullText": "&gt;&gt; Bang voor spinnen ( Sessie3) Heeft al 1000 legpuzzels gemaakt, maar nog niet 1 afgemaakt (seesie4)",
+      "fullHtml": ">><br>Bang voor spinnen ( Sessie3)<br>Heeft al 1000 legpuzzels gemaakt, maar nog niet 1 afgemaakt (seesie4)",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/9085133",
-      "updatedAt": "2026-06-01T10:06:09.000000Z"
+      "updatedAt": "2026-06-03T07:15:45.000000Z"
     },
     {
       "id": 2402844,
@@ -159,12 +174,12 @@
       "type": "Player",
       "title": null,
       "image": "https://cdn-ugc.kanka.io/campaigns/167950/a1747b2b-348e-4594-8a54-78b4019337c9.png",
-      "summary": "&gt;&gt; Heeft een princes uit een toren gered ( sessie 3)",
-      "fullText": "&gt;&gt; Heeft een princes uit een toren gered ( sessie 3)",
-      "fullHtml": ">><br><br>Heeft een princes uit een toren gered ( sessie 3)",
+      "summary": "&gt;&gt; - Heeft een princes uit een toren gered ( sessie 3) - Houd altijd een stoel naast zich vrij",
+      "fullText": "&gt;&gt; - Heeft een princes uit een toren gered ( sessie 3) - Houd altijd een stoel naast zich vrij",
+      "fullHtml": ">><br><br>- Heeft een princes uit een toren gered ( sessie 3)<br><br>- Houd altijd een stoel naast zich vrij",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/9085736",
-      "updatedAt": "2026-06-01T10:07:00.000000Z"
+      "updatedAt": "2026-06-03T07:17:40.000000Z"
     },
     {
       "id": 2420409,

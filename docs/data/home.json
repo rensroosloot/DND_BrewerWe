@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-02T10:22:19.431Z",
+  "generatedAt": "2026-06-03T10:57:14.491Z",
   "title": "BrewerWe",
   "intro": "Een spelergerichte campagnehub rond een kleine brouwerij, de bijbehorende bar en de plaatsen en personen die ermee verbonden zijn.",
   "stats": {
-    "totalEntries": 41,
+    "totalEntries": 43,
     "locations": 12,
     "organisations": 5,
-    "characters": 18,
+    "characters": 19,
     "quests": 1,
-    "journals": 3,
+    "journals": 4,
     "events": 0
   },
   "featured": {
@@ -71,19 +71,19 @@
       "previewImage": "./assets/maps/previews/boareskyr-bridge.jpg"
     },
     "latestChronicle": {
-      "id": 175414,
-      "entityId": 9291206,
+      "id": 176711,
+      "entityId": 9357974,
       "module": "journals",
-      "name": "Sessie 3 - De akte",
-      "type": "Session",
+      "name": "Sessie 4 Fire elemental",
+      "type": null,
       "title": null,
       "image": "",
-      "summary": "Start: Otis heeft vorige week nog een princes gered uit een toren Mina heeft altijd koude handen Harrie is bang voor spinnen",
-      "fullText": "Start: Otis heeft vorige week nog een princes gered uit een toren Mina heeft altijd koude handen Harrie is bang voor spinnen",
-      "fullHtml": "Start:<br><br>Otis heeft vorige week nog een princes gered uit een toren<br><br>Mina heeft altijd koude handen<br><br>Harrie is bang voor spinnen",
+      "summary": "DM Doris Spelers Doa, Otis en Harrie",
+      "fullText": "DM Doris Spelers Doa, Otis en Harrie",
+      "fullHtml": "DM Doris<br>Spelers Doa, Otis en Harrie",
       "locationId": null,
-      "url": "https://app.kanka.io/w/167950/entities/9291206",
-      "updatedAt": "2026-06-01T10:04:49.000000Z"
+      "url": "https://app.kanka.io/w/167950/entities/9357974",
+      "updatedAt": "2026-06-03T07:21:43.000000Z"
     }
   }
 }
