@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T09:33:06.785Z",
+  "generatedAt": "2026-06-15T12:11:32.573Z",
   "characters": [
     {
       "id": 2420300,
@@ -99,12 +99,27 @@
       "type": "Player",
       "title": null,
       "image": "https://cdn-ugc.kanka.io/campaigns/167950/a16d1249-2477-4c7b-b07f-0340a13713a2.png",
-      "summary": "&gt;&gt; Bang voor spinnen ( Sessie3) Heeft al 1000 legpuzzels gemaakt, maar nog niet 1 afgemaakt (seesie4)",
-      "fullText": "&gt;&gt; Bang voor spinnen ( Sessie3) Heeft al 1000 legpuzzels gemaakt, maar nog niet 1 afgemaakt (seesie4)",
-      "fullHtml": ">><br>Bang voor spinnen ( Sessie3)<br>Heeft al 1000 legpuzzels gemaakt, maar nog niet 1 afgemaakt (seesie4)",
+      "summary": "&gt;&gt; Bang voor spinnen (Sessie 3) Heeft al 1000 legpuzzels gemaakt, maar nog niet 1 afgemaakt (Sessie 4)",
+      "fullText": "&gt;&gt; Bang voor spinnen (Sessie 3) Heeft al 1000 legpuzzels gemaakt, maar nog niet 1 afgemaakt (Sessie 4)",
+      "fullHtml": ">><br>Bang voor spinnen (Sessie 3)<br>Heeft al 1000 legpuzzels gemaakt, maar nog niet 1 afgemaakt (Sessie 4)",
       "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/9085133",
-      "updatedAt": "2026-06-03T07:15:45.000000Z"
+      "updatedAt": "2026-06-15T11:44:59.000000Z"
+    },
+    {
+      "id": 2436909,
+      "entityId": 9415633,
+      "module": "characters",
+      "name": "Little Key",
+      "type": "NPC",
+      "title": "Vuur beheerder",
+      "image": "https://cdn-ugc.kanka.io/campaigns/167950/a20757ea-b7a3-4a50-bb53-143936a7b215.jpg",
+      "summary": "Fire elemental, gered (zie sessie 4).",
+      "fullText": "Fire elemental, gered (zie sessie 4). Bewaakt nu ons vuur.",
+      "fullHtml": "Fire elemental, gered (zie sessie 4). Bewaakt nu ons vuur.",
+      "locationId": null,
+      "url": "https://app.kanka.io/w/167950/entities/9415633",
+      "updatedAt": "2026-06-15T11:50:43.000000Z"
     },
     {
       "id": 2402844,
