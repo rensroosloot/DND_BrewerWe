@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T06:45:55.865Z",
+  "generatedAt": "2026-08-27T17:20:48.515Z",
   "brewery": {
     "id": 430337,
     "entityId": 9085100,
@@ -174,7 +174,7 @@
       "summary": "Toen [character:9085133] , [character:9085736] en [character:9085737] de brouwerij gingen opknappen om de plek te bemachtigen, moesten ze af van een soort slijm/ooze wat zich in de kelder van de brouwerij bevond.",
       "fullText": "Toen [character:9085133] , [character:9085736] en [character:9085737] de brouwerij gingen opknappen om de plek te bemachtigen, moesten ze af van een soort slijm/ooze wat zich in de kelder van de brouwerij bevond. Dit slijm groeide door nootjes op te eten. Hun oplossing was om het slijm naar de rivier te begeleiden en deze in de rivier te dumpen, de [location:9085738]. Wat er daarna is gebeurd met de ooze of waar het is uitgekomen, of hoe groot het is, is onbekend... Wat we weten van ooze: het gaat op nootjes af er zaten skeletten in van onder andere ratten, vogels en andere kleine knaagdieren het rook behoorlijk zuur. het lijkt niet of nauwelijks schade te krijgen van poison het kan kleiner worden door er stukjes af te hakken & te cleanen (met prestidigitation)",
       "fullHtml": "Toen [character:9085133] , [character:9085736] en [character:9085737] de brouwerij gingen opknappen om de plek te bemachtigen, moesten ze af van een soort slijm/ooze wat zich in de kelder van de brouwerij bevond.<br><br>Dit slijm groeide door nootjes op te eten.<br><br>Hun oplossing was om het slijm naar de rivier te begeleiden en deze in de rivier te dumpen, de [location:9085738].<br><br>Wat er daarna is gebeurd met de ooze of waar het is uitgekomen, of hoe groot het is, is onbekend...<br><br>Wat we weten van ooze:<br><br>het gaat op nootjes af<br><br>er zaten skeletten in van onder andere ratten, vogels en andere kleine knaagdieren<br><br>het rook behoorlijk zuur.<br><br>het lijkt niet of nauwelijks schade te krijgen van poison<br><br>het kan kleiner worden door er stukjes af te hakken & te cleanen (met prestidigitation)",
-      "locationId": 2043715,
+      "locationId": null,
       "url": "https://app.kanka.io/w/167950/entities/9085735",
       "updatedAt": "2026-03-31T19:09:24.000000Z"
     }
